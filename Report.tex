@@ -786,62 +786,6 @@ The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\ci
 
 \section{Method}
 
-\subsection{Secure RSA File Transmission}
-\label{sec:secureMrea}
-
-MREA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for MREA crypto system. We have removed the drawback using MREA for safe transmission of file from one user to another.
-
-Secure RSA file transmission can be summarized as follows:
-
-\begin{enumerate}[ {STEP }1{:} ]
-	\item \emph{ Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
-	\item \emph{ Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
-	\item \emph{Choose an integer $e, 1 < e < \phi$, such that GCD($e, \phi$) = 1}
-	\item \emph{Compute the secret exponent $d, 1 < d < \phi$, such that $e \times d (\mod \phi) = 1$}
-		\label{itm:step6}
-	\item \emph{Select an integer $g = m+1$}
-	\item \emph{Compute the modular multiplicative inverse: $\mu = \lambda^{-1} (\mod m)$}
-\end{enumerate}
-The public key is ($n, m, g, e$) and private key is ($d, \lambda, \mu$). 
-
-\subsection{Encryption:}
-Let F be a file to be encrypted where the contents of file are taken into string $S$. Select random number $r$, where $r<m$ Compute cipher text as:
-\begin{center}
-	$c = g^{s^{e}\mod n} \times r^{m}\mod m^{2}$
-\end{center}
-
-\subsection{Decryption: }
-Compute origin message:
-\begin{center}
-	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
-\end{center}
-
-We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
-\begin{equation}
-e \times d = 1 + x(\phi)
-\end{equation}
-
-\begin{align*}
-	d &= \frac{1 + x(\phi)}{e}
-\end{align*}
-
-since $d < \phi$
-
-\begin{align*}
-	\frac{1 + x(\phi)}{e} &< \phi \\
-	x(\phi) &< e(\phi) -1 \\
-	x &< \frac{e(\phi) -1}{\phi} \\
-\end{align*}
-
-since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will be:
-\begin{equation}
-	x < e
-\end{equation}
-Value of $d$ in STEP \ref{itm:step6} can be written as
-\begin{equation}
-d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
-\end{equation}
-
 \subsection{Pseudorandom Number Generation}
 \label{sec:mersenne}
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
@@ -1020,6 +964,64 @@ We measured the program and found the results of multiplication for pairs of ran
 \label{fig:karatsubaVSgrade}
 \end{figure}
 
+
+\subsection{Secure RSA File Transmission}
+\label{sec:secureMrea}
+
+MREA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for MREA crypto system. We have removed the drawback using MREA for safe transmission of file from one user to another.
+
+Secure RSA file transmission can be summarized as follows:
+
+\begin{enumerate}[ {STEP }1{:} ]
+	\item \emph{ Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
+	\item \emph{ Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
+	\item \emph{Choose an integer $e, 1 < e < \phi$, such that GCD($e, \phi$) = 1}
+	\item \emph{Compute the secret exponent $d, 1 < d < \phi$, such that $e \times d (\mod \phi) = 1$}
+		\label{itm:step6}
+	\item \emph{Select an integer $g = m+1$}
+	\item \emph{Compute the modular multiplicative inverse: $\mu = \lambda^{-1} (\mod m)$}
+\end{enumerate}
+The public key is ($n, m, g, e$) and private key is ($d, \lambda, \mu$). 
+
+\subsection{Encryption:}
+Let F be a file to be encrypted where the contents of file are taken into string $S$. Select random number $r$, where $r<m$ Compute cipher text as:
+\begin{center}
+	$c = g^{s^{e}\mod n} \times r^{m}\mod m^{2}$
+\end{center}
+
+\subsection{Decryption: }
+Compute origin message:
+\begin{center}
+	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
+\end{center}
+
+We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
+\begin{equation}
+e \times d = 1 + x(\phi)
+\end{equation}
+
+\begin{align*}
+	d &= \frac{1 + x(\phi)}{e}
+\end{align*}
+
+since $d < \phi$
+
+\begin{align*}
+	\frac{1 + x(\phi)}{e} &< \phi \\
+	x(\phi) &< e(\phi) -1 \\
+	x &< \frac{e(\phi) -1}{\phi} \\
+\end{align*}
+
+since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will be:
+\begin{equation}
+	x < e
+\end{equation}
+Value of $d$ in STEP \ref{itm:step6} can be written as
+\begin{equation}
+d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
+\end{equation}
+
+
 \section{Results}
 
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
@@ -1041,7 +1043,7 @@ Also we tested to generation large prime number and our system showed significan
 \end{figure}
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
 
-Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
 
