@@ -789,7 +789,7 @@ Compute origin message:
 	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
 \end{center}
 
-We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by third prime number. STEP \ref{itm:step6} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
+We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
 \begin{equation}
 e \times d = 1 + x(\phi)
 \end{equation}
@@ -863,7 +863,7 @@ Assuming that we replace two of the multiplications with only one makes the prog
 
 
 \section{Results}
-Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
+Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
 
 \begin{figure}[ht!]
 \centering
@@ -882,13 +882,17 @@ Also we tested to generation large prime number and our system showed significan
 \end{figure}
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
 
-Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance. For key generation we worked to generate keys of size upto 512 bit keys and showed significant performance based on time of computation.
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
 
 
 \section{Conclusion}
-This is a sample sentence.
+Our method have showed a new approach to make secure by increasing the bit size of the key generated. Our system showed good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption. 
+
+With the increasing computing power available to even casual users, the security conscious have had to move on to increasingly robust encryption, lest they find their information vulnerable to brute-force attacks. The latest milestone to fall is 768-bit RSA. In "\emph{Factorization of a 768-bit RSA modulus}"\cite{768_key} announced that they factored one of these keys. 
+
+Most modern cryptography relies on single large number that are the product of two primes. By knowing the numbers, it is relatively easy to encrypt and decrypt data, otherwise finding by brute force is big computational challenge. "\emph{There is nothing new to be reported for the square root step, except for the resulting factorization of RSA-768. Nevertheless, and for the record, we present some of the details}"\cite{768_key} they wrote.
 
 {
 \bibliographystyle{abbrv} %plain; ieeetr; alpha

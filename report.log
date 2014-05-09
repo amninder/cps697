@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  9 MAY 2014 09:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  9 MAY 2014 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,13 +402,13 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
-(./Report.bbl
+[5 <./Karatsuba-Complexity.png (PNG copy)> <./mt19937.png> <./mersenneTime.png>
+] (./Report.bbl
 Underfull \hbox (badness 2376) in paragraph at lines 41--45
 []\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
  []
 
-[5 <./Karatsuba-Complexity.png (PNG copy)> <./mt19937.png> <./mersenneTime.png>
-])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -424,10 +424,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4142 strings out of 493488
- 62000 string characters out of 3141326
- 137088 words of memory out of 3000000
- 7396 multiletter control sequences out of 15000+200000
+ 4143 strings out of 493488
+ 62009 string characters out of 3141326
+ 137092 words of memory out of 3000000
+ 7397 multiletter control sequences out of 15000+200000
  36328 words of font info for 65 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,9n,32p,1749b,1105s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -446,7 +446,7 @@ ive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (6 pages, 209302 bytes).
+Output written on Report.pdf (6 pages, 210718 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

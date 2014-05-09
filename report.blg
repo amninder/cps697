@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
-You've used 12 entries,
+Warning--there's a number but no series in 768_key
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            568 strings with 5317 characters,
-and the built_in function-call counts, 3766 in all, are:
-= -- 368
-> -- 125
-< -- 5
-+ -- 51
-- -- 38
-* -- 216
-:= -- 587
-add.period$ -- 33
-call.type$ -- 12
-change.case$ -- 55
+            573 strings with 5597 characters,
+and the built_in function-call counts, 4022 in all, are:
+= -- 389
+> -- 139
+< -- 6
++ -- 56
+- -- 42
+* -- 235
+:= -- 628
+add.period$ -- 35
+call.type$ -- 13
+change.case$ -- 59
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 165
-empty$ -- 337
-format.name$ -- 38
-if$ -- 832
+cite$ -- 14
+duplicate$ -- 176
+empty$ -- 360
+format.name$ -- 42
+if$ -- 885
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 13
 missing$ -- 9
-newline$ -- 60
-num.names$ -- 24
-pop$ -- 69
+newline$ -- 64
+num.names$ -- 27
+pop$ -- 75
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 47
 quote$ -- 0
-skip$ -- 152
+skip$ -- 160
 stack$ -- 0
-substring$ -- 243
-swap$ -- 54
-text.length$ -- 5
+substring$ -- 248
+swap$ -- 57
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 0
-while$ -- 37
-width$ -- 14
-write$ -- 121
+type$ -- 51
+warning$ -- 1
+while$ -- 39
+width$ -- 15
+write$ -- 130
+(There was 1 warning)
