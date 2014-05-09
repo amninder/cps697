@@ -548,7 +548,7 @@ Cryptography, RSA, MT19937, Mersenne Twister, Miller-Rabin, Prime Numbers, Pseud
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{C}{ryptography} makes secure web sites and electronic safe transmissions possible. For a we site to be secure all of the data transmitted between the computers where the daw is kept and where it is received must be encrypted. This allows people to do online banking, online trading and make online purchases with their credit cards, without worrying that any of their account information is being compromised. Cryptography is very important to the continued growth of the internet and electronic commerce.
+\IEEEPARstart{C}{ryptography} makes secure web sites and electronic safe transmissions possible. For a web site to be secure all of the data transmitted between the computers where the daw is kept and where it is received must be encrypted. This allows people to do online banking, online trading and make online purchases with their credit cards, without worrying that any of their account information is being compromised. Cryptography is very important to the continued growth of the internet and electronic commerce.
 
 E-commerce is increasing at a very rapid rate. By the turn of the century, commercial transactions on the internet are expected to total hundreds of billions of dollars a year. This level of activity could not be supported without cryptographic security. It has been said that one is safer using a credit card over the internet than within a store or restaurant. It requires much more work to seize credit card numbers over computer networks than it does to simply walk by a table in a restaurant and lay hold of a credit card receipt. These levels of security, though not yet widely used, gibe the means to strengthen the foundation with which e-commerce can grow.
 
@@ -862,7 +862,7 @@ Assuming that we replace two of the multiplications with only one makes the prog
 
 
 
-\section{Summary and Further Study}
+\section{Results}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
 
 \begin{figure}[ht!]
@@ -882,9 +882,13 @@ Also we tested to generation large prime number and our system showed significan
 \end{figure}
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
 
-Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also showed significant performance. For key generation we worked to generate keys of size unto 512 bit keys and showed significant performance based on time of computation.
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance. For key generation we worked to generate keys of size upto 512 bit keys and showed significant performance based on time of computation.
 
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
+
+
+\section{Conclusion}
+This is a sample sentence.
 
 {
 \bibliographystyle{abbrv} %plain; ieeetr; alpha
