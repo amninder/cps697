@@ -198,7 +198,9 @@
 
 % *** SPECIALIZED LIST PACKAGES ***
 %
-%\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage[noend]{algpseudocode}
 % algorithmic.sty was written by Peter Williams and Rogerio Brito.
 % This package provides an algorithmic environment fo describing algorithms.
 % You can use the algorithmic environment in-text or within a figure
@@ -864,10 +866,37 @@ If for some $a$ none of the above set of powers is $-1$ and the specific odd pow
 Following is the algorithm:
 
 
-\parbox{\linewidth}{
-	\lstinputlisting[label = samplecode, firstline=1,lastline=33]{miller_rabin.py}
-}
+%\parbox{\linewidth}{
+%	\lstinputlisting[label = samplecode, firstline=1,lastline=33]{miller_rabin.py}
+%}
+
+\begin{algorithm}                      % enter the algorithm environment
+\caption{Calculate $y = x^n$}          % give the algorithm a caption
+\label{alg1}                           % and a label for \ref{} commands later in the document
+\begin{algorithmic}                    % enter the algorithmic environment
+    \REQUIRE $n \geq 0 \vee x \neq 0$
+    \ENSURE $y = x^n$
+    \STATE $y \Leftarrow 1$
+    \IF{$n < 0$}
+        \STATE $X \Leftarrow 1 / x$
+        \STATE $N \Leftarrow -n$
+    \ELSE
+        \STATE $X \Leftarrow x$
+        \STATE $N \Leftarrow n$
+    \ENDIF
+    \WHILE{$N \neq 0$}
+        \IF{$N$ is even}
+            \STATE $X \Leftarrow X \times X$
+            \STATE $N \Leftarrow N / 2$
+        \ELSE[$N$ is odd]
+            \STATE $y \Leftarrow y \times X$
+            \STATE $N \Leftarrow N - 1$
+        \ENDIF
+    \ENDWHILE
+\end{algorithmic}
+\end{algorithm}
  
+
 \subsection{Karatsuba Multiplication}
 \label{sec: karatsuba_code}
 Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods methods of integer multiplication beyond what we learnt in third grade and this is one of them. 
@@ -924,12 +953,11 @@ Assuming that we replace two of the multiplications with only one makes the prog
 \subsubsection{Algorithm}
 Following is the algorithm we followed to generate result for Karatsuba multiplication
 
-
 \parbox{\linewidth}{
 	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
 }
 
-We measure the program and found the results for pairs of random \emph{n}-digit numbers. All times are in milliseconds. Table \ref{table:karatsubaVSgrade} and Figure \ref{table:karatsubaVSgrade} shows results we obtained.
+We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers. All times are in milliseconds and Table \ref{table:karatsubaVSgrade} and Figure \ref{table:karatsubaVSgrade} shows results we obtained.
 
 \begin{table}[ht]
 	\begin{center}
@@ -960,6 +988,7 @@ We measure the program and found the results for pairs of random \emph{n}-digit 
 \end{figure}
 
 \section{Results}
+
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
 
 \begin{figure}[ht!]
