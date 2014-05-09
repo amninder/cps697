@@ -195,19 +195,38 @@ def selectPrime():
 _CUTOFF = 1536
 
 def k_multiply(x, y):
-	if x.bit_length()<= _CUTOFF or y.bit_length <= _CUTOFF:
+	if x.bit_length()\
+	 <= _CUTOFF \
+	 or \
+	 y.bit_length \
+	 <= \
+	 _CUTOFF:
 		return x*y
 	else:
-		n 		= max(b.bit_length(), y.bit_length)
-		half 	= (n+32) // mul(64, 32)
-		mask 	= (1 << half) - 1
-		xlow 	= x & mask
-		ylow 	= y & mask
-		xhigh 	= x >> half
-		yhigh 	= y >> half
-
-		a 		= k_multiply(xhigh, yhigh)
-		b 		= k_multiply(xlow + xhigh, ylow + yhigh)
-		c 		= k_multiply(xlow, ylow)
-		d 		= b - a - c
-		return (((a << half) + d) << half) + c
+		n =\
+		 max(b.bit_length(), 
+		 	y.bit_length)
+		half =\
+		(n+32) // mul(64, 32)
+		mask =\
+		(1 << half) - 1
+		xlow=\
+		 x & mask
+		ylow =\
+		 y & mask
+		xhigh =\
+		x >> half
+		yhigh =\
+		 y >> half
+		a = \
+		 k_multiply(xhigh, yhigh)
+		b =\
+		 k_multiply(xlow + xhigh, \
+		 	ylow + yhigh)
+		c =\
+		k_multiply(xlow, ylow)
+		d =\
+		 b - a - c
+		return (((a << half) + d) \
+			<< half) \
+			+ c

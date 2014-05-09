@@ -1,7 +1,9 @@
-from random import *
-from gmpy2 import *
+input: number n to be tested, 
+	k number of iteration
+output: true if prime, 
+false otherwise
 
-def millerRabin(n, k=3):
+def millerRabin(n, k):
 	if n<2:
 		return False
 	if n%2==0:
@@ -11,21 +13,21 @@ def millerRabin(n, k=3):
 	d = n-1
 
 	while d%2==0:
-		s 	+=	1
-		d 	>>=	1
+		s += 1
+		d >>= 1
 	for i in range(k):
-		rand 	= randint(2, n-2)
-		x 		= powmod(rand, d, n)
+		rand = randint(2, n-2)
+		x = powmod(rand, d, n)
 		if x == 1 or x == n-1:
 			continue
 		for r in range(s):
 			isPrime = True
-			x = powmod(x,2,n)
+			x =powmod(x,2,n)
 			if x==1:
-				return False
+			 return False
 			if x==n-1:
-				isPrime = False
-				break
+			 isPrime=False
+			 break
 		if isPrime:
 			return False
 	return True

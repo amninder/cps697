@@ -100,6 +100,8 @@
 \usepackage{listings}
 \usepackage{enumerate}
 \usepackage{url}
+
+
 \lstloadlanguages{Python}
 %\usepackage{amsmath}
 
@@ -134,7 +136,7 @@
   \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png, .PNG}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -651,7 +653,7 @@ To achieve security there are two ways in which we can achieve.
 	\item Strong secure protocol for transmission
 \end{itemize}
 
-\section{Background}
+\section{Background \& Related Work}
 There are two types of cryptographic algorithm to accomplish these goals: Symmetric and Asymmetric cryptography. The initial unencrypted dat is referred as normal text. RSA is (\emph{Rivest, Shamir \& Adleman}) is asymmetric cryptographic algorithm developed in 1977. It generated two keys: public key for encryption and private key to decrypt message. RSA encrypt and decrypt data, second phase is encryption, where actual process of conversion of plain text to cipher text is being carried out and third phase is decryption, where encrypted text is converted in to plain text at the other side.
 
 
@@ -667,12 +669,11 @@ Secure RSA prevents files from hackers and help safe transmission of files from 
 
 %Second is Henry Fayol, a French mining engineer whose work in directing one of France's most important mining operations led him to create complete theory of project management known as "Fayolism". Fayol identified the core functions and principles of management.
 
-\section{Related Work}
 Cryptography is a process which is associated with scrambling plaintext into cipher text, then back again to plain text. The key feature of asymmetric cryptography system is encryption and decryption procedure are done with two different keys - public key and private key. Private Key can not be derived with hep of public key that provides much strength to security of cryptography.
 
 This is one main difference between symmetric and asymmetric cryptography, but that difference makes whole process different. This difference is small but it is enough that it has implications throughout the security. Mainly, symmetric cryptography is seen as faster, more lightweight and better suited for applications that have a lot of data to transfer, while at the same time, it is known to be less secure and more open to wider areas of attacks because of maintenance for a private key required. This drawback is removed by asymmetric cryptographic algorithm discussed in following section.
 
-\subsection{Elliptic curve Cryptosystem (ECC)}
+\subsection{Elliptic curve Cryptosystem (ECC)\cite{ecc}}
 Over the past 30 years, public key cryptography has become a mainstay for secure communications over the Internet and throughout many other forms of communications. It provides the foundation for both key management and digital signatures. In key management, public key cryptography is used to distribute the secret keys used in other cryptographic algorithms (e.g. DES). For digital signatures, public key cryptography is used to authenticate the origin of data and protect the integrity of that data. For the past 20 years, Internet communications have been secured by the first generation of public key cryptographic algorithms developed in the mid-1970's. Notably, they form the basis for key management and authentication for IP encryption (IKE/IPSEC), web traffic (SSL/TLS) and secure electronic mail. 
 
 The majority of public key systems in use today use 1024-bit parameters for RSA and Diffie-Hellman. The US National Institute for Standards and Technology has recommended that these 1024-bit systems are sufficient for use until 2010. After that, NIST recommends that they be upgraded to something providing more security. The question is what should these systems be changed to? One option is to simply increase the public key parameter size to a level appropriate for another decade of use. Another option is to take advantage of the past 30 years of public key research and analysis and move from first generation public key algorithms and on to elliptic curves.
@@ -724,8 +725,9 @@ Following is the algorithm\cite{eratos}:
 
 
 The complexity of the algorithm is $O(n(\log n)(\log \log n))$\cite{sieve_complexity} bit operations with a memory requirement of $O(n)$.Time complexity in RAM machine model is $O(n\log \log n)$ operations; this is a direct consequence of the fact that the prime harmonic series asymptotically approaches $\frac{1}{(ln(\ln(N)))}$. The segmented version of the sieve of Eratosthenes, with basic optimizations, uses $O(n)$ operations and $O(n^{\frac{1}{2}}\log \log n / \log n)$ bits of memory.
-\subsection{Fermat's Little Theorem}
-"\emph{Let $p$ be a prime which does not divide the integer $a$, then $a^{p-1} = 1 \mod p$}". The result is trivial (both sides are zero) if $p$ divides $a$. If $p$ does not divide $a$, then we need only multiply the congruence in Fermat's Little Theorem by $a$ to complete the proof. This theorem satisfies only the subset of prime numbers since there are few composite numbers which also satisfy this property. Those numbers were discovered by Robert Carmichael. The smallest carmichael is 561 ($3 \times 11 \times 17$). In 1994 it was proved that there are infinite carmaichael numbers.
+
+\subsection{Fermat's Little Theorem\cite{fermat}}
+"\emph{Let $p$ be a prime which does not divide the integer $a$, then $a^{p-1} = 1 \mod p$}"\cite{fermat}. The result is trivial (both sides are zero) if $p$ divides $a$. If $p$ does not divide $a$, then we need only multiply the congruence in Fermat's Little Theorem by $a$ to complete the proof. This theorem satisfies only the subset of prime numbers since there are few composite numbers which also satisfy this property. Those numbers were discovered by Robert Carmichael. The smallest carmichael is 561 ($3 \times 11 \times 17$). In 1994 it was proved that there are infinite carmaichael numbers.
 
 \subsection{Gauss Theorem}
 Carl Friedrich Gauss considered the question of prime-counting function that gives the number of primes less than or equal to x, for any real number x which is as follows:
@@ -756,6 +758,26 @@ for example:
 		Li(1000000000) = 50849234
 	\end{align*}
 Error difference is just 1700
+
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+    	\hline
+       		$x$	&		$\pi(x)$					&	$\frac{x}{\log x}$		&	$Li(x)$\\
+	\hline
+    		$10^{4}$	&	1,229					&	1085.7				&	1246.1	\\
+		$10^{8}$	&	5,761,455					&	$5.42 \times 10^6$		&	$5.762 \times 10^6$	\\
+		$10^{12}$	&	37,607,912,018				&	$3.61 \times 10^10$		&	$3.760795  \times 10^10$		\\
+		$10^{16}$	&	279,238,341,033,925		&	$2.71 \times 10^14$		&	$2.79238344 \times 10^14$	\\
+		$10^{18}$	&	24,739,954,287,740,860		&	$2.41 \times 10^16$		&	$2.4739954309 \times 10^16$	\\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Prime numbers}
+	\label{table:gauss_values}
+
+\end{table}
+The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
 
 \section{Method}
 
@@ -830,14 +852,20 @@ MT19937 has to following statistical property which makes it preferable over oth
 \end{itemize}
 
 
-\subsection{Miller-Rabin Primality Test}
+\subsection{Miller-Rabin Primality Test\cite{miller-rabin}}
 In Miller-Rabin primality test the number to be tested say $p$ and $y$ be a non trivial square root of $1 (\mod p)$.\cite{miller-rabin} Then we must have that $y^{2} = 1 (\mod p)$ and so $(y-1)(y+1) = 0(\mod p)$. This implies that either $y = 1 \mod p$ or $y = -1 \mod p$, which implies that $y$ is a trivial square root.
 
 Thus, if there is a non trivial square root of $1 \mod p$, then $p$ has to composite. For an example of a non trivial square root of a composite, consider $p = 15$. We have that $4^{2} = 16 = 1 (\mod 15)$, thus 15 is composite. The fact about non trivial square roots can be used to prove that if $p$ is prime, then for any $a$ relatively prime to $p$, some power of $a$ from a given set of powers must be $-1$ or a specific odd power of $a$ must be $1$.
 
 If for some $a$ none of the above set of powers is $-1$ and the specific odd power is not 1, then it must be the fact that p is composite. It can also be shown that for composite $p$, the chances of finding such $a$ is at least $\frac{3}{4}$. This $a$ is the witness in the primality test and is not necessarily a non-trivial square root of $1 \mod p$.
 
+\subsubsection{Algorithm}
+Following is the algorithm:
 
+
+\parbox{\linewidth}{
+	\lstinputlisting[label = samplecode, firstline=1,lastline=33]{miller_rabin.py}
+}
  
 \subsection{Karatsuba Multiplication}
 \label{sec: karatsuba_code}
@@ -861,6 +889,14 @@ Assuming that we replace two of the multiplications with only one makes the prog
 \end{figure}
 
 
+
+\subsubsection{Algorithm}
+Following is the algorithm we followed to generate result for Karatsuba multiplication
+
+
+\parbox{\linewidth}{
+	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
+}
 
 \section{Results}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}

@@ -16,6 +16,11 @@ R.~Dhakar, A.~Gupta, and P.~Sharma.
 \newblock In {\em Advanced Computing Communication Technologies (ACCT), 2012
   Second International Conference on}, pages 426--429, Jan 2012.
 
+\bibitem{zeta_values}
+H.~M. Edwards.
+\newblock {\em Riemann's zeta function}.
+\newblock Dover Ed, June 2001.
+
 \bibitem{elgamal}
 K.~Huang and R.~Tso.
 \newblock A commutative encryption scheme based on elgamal encryption.
@@ -43,6 +48,10 @@ M.~Matsumoto and T.~Nishimura.
   pseudo-random number generator.
 \newblock {\em ACM Trans. Model. Comput. Simul.}, 8(1):3--30, Jan. 1998.
 
+\bibitem{ecc}
+J.~W. B. J. H. N. H. J. M.~M. Naehrig.
+\newblock Elliptic curve cryptography in practice.
+
 \bibitem{dss}
 U.~D. of~Commerce.
 \newblock Digital signature standard.
@@ -53,10 +62,16 @@ U.~D. of~Commerce.
 U.~of~Tennessee.
 \newblock Sieve of eratosthenes.
 
+\bibitem{fermat}
+J.~Robinson.
+\newblock Elaboration on history of fermat's theorem and implications of
+  euler's generalization by means of totien ttheorem.
+\newblock Master's thesis, University of Arizona, 2011.
+
 \bibitem{768_key}
 T.~K. K. A. J. F. A. K. L. E. T. J. W. B. P. G. A. K. P. L. M. D. A. O.~H.
   to~Riele; Andrey~Timofeev and P.~Zimmermann, editors.
-\newblock {\em Factorization of a 768-bit RSA modulus}, number 1.4, February
+\newblock {\em Factorization of a 768-bit RSA modulus}, volume 1.4, February
   2010.
 
 \bibitem{sieve_complexity}
