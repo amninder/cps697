@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -125,6 +125,14 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks17
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen121
+\extrarowheight=\dimen122
+\NC@list=\toks18
+\extratabsurround=\skip44
+\backup@length=\skip45
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -157,12 +165,12 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
 ))
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip44
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -170,12 +178,12 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks18
-\ex@=\dimen123
+\@emptytoks=\toks19
+\ex@=\dimen125
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen124
+\pmbraise@=\dimen126
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -192,7 +200,7 @@ LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
-\big@size=\dimen125
+\big@size=\dimen127
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count106
@@ -200,60 +208,54 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count108
 \dspbrk@lvl=\count109
-\tag@help=\toks19
+\tag@help=\toks20
 \row@=\count110
 \column@=\count111
 \maxfields@=\count112
-\andhelp@=\toks20
-\eqnshift@=\dimen126
-\alignsep@=\dimen127
-\tagshift@=\dimen128
-\tagwidth@=\dimen129
-\totwidth@=\dimen130
-\lineht@=\dimen131
-\@envbody=\toks21
-\multlinegap=\skip45
-\multlinetaggap=\skip46
-\mathdisplay@stack=\toks22
+\andhelp@=\toks21
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
+\@envbody=\toks22
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./Report.aux
-
-LaTeX Warning: Label `samplecode' multiply defined.
-
-
-LaTeX Warning: Label `samplecode' multiply defined.
-
-)
+(./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 398.
+LaTeX Font Info:    ... okay on input line 398.
 \c@lstlisting=\count113
- (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count114
-\scratchdimen=\dimen132
+\scratchdimen=\dimen134
 \scratchbox=\box31
 \nofMPsegments=\count115
 \nofMParguments=\count116
-\everyMPshowfont=\toks23
+\everyMPshowfont=\toks24
 \MPscratchCnt=\count117
-\MPscratchDim=\dimen133
+\MPscratchDim=\dimen135
 \MPnumerator=\count118
 \makeMPintoPDFobject=\count119
-\everyMPtoPDFconversion=\toks24
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -294,39 +296,73 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.jpeg,.png,.PNG,.eps]
+(grfext)             [.pdf,.jpeg,.png,.PNG,.GIF,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 498.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 499.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 498.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 499.
 
-Underfull \hbox (badness 3815) in paragraph at lines 515--518
+
+LaTeX Warning: Citation `6021216' on page 1 undefined on input line 504.
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 516--519
 []\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Cryptography, RSA, MT19937, Mers
 enne
  []
 
-** WARNING: \IEEEPARstart is locked out when in conference mode (line 553).
+** WARNING: \IEEEPARstart is locked out when in conference mode (line 554).
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 652.
+(Font)              <7> on input line 653.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 652.
+(Font)              <5> on input line 653.
+
+LaTeX Warning: Citation `6021216' on page 1 undefined on input line 661.
+
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+
+LaTeX Warning: Citation `ecc' on page 2 undefined on input line 677.
+
+
+LaTeX Warning: Citation `elgamal' on page 2 undefined on input line 685.
+
+
+LaTeX Warning: Citation `dss' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `dss' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `dss' on page 2 undefined on input line 693.
+
 Missing character: There is no Ð in font ptmr7t!
 
-[2] (./algo.py
+LaTeX Warning: Citation `diffie' on page 2 undefined on input line 709.
+
+
+LaTeX Warning: Citation `diffie' on page 2 undefined on input line 709.
+
+
+LaTeX Warning: Citation `diffie' on page 2 undefined on input line 709.
+
+[2]
+
+LaTeX Warning: Citation `eratos' on page 3 undefined on input line 720.
+
+(./algo.py
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 7.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
@@ -334,51 +370,123 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 724--725
+Overfull \hbox (10.0pt too wide) in paragraph at lines 725--726
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--728
+LaTeX Warning: Citation `sieve_complexity' on page 3 undefined on input line 72
+8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 []\OT1/ptm/m/n/10 The com-plex-ity of the al-go-rithm is
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 764.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 764.
 
-Overfull \hbox (9.16815pt too wide) in paragraph at lines 764--775
+Underfull \hbox (badness 2547) in paragraph at lines 728--729
+\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ([] \OML/c
+mm/m/it/10 n\OT1/cmr/m/n/10 )([] [] \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))$\OT1/p
+tm/m/n/10 [[]] bit op-er-a-tions with a mem-ory
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 728--729
+\OT1/ptm/m/n/10 model is $\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n
+ [] [] n\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 op-er-a-tions; this is a di-rect
+ []
+
+
+LaTeX Warning: Citation `fermat' on page 3 undefined on input line 730.
+
+
+LaTeX Warning: Citation `fermat' on page 3 undefined on input line 731.
+
+
+LaTeX Warning: Reference `eq:gauss1' on page 3 undefined on input line 743.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 765.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 765.
+
+Overfull \hbox (11.16812pt too wide) in paragraph at lines 765--776
  [] 
  []
 
+
+LaTeX Warning: Reference `table:gauss_values' on page 3 undefined on input line
+ 781.
+
+
+LaTeX Warning: Citation `zeta_values' on page 3 undefined on input line 781.
+
+
+LaTeX Warning: Citation `mrea' on page 3 undefined on input line 788.
+
 [3]
-Underfull \hbox (badness 3503) in paragraph at lines 850--851
+
+LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 815.
+
+
+LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 815
+.
+
+
+LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 815.
+
+
+LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 815
+.
+
+
+LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 836.
+
+
+LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 843.
+
+
+LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 843.
+
+
+LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 845.
+
+
+LaTeX Warning: Citation `wolfram_mt' on page 4 undefined on input line 849.
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 851--852
 []\OT1/ptm/b/n/10 Probability Den-sity Func-tion: $\OT1/cmr/m/n/10 2\OML/cmm/m/
 it/10 :\OT1/cmr/m/n/10 386863070221 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 850--851
+Underfull \hbox (badness 5924) in paragraph at lines 851--852
 \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OM
 S/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0728338266
 6440 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 []\OT1/ptm/b/n/10 Cumulative Dis-tribu-tive Func-tion (CDF):
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 851--852
+Underfull \hbox (badness 2293) in paragraph at lines 852--853
 []\OML/cmm/m/it/10 erfc\OT1/cmr/m/n/10 (4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2306
 04640398 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[](2\OML/cmm/m/it/10 :\OT1/cmr/
 m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
  []
 
+
+LaTeX Warning: Citation `miller-rabin' on page 4 undefined on input line 856.
+
+
+LaTeX Warning: Citation `miller-rabin' on page 4 undefined on input line 857.
+
 (./miller_rabin.py)
-Overfull \hbox (10.0pt too wide) in paragraph at lines 868--869
+Overfull \hbox (10.0pt too wide) in paragraph at lines 869--870
 []$[]$ 
  []
 
@@ -386,14 +494,33 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 868--869
 Underfull \vbox (badness 5862) has occurred while \output is active []
 
  [4]
+
+LaTeX Warning: Citation `karatsuba' on page 5 undefined on input line 873.
+
+
+LaTeX Warning: Reference `eq:eq1' on page 5 undefined on input line 880.
+
+
+LaTeX Warning: Reference `eq:eq2' on page 5 undefined on input line 891.
+
+
+LaTeX Warning: Citation `karatsuba' on page 5 undefined on input line 891.
+
+
+LaTeX Warning: Citation `378085' on page 5 undefined on input line 913.
+
+
+LaTeX Warning: Reference `fig:karatsube_image' on page 5 undefined on input lin
+e 915.
+
 <Karatsuba-Complexity.png, id=34, 602.25pt x 372.39125pt>
 File: Karatsuba-Complexity.png Graphic file (type png)
 
 <use Karatsuba-Complexity.png>
-Package pdftex.def Info: Karatsuba-Complexity.png used on input line 886.
+Package pdftex.def Info: Karatsuba-Complexity.png used on input line 919.
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 886--887
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 919--920
  [][] 
  []
 
@@ -408,89 +535,20 @@ Overfull \hbox (6.00262pt too wide) in paragraph at lines 230--231
  []
 
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 899--900
+Overfull \hbox (10.0pt too wide) in paragraph at lines 930--931
 []$[]$ 
  []
 
+[5 <./Karatsuba-Complexity.png (PNG copy)>]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `table:karatsubaVSgrade' on page 6 undefined on input 
+line 932.
 
- [5 <./Karatsuba-Complexity.png (PNG copy)>]
-<mt19937.png, id=38, 350.30875pt x 261.97874pt>
-File: mt19937.png Graphic file (type png)
- <use mt19937.png>
-Package pdftex.def Info: mt19937.png used on input line 906.
-(pdftex.def)             Requested size: 256.0748pt x 191.5187pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 906--907
- [][] 
- []
+LaTeX Warning: Reference `table:karatsubaVSgrade' on page 6 undefined on input 
+line 932.
 
-<mersenneTime.png, id=40, 722.7pt x 542.025pt>
-File: mersenneTime.png Graphic file (type png)
- <use mersenneTime.png>
-Package pdftex.def Info: mersenneTime.png used on input line 915.
-(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 915--916
- [][] 
- []
-
-[6 <./mt19937.png> <./mersenneTime.png>] (./Report.bbl
-Underfull \hbox (badness 2376) in paragraph at lines 46--50
-[]\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
- []
-
-)
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[7
-
-] (./Report.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 4193 strings out of 493315
- 62761 string characters out of 6137904
- 158155 words of memory out of 5000000
- 7579 multiletter control sequences out of 15000+600000
- 39875 words of font info for 73 fonts, out of 8000000 for 9000
- 960 hyphenation exceptions out of 8191
- 38i,10n,32p,1749b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
-mes/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (7 pages, 256098 bytes).
-PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!pdfTeX error: /usr/texbin/pdflatex (file ./karatsuba_gradeSchool.jpg): reading
+ JPEG image failed (no JPEG header found)
+ ==> Fatal error occurred, no output PDF file produced!

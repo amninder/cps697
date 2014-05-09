@@ -99,6 +99,7 @@
 
 \usepackage{listings}
 \usepackage{enumerate}
+\usepackage{array}
 \usepackage{url}
 
 
@@ -136,7 +137,7 @@
   \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  \DeclareGraphicsExtensions{.pdf,.jpeg,.png, .PNG}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png, .PNG, .GIF}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -869,7 +870,37 @@ Following is the algorithm:
  
 \subsection{Karatsuba Multiplication}
 \label{sec: karatsuba_code}
-Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods methods of integer multiplication beyond what we learnt in third grade and this is one of them. Taking an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
+Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods methods of integer multiplication beyond what we learnt in third grade and this is one of them. 
+
+To illustrate the algorithm, we let $X$ and $Y$ be two $2k$-bit unsigned integer and split them both in half
+\begin{align}
+X &= 2^{k}X_{1} + X_{0} \notag \\
+Y &= 2^{k}Y_{1} + Y_{0} 
+\end{align}
+In conventional long multiplication, the product $XY$ is computed with four $k$-bit multiplications and three additions as shown in Equation \ref{eq:eq1}
+
+\begin{align*}
+XY &= 2^{2k}z_{2} + 2^{k}z_{1} + z_{0}
+\end{align*}
+
+\begin{align}
+\label{eq:eq1}
+z_2 = X_{1}Y_{1}, z_{1} = X_{0}Y_{1} + X_{1}Y_{0}, z_{0} = X_{0}Y_{0}
+\end{align}
+
+As shown in Equation \ref{eq:eq2}, Karatsuba\cite{karatsuba} noticed that the middle term $z_1$ can be computed reusing the terms $z_2$ and $z_0$. Reusing these terms allow us to  replace two of the multiplications and one addition with four additions/subtractions and one multiplication
+
+\begin{align}
+z_{1} &=  X_{0}Y_{1} + X_{1}Y_{0} \notag\\
+&=  X_{1}Y_{1} + X_{0}Y_{0} - (X_{1} - X_{0})(Y_{1} - Y_{0}) \notag\\
+XY &= T_{1} - T_{2} \notag \\
+T_{1} &= 2^{2k}z_{2} + z_{0} + 2^{k}(z_{2} + z_{0}) \notag \\
+T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
+\label{eq:eq2}
+\end{align}
+
+
+Taking an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
 
 \begin{enumerate}[ {STEP }1{:} ]
 	\item Compute $a \times c = 672$
@@ -878,6 +909,8 @@ Karatsuba's algorithm for fast multiplication was first published in "\emph{Mult
 	\item Compute STEP 3 - STEP 2 - STEP 1 = 2840
 	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
 \end{enumerate}
+
+Also Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: chines remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
 
 Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast. Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen on the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
 
@@ -888,8 +921,6 @@ Assuming that we replace two of the multiplications with only one makes the prog
 \label{fig:karatsube_image}
 \end{figure}
 
-
-
 \subsubsection{Algorithm}
 Following is the algorithm we followed to generate result for Karatsuba multiplication
 
@@ -897,6 +928,36 @@ Following is the algorithm we followed to generate result for Karatsuba multipli
 \parbox{\linewidth}{
 	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
 }
+
+We measure the program and found the results for pairs of random \emph{n}-digit numbers. All times are in milliseconds. Table \ref{table:karatsubaVSgrade} and Figure \ref{table:karatsubaVSgrade} shows results we obtained.
+
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+    	\hline
+       		digits 	&		Karatsuba					&	Grade School Multiplication\\
+	\hline
+    		8		&		0.059923					&	0.063902 \\
+		16		&		0.006230					&	0.006141 \\
+		32		&		0.016622					&	0.017437 \\
+		64		&		0.048354					&	0.058411 \\
+		128		&		0.140272					&	0.212314 \\
+		256		&		0.437445					&	0.808407 \\
+		512		&		1.317523					&	3.164557 \\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Karatsube VS GradeSchool Multiplication}
+	\label{table:karatsubaVSgrade}
+
+\end{table}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{karatsuba_gradeSchool.jpg}
+\caption{Graph of results for Karatsuba and Grade School Multiplication}
+\label{fig:karatsubaVSgrade}
+\end{figure}
 
 \section{Results}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}

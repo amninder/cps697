@@ -68,6 +68,12 @@ J.~Robinson.
   euler's generalization by means of totien ttheorem.
 \newblock Master's thesis, University of Arizona, 2011.
 
+\bibitem{378085}
+M.~Shand and J.~Vuillemin.
+\newblock Fast implementations of rsa cryptography.
+\newblock In {\em Computer Arithmetic, 1993. Proceedings., 11th Symposium on},
+  pages 252--259, Jun 1993.
+
 \bibitem{768_key}
 T.~K. K. A. J. F. A. K. L. E. T. J. W. B. P. G. A. K. P. L. M. D. A. O.~H.
   to~Riele; Andrey~Timofeev and P.~Zimmermann, editors.
