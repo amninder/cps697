@@ -200,6 +200,8 @@
 %
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
 %\usepackage[noend]{algpseudocode}
 % algorithmic.sty was written by Peter Williams and Rogerio Brito.
 % This package provides an algorithmic environment fo describing algorithms.
@@ -860,10 +862,7 @@ In Miller-Rabin primality test the number to be tested say $p$ and $y$ be a non 
 
 Thus, if there is a non trivial square root of $1 \mod p$, then $p$ has to composite. For an example of a non trivial square root of a composite, consider $p = 15$. We have that $4^{2} = 16 = 1 (\mod 15)$, thus 15 is composite. The fact about non trivial square roots can be used to prove that if $p$ is prime, then for any $a$ relatively prime to $p$, some power of $a$ from a given set of powers must be $-1$ or a specific odd power of $a$ must be $1$.
 
-If for some $a$ none of the above set of powers is $-1$ and the specific odd power is not 1, then it must be the fact that p is composite. It can also be shown that for composite $p$, the chances of finding such $a$ is at least $\frac{3}{4}$. This $a$ is the witness in the primality test and is not necessarily a non-trivial square root of $1 \mod p$.
-
-\subsubsection{Algorithm}
-Following is the algorithm:
+If for some $a$ none of the above set of powers is $-1$ and the specific odd power is not 1, then it must be the fact that p is composite. It can also be shown that for composite $p$, the chances of finding such $a$ is at least $\frac{3}{4}$. This $a$ is the witness in the primality test and is not necessarily a non-trivial square root of $1 \mod p$. The algorithm is defined in Algorithm \ref{alg1}
 
 
 %\parbox{\linewidth}{
@@ -871,28 +870,31 @@ Following is the algorithm:
 %}
 
 \begin{algorithm}                      % enter the algorithm environment
-\caption{Calculate $y = x^n$}          % give the algorithm a caption
+\caption{Miller-Rabin Primality Algorithm}          % give the algorithm a caption
 \label{alg1}                           % and a label for \ref{} commands later in the document
 \begin{algorithmic}                    % enter the algorithmic environment
-    \REQUIRE $n \geq 0 \vee x \neq 0$
-    \ENSURE $y = x^n$
-    \STATE $y \Leftarrow 1$
-    \IF{$n < 0$}
-        \STATE $X \Leftarrow 1 / x$
-        \STATE $N \Leftarrow -n$
-    \ELSE
-        \STATE $X \Leftarrow x$
-        \STATE $N \Leftarrow n$
-    \ENDIF
-    \WHILE{$N \neq 0$}
-        \IF{$N$ is even}
-            \STATE $X \Leftarrow X \times X$
-            \STATE $N \Leftarrow N / 2$
-        \ELSE[$N$ is odd]
-            \STATE $y \Leftarrow y \times X$
-            \STATE $N \Leftarrow N - 1$
-        \ENDIF
-    \ENDWHILE
+    \REQUIRE $n>2$, an odd integer to be tested for primality; $k$, a parameter that determines the accuracy of the test
+    \ENSURE composite if $n$ is composite, otherwise probably prime.
+    
+   \STATE{write $n-1$ as $2^{s}d$ with $d$ odd by factoring powers of $2$ from $n-1$}
+   
+   \REPEAT
+   	\STATE {$x \leftarrow a^{d} \mod n$}
+	\IF{$x = 1$ \OR $x = n-1$}
+		\STATE{continue}
+	\ENDIF
+	\FOR{$r = 1 to s-1$}
+		\STATE{$x \leftarrow x^{2}\mod n$}
+		\IF{$x = 1$}
+			\RETURN{composite}
+		\ENDIF
+		\IF{$x = n-1$}
+			\STATE{do next loop}
+		\ENDIF
+	\ENDFOR
+	\RETURN{composite}
+   \UNTIL{k times}
+   \RETURN{probably prime}
 \end{algorithmic}
 \end{algorithm}
  

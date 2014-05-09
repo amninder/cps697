@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -253,24 +253,27 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip49
 \algorithmicindent=\skip50
 )
-(./Report.aux)
+(./Report.aux
+
+LaTeX Warning: Label `samplecode' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 402.
+LaTeX Font Info:    ... okay on input line 402.
 \c@lstlisting=\count119
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count120
 \scratchdimen=\dimen134
@@ -330,66 +333,32 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 501.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 503.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 501.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 503.
 
-
-LaTeX Warning: Citation `6021216' on page 1 undefined on input line 506.
-
-
-Underfull \hbox (badness 3815) in paragraph at lines 518--521
+Underfull \hbox (badness 3815) in paragraph at lines 520--523
 []\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Cryptography, RSA, MT19937, Mers
 enne
  []
 
-** WARNING: \IEEEPARstart is locked out when in conference mode (line 556).
+** WARNING: \IEEEPARstart is locked out when in conference mode (line 558).
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 655.
+(Font)              <7> on input line 657.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 655.
-
-LaTeX Warning: Citation `6021216' on page 1 undefined on input line 663.
-
+(Font)              <5> on input line 657.
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-
-LaTeX Warning: Citation `ecc' on page 2 undefined on input line 679.
-
-
-LaTeX Warning: Citation `elgamal' on page 2 undefined on input line 687.
-
-
-LaTeX Warning: Citation `dss' on page 2 undefined on input line 695.
-
-
-LaTeX Warning: Citation `dss' on page 2 undefined on input line 695.
-
-
-LaTeX Warning: Citation `dss' on page 2 undefined on input line 695.
-
 Missing character: There is no Ð in font ptmr7t!
 
-LaTeX Warning: Citation `diffie' on page 2 undefined on input line 711.
-
-
-LaTeX Warning: Citation `diffie' on page 2 undefined on input line 711.
-
-
-LaTeX Warning: Citation `diffie' on page 2 undefined on input line 711.
-
-[2]
-
-LaTeX Warning: Citation `eratos' on page 3 undefined on input line 722.
-
-(./algo.py
+[2] (./algo.py
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 7.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
@@ -397,149 +366,57 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 727--728
+Overfull \hbox (10.0pt too wide) in paragraph at lines 729--730
 []$[]$ 
  []
 
 
-LaTeX Warning: Citation `sieve_complexity' on page 3 undefined on input line 73
-0.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 730--731
+Underfull \hbox (badness 10000) in paragraph at lines 732--733
 []\OT1/ptm/m/n/10 The com-plex-ity of the al-go-rithm is
  []
 
-
-Underfull \hbox (badness 2547) in paragraph at lines 730--731
-\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ([] \OML/c
-mm/m/it/10 n\OT1/cmr/m/n/10 )([] [] \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))$\OT1/p
-tm/m/n/10 [[]] bit op-er-a-tions with a mem-ory
- []
-
-
-Underfull \hbox (badness 7613) in paragraph at lines 730--731
-\OT1/ptm/m/n/10 model is $\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n
- [] [] n\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 op-er-a-tions; this is a di-rect
- []
-
-
-LaTeX Warning: Citation `fermat' on page 3 undefined on input line 732.
-
-
-LaTeX Warning: Citation `fermat' on page 3 undefined on input line 733.
-
-
-LaTeX Warning: Reference `eq:gauss1' on page 3 undefined on input line 745.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 767.
+(Font)              <8> on input line 769.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 767.
+(Font)              <6> on input line 769.
 
-Overfull \hbox (11.16812pt too wide) in paragraph at lines 767--778
+Overfull \hbox (11.16812pt too wide) in paragraph at lines 769--780
  [] 
  []
 
-
-LaTeX Warning: Reference `table:gauss_values' on page 3 undefined on input line
- 783.
-
-
-LaTeX Warning: Citation `zeta_values' on page 3 undefined on input line 783.
-
-
-LaTeX Warning: Citation `mrea' on page 3 undefined on input line 790.
-
 [3]
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 817.
-
-
-LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 817
-.
-
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 817.
-
-
-LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 817
-.
-
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 838.
-
-
-LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 845.
-
-
-LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 845.
-
-
-LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 847.
-
-
-LaTeX Warning: Citation `wolfram_mt' on page 4 undefined on input line 851.
-
-
-Underfull \hbox (badness 3503) in paragraph at lines 853--854
+Underfull \hbox (badness 3503) in paragraph at lines 855--856
 []\OT1/ptm/b/n/10 Probability Den-sity Func-tion: $\OT1/cmr/m/n/10 2\OML/cmm/m/
 it/10 :\OT1/cmr/m/n/10 386863070221 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 853--854
+Underfull \hbox (badness 5924) in paragraph at lines 855--856
 \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OM
 S/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0728338266
 6440 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
+Underfull \hbox (badness 10000) in paragraph at lines 856--857
 []\OT1/ptm/b/n/10 Cumulative Dis-tribu-tive Func-tion (CDF):
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 854--855
+Underfull \hbox (badness 2293) in paragraph at lines 856--857
 []\OML/cmm/m/it/10 erfc\OT1/cmr/m/n/10 (4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2306
 04640398 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[](2\OML/cmm/m/it/10 :\OT1/cmr/
 m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
  []
 
-
-LaTeX Warning: Citation `miller-rabin' on page 4 undefined on input line 858.
-
-
-LaTeX Warning: Citation `miller-rabin' on page 4 undefined on input line 859.
-
-
-LaTeX Warning: Citation `karatsuba' on page 4 undefined on input line 902.
-
-[4]
-
-LaTeX Warning: Reference `eq:eq1' on page 5 undefined on input line 909.
-
-
-LaTeX Warning: Reference `eq:eq2' on page 5 undefined on input line 920.
-
-
-LaTeX Warning: Citation `karatsuba' on page 5 undefined on input line 920.
-
-
-LaTeX Warning: Citation `378085' on page 5 undefined on input line 942.
-
-
-LaTeX Warning: Reference `fig:karatsube_image' on page 5 undefined on input lin
-e 944.
-
-<Karatsuba-Complexity.png, id=34, 602.25pt x 372.39125pt>
+[4] <Karatsuba-Complexity.png, id=34, 602.25pt x 372.39125pt>
 File: Karatsuba-Complexity.png Graphic file (type png)
 
 <use Karatsuba-Complexity.png>
-Package pdftex.def Info: Karatsuba-Complexity.png used on input line 948.
+Package pdftex.def Info: Karatsuba-Complexity.png used on input line 950.
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 948--949
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 950--951
  [][] 
  []
 
@@ -554,7 +431,7 @@ Overfull \hbox (6.00262pt too wide) in paragraph at lines 230--231
  []
 
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 958--959
+Overfull \hbox (10.0pt too wide) in paragraph at lines 960--961
 []$[]$ 
  []
 
@@ -562,31 +439,16 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 958--959
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./Karatsuba-Complexity.png (PNG copy)>]
-
-LaTeX Warning: Reference `table:karatsubaVSgrade' on page 6 undefined on input 
-line 960.
-
-
-LaTeX Warning: Reference `table:karatsubaVSgrade' on page 6 undefined on input 
-line 960.
-
 <karatsubaVSgradeSchool.jpg, id=38, 722.7pt x 542.025pt>
 File: karatsubaVSgradeSchool.jpg Graphic file (type jpg)
 
 <use karatsubaVSgradeSchool.jpg>
-Package pdftex.def Info: karatsubaVSgradeSchool.jpg used on input line 985.
+Package pdftex.def Info: karatsubaVSgradeSchool.jpg used on input line 987.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 985--986
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 987--988
  [][] 
  []
-
-
-LaTeX Warning: Reference `fig:mersenne_performance' on page 6 undefined on inpu
-t line 992.
-
-
-LaTeX Warning: Citation `wolfram_mt' on page 6 undefined on input line 992.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -595,43 +457,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <mt19937.png, id=39, 350.30875pt x 261.97874pt>
 File: mt19937.png Graphic file (type png)
  <use mt19937.png>
-Package pdftex.def Info: mt19937.png used on input line 996.
+Package pdftex.def Info: mt19937.png used on input line 998.
 (pdftex.def)             Requested size: 256.0748pt x 191.5187pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 996--997
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 998--999
  [][] 
  []
-
-
-LaTeX Warning: Reference `fig:mersenne_time' on page 6 undefined on input line 
-1001.
 
 <mersenneTime.png, id=41, 722.7pt x 542.025pt>
 File: mersenneTime.png Graphic file (type png)
  <use mersenneTime.png>
-Package pdftex.def Info: mersenneTime.png used on input line 1005.
+Package pdftex.def Info: mersenneTime.png used on input line 1007.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1007--1008
  [][] 
  []
 
-
-LaTeX Warning: Citation `karatsuba_multiplication' on page 6 undefined on input
- line 1011.
-
-
-LaTeX Warning: Reference `sec: karatsuba_code' on page 6 undefined on input lin
-e 1011.
-
-[6 <./karatsubaVSgradeSchool.jpg> <./mt19937.png>]
-
-LaTeX Warning: Citation `768_key' on page 7 undefined on input line 1019.
-
-
-LaTeX Warning: Citation `768_key' on page 7 undefined on input line 1021.
-
-(./Report.bbl
+[6 <./karatsubaVSgradeSchool.jpg> <./mt19937.png>] (./Report.bbl
 Underfull \hbox (badness 2376) in paragraph at lines 46--50
 []\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
  []
@@ -650,20 +493,17 @@ Before submitting the final camera ready copy, remember to:
 
 [7 <./mersenneTime.png>] (./Report.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  4524 strings out of 493315
  66943 string characters out of 6137904
- 156145 words of memory out of 5000000
+ 157399 words of memory out of 5000000
  7895 multiletter control sequences out of 15000+600000
  39875 words of font info for 73 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 38i,10n,32p,1756b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,32p,1749b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -683,7 +523,7 @@ type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
 mes/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (7 pages, 286706 bytes).
+Output written on Report.pdf (7 pages, 285070 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
