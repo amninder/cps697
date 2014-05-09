@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{wolfram_mt}
+W.~Alpha.
+\newblock Statistical performance of mersenne twister mt19937.
+
 \bibitem{karatsuba_multiplication}
 G.~CESARI and R.~MAEDER.
 \newblock Performance analysis of the parallel karatsuba multiplication
@@ -27,6 +31,11 @@ E.~R.~R. Inc.
 A.~Karatsuba and Y.~Ofman.
 \newblock Multiplication of many-digital numbers by automatic computers.
 \newblock {\em Proceedings of USSR Academy of Sciences}, 145(7):293--294, 1962.
+
+\bibitem{miller-rabin}
+B.~Kleinberg.
+\newblock Introduction to algorithms (cs 482).
+\newblock {\em The Miller-Rabin Randomized Primality Test}, 05 2010.
 
 \bibitem{MT19937}
 M.~Matsumoto and T.~Nishimura.
