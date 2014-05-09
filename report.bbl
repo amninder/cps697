@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{karatsuba_multiplication}
+G.~CESARI and R.~MAEDER.
+\newblock Performance analysis of the parallel karatsuba multiplication
+  algorithm for distributed memory architectures.
+\newblock {\em Journal of Symbolic Computation}, 21(4--6):467 -- 473, 1996.
+
 \bibitem{mrea}
 R.~Dhakar, A.~Gupta, and P.~Sharma.
 \newblock Modified rsa encryption algorithm (mrea).
@@ -16,12 +22,6 @@ K.~Huang and R.~Tso.
 E.~R.~R. Inc.
 \newblock Diffie-hellman key agreement method.
 \newblock {\em The Internet Society}, 1999.
-
-\bibitem{securersa}
-R.~S. Jamgekar and G.~S. Joshi.
-\newblock File encryption and decryption using secure rsa.
-\newblock In {\em International Journal of Emergine Science and Engineering},
-  pages 426--429, February 2013.
 
 \bibitem{karatsuba}
 A.~Karatsuba and Y.~Ofman.
@@ -47,12 +47,6 @@ U.~of~Tennessee.
 \bibitem{sieve_complexity}
 P.~Univeristy.
 \newblock Sieve of eratosthenes.
-
-\bibitem{MTpseudocode}
-Wikipedia.
-\newblock Mersenne twister: Pseudocode.
-\newblock
-  \url{http://en.wikipedia.org/wiki/Mersenne_twister#Algorithmic_detail}.
 
 \bibitem{6021216}
 X.~Zhou and X.~Tang.

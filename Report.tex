@@ -651,6 +651,7 @@ To achieve security there are two ways in which we can achieve.
 	\item Strong secure protocol for transmission
 \end{itemize}
 
+\section{Background}
 There are two types of cryptographic algorithm to accomplish these goals: Symmetric and Asymmetric cryptography. The initial unencrypted dat is referred as normal text. RSA is (\emph{Rivest, Shamir \& Adleman}) is asymmetric cryptographic algorithm developed in 1977. It generated two keys: public key for encryption and private key to decrypt message. RSA encrypt and decrypt data, second phase is encryption, where actual process of conversion of plain text to cipher text is being carried out and third phase is decryption, where encrypted text is converted in to plain text at the other side.
 
 
@@ -659,12 +660,12 @@ Secure RSA prevents files from hackers and help safe transmission of files from 
 
 %This paper is organised as follows: Section \ref{sec:algorithm} explained the implementation of algorithm is explained. Pseudorandom number is generated using Mersenne Twister(MT19937)\cite{MT19937} which is explained in section \ref{sec:mersenne}. To enhance multiplication performance for larger number Karatsube Multiplication algorithm was used for which code is mentioned in section \ref{sec: karatsuba_code} but did not showed significant result for performance.
 
-\section{Background}
-"How many project do you have in your plate?" Project Management is a mean of reaching towards end, not only end but successful end. A successful development ways has become indispensible to the modern day software development society. Software development or Project management is a vast field and it is impossible to provide the lucid and concise definition in few pages. People used to manage projects in history too, taking an example of construction of pyramids, bread wall of China or Taj Mahal. Creating such wonder would not have been possible of those weren't managed and planned before construction. 
+%\section{Background}
+%"How many project do you have in your plate?" Project Management is a mean of reaching towards end, not only end but successful end. A successful development ways has become indispensible to the modern day software development society. Software development or Project management is a vast field and it is impossible to provide the lucid and concise definition in few pages. People used to manage projects in history too, taking an example of construction of pyramids, bread wall of China or Taj Mahal. Creating such wonder would not have been possible of those weren't managed and planned before construction. 
 
-Not just in history we can take example from the recent years when when Henry Ford managed to increase his production of cars with bread number just by introduction a simple drive belt from the butchery shop where instead of moving workers from different department to the car, car was sent to the workers which saved a lot of time and increased the production. 
+%Not just in history we can take example from the recent years when when Henry Ford managed to increase his production of cars with bread number just by introduction a simple drive belt from the butchery shop where instead of moving workers from different department to the car, car was sent to the workers which saved a lot of time and increased the production. 
 
-Second is Henry Fayol, a French mining engineer whose work in directing one of France's most important mining operations led him to create complete theory of project management known as "Fayolism". Fayol identified the core functions and principles of management.
+%Second is Henry Fayol, a French mining engineer whose work in directing one of France's most important mining operations led him to create complete theory of project management known as "Fayolism". Fayol identified the core functions and principles of management.
 
 \section{Related Work}
 Cryptography is a process which is associated with scrambling plaintext into cipher text, then back again to plain text. The key feature of asymmetric cryptography system is encryption and decryption procedure are done with two different keys - public key and private key. Private Key can not be derived with hep of public key that provides much strength to security of cryptography.
@@ -873,10 +874,17 @@ Our method for doing simple benchmarking and Mersenne Twister implementation gen
 \label{fig:mersenne_performance}
 \end{figure}
 
-%Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. Karatsuba Multiplication algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication but showed no significant performance. The paper\cite{securersa} shows algorithm using 32 bit keys to generate prime numbers but this algorithm works to generate keys of size unto 512 bit keys and showed significant performance.
+Also we tested to generation large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{mersenneTime.png}
+\caption{Time VS Mersenne Prime Number Generation}
+\label{fig:mersenne_time}
+\end{figure}
+%Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
 
-
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also showed significant performance. For key generation we worked to generate keys of size unto 512 bit keys and showed significant performance based on time of computation.
 
 {
 \bibliographystyle{abbrv} %plain; ieeetr; alpha

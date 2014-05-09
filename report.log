@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  8 MAY 2014 20:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  8 MAY 2014 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -332,48 +332,48 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 722--723
+Overfull \hbox (10.0pt too wide) in paragraph at lines 723--724
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
 []\OT1/ptm/m/n/10 The com-plex-ity of the al-go-rithm is
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 725--726
+Underfull \hbox (badness 2547) in paragraph at lines 726--727
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ([] \OML/c
 mm/m/it/10 n\OT1/cmr/m/n/10 )([] [] \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))$\OT1/p
 tm/m/n/10 [[]] bit op-er-a-tions with a mem-ory
  []
 
 
-Underfull \hbox (badness 7613) in paragraph at lines 725--726
+Underfull \hbox (badness 7613) in paragraph at lines 726--727
 \OT1/ptm/m/n/10 model is $\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n
  [] [] n\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 op-er-a-tions; this is a di-rect
  []
 
 [3]
-Underfull \hbox (badness 3503) in paragraph at lines 827--828
+Underfull \hbox (badness 3503) in paragraph at lines 828--829
 []\OT1/ptm/b/n/10 Probability Den-sity Func-tion: $\OT1/cmr/m/n/10 2\OML/cmm/m/
 it/10 :\OT1/cmr/m/n/10 386863070221 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 827--828
+Underfull \hbox (badness 5924) in paragraph at lines 828--829
 \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OM
 S/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0728338266
 6440 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 828--829
+Underfull \hbox (badness 10000) in paragraph at lines 829--830
 []\OT1/ptm/b/n/10 Cumulative Dis-tribu-tive Func-tion (CDF):
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 828--829
+Underfull \hbox (badness 2293) in paragraph at lines 829--830
 []\OML/cmm/m/it/10 erfc\OT1/cmr/m/n/10 (4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2306
 04640398 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[](2\OML/cmm/m/it/10 :\OT1/cmr/
 m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
@@ -383,20 +383,30 @@ m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
 File: Karatsuba-Complexity.png Graphic file (type png)
 
 <use Karatsuba-Complexity.png>
-Package pdftex.def Info: Karatsuba-Complexity.png used on input line 857.
+Package pdftex.def Info: Karatsuba-Complexity.png used on input line 858.
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 857--858
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 858--859
  [][] 
  []
 
 <mt19937.png, id=30, 350.30875pt x 261.97874pt>
 File: mt19937.png Graphic file (type png)
  <use mt19937.png>
-Package pdftex.def Info: mt19937.png used on input line 871.
+Package pdftex.def Info: mt19937.png used on input line 872.
 (pdftex.def)             Requested size: 256.0748pt x 191.5187pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 871--872
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 872--873
+ [][] 
+ []
+
+<mersenneTime.png, id=32, 722.7pt x 542.025pt>
+File: mersenneTime.png Graphic file (type png)
+ <use mersenneTime.png>
+Package pdftex.def Info: mersenneTime.png used on input line 881.
+(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 881--882
  [][] 
  []
 
@@ -405,10 +415,6 @@ Underfull \hbox (badness 2376) in paragraph at lines 32--36
 []\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 55.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 55.
 )
 
 ** Conference Paper **
@@ -421,35 +427,35 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./Karatsuba-Complexity.png (PNG copy)> <./mt19937.png>] (./Report.aux) ) 
+[5 <./Karatsuba-Complexity.png (PNG copy)> <./mt19937.png> <./mersenneTime.png>
+] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4150 strings out of 493488
- 62006 string characters out of 3141326
- 137076 words of memory out of 3000000
- 7399 multiletter control sequences out of 15000+200000
- 38658 words of font info for 72 fonts, out of 3000000 for 9000
+ 4140 strings out of 493488
+ 61974 string characters out of 3141326
+ 137080 words of memory out of 3000000
+ 7394 multiletter control sequences out of 15000+200000
+ 36328 words of font info for 65 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,9n,32p,1749b,1105s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/u
-sr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
-/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on Report.pdf (5 pages, 191469 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on Report.pdf (5 pages, 207275 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
