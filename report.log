@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  8 MAY 2014 23:00
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  8 MAY 2014 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -385,20 +385,20 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 858--859
 <mt19937.png, id=30, 350.30875pt x 261.97874pt>
 File: mt19937.png Graphic file (type png)
  <use mt19937.png>
-Package pdftex.def Info: mt19937.png used on input line 872.
+Package pdftex.def Info: mt19937.png used on input line 870.
 (pdftex.def)             Requested size: 256.0748pt x 191.5187pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 872--873
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 870--871
  [][] 
  []
 
 <mersenneTime.png, id=32, 722.7pt x 542.025pt>
 File: mersenneTime.png Graphic file (type png)
  <use mersenneTime.png>
-Package pdftex.def Info: mersenneTime.png used on input line 881.
+Package pdftex.def Info: mersenneTime.png used on input line 879.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 881--882
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
@@ -446,7 +446,7 @@ ive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (6 pages, 209040 bytes).
+Output written on Report.pdf (6 pages, 209230 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

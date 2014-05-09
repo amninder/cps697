@@ -498,7 +498,7 @@
 
 \begin{abstract}
 %\boldmath
-The RSA algorithm is generally 6 step algorithm and the security is based on the randomly selected 2 prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
+The Secure RSA algorithm\cite{6021216} is generally 6 step algorithm and the security is based on the randomly selected 2 prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
 
 This paper introduces the concept and implementation of RSA algorithm for security purpose. We will enhance the performance of the system by adding one more prime numbers to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be more secure to be decrypted by crypto analyst.
 \end{abstract}
@@ -851,7 +851,7 @@ Karatsuba's algorithm for fast multiplication was first published in "\emph{Mult
 	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
 \end{enumerate}
 
-Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast. Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which as you can see on the diagram below is much faster for big n.
+Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast. Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen on the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
 
 \begin{figure}[ht!]
 \centering
@@ -859,8 +859,6 @@ Assuming that we replace two of the multiplications with only one makes the prog
 \caption{Karatsuba Multiplication Performance}
 \label{fig:karatsube_image}
 \end{figure}
-
-Figure \ref{fig:karatsube_image} shows the performance of Karatsuba Multiplication over conventional multiplication.
 
 
 
