@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 14:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  9 MAY 2014 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -226,7 +226,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./Report.aux)
+(./Report.aux
+
+LaTeX Warning: Label `samplecode' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 398.
@@ -242,8 +246,7 @@ LaTeX Font Info:    ... okay on input line 398.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 398.
 LaTeX Font Info:    ... okay on input line 398.
 \c@lstlisting=\count113
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count114
 \scratchdimen=\dimen134
@@ -402,9 +405,6 @@ LaTeX Warning: Citation `fermat' on page 3 undefined on input line 730.
 
 LaTeX Warning: Citation `fermat' on page 3 undefined on input line 731.
 
-
-LaTeX Warning: Reference `eq:gauss1' on page 3 undefined on input line 743.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 765.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -415,33 +415,12 @@ Overfull \hbox (11.16812pt too wide) in paragraph at lines 765--776
  []
 
 
-LaTeX Warning: Reference `table:gauss_values' on page 3 undefined on input line
- 781.
-
-
 LaTeX Warning: Citation `zeta_values' on page 3 undefined on input line 781.
 
 
 LaTeX Warning: Citation `mrea' on page 3 undefined on input line 788.
 
 [3]
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 815.
-
-
-LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 815
-.
-
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 815.
-
-
-LaTeX Warning: Reference `sec:secureMrea' on page 4 undefined on input line 815
-.
-
-
-LaTeX Warning: Reference `itm:step6' on page 4 undefined on input line 836.
-
 
 LaTeX Warning: Citation `MT19937' on page 4 undefined on input line 843.
 
@@ -498,20 +477,10 @@ Underfull \vbox (badness 5862) has occurred while \output is active []
 LaTeX Warning: Citation `karatsuba' on page 5 undefined on input line 873.
 
 
-LaTeX Warning: Reference `eq:eq1' on page 5 undefined on input line 880.
-
-
-LaTeX Warning: Reference `eq:eq2' on page 5 undefined on input line 891.
-
-
 LaTeX Warning: Citation `karatsuba' on page 5 undefined on input line 891.
 
 
 LaTeX Warning: Citation `378085' on page 5 undefined on input line 913.
-
-
-LaTeX Warning: Reference `fig:karatsube_image' on page 5 undefined on input lin
-e 915.
 
 <Karatsuba-Complexity.png, id=34, 602.25pt x 372.39125pt>
 File: Karatsuba-Complexity.png Graphic file (type png)
@@ -548,7 +517,119 @@ line 932.
 LaTeX Warning: Reference `table:karatsubaVSgrade' on page 6 undefined on input 
 line 932.
 
+<karatsubaVSgradeSchool.jpg, id=38, 722.7pt x 542.025pt>
+File: karatsubaVSgradeSchool.jpg Graphic file (type jpg)
 
-!pdfTeX error: /usr/texbin/pdflatex (file ./karatsuba_gradeSchool.jpg): reading
- JPEG image failed (no JPEG header found)
- ==> Fatal error occurred, no output PDF file produced!
+<use karatsubaVSgradeSchool.jpg>
+Package pdftex.def Info: karatsubaVSgradeSchool.jpg used on input line 957.
+(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 957--958
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:mersenne_performance' on page 6 undefined on inpu
+t line 963.
+
+
+LaTeX Warning: Citation `wolfram_mt' on page 6 undefined on input line 963.
+
+
+Underfull \vbox (badness 4518) has occurred while \output is active []
+
+
+<mt19937.png, id=39, 350.30875pt x 261.97874pt>
+File: mt19937.png Graphic file (type png)
+ <use mt19937.png>
+Package pdftex.def Info: mt19937.png used on input line 967.
+(pdftex.def)             Requested size: 256.0748pt x 191.5187pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 967--968
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:mersenne_time' on page 6 undefined on input line 
+972.
+
+<mersenneTime.png, id=41, 722.7pt x 542.025pt>
+File: mersenneTime.png Graphic file (type png)
+ <use mersenneTime.png>
+Package pdftex.def Info: mersenneTime.png used on input line 976.
+(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 976--977
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `karatsuba_multiplication' on page 6 undefined on input
+ line 982.
+
+[6 <./karatsubaVSgradeSchool.jpg> <./mt19937.png>]
+
+LaTeX Warning: Citation `768_key' on page 7 undefined on input line 990.
+
+
+LaTeX Warning: Citation `768_key' on page 7 undefined on input line 992.
+
+(./Report.bbl
+Underfull \hbox (badness 2376) in paragraph at lines 46--50
+[]\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
+ []
+
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[7 <./mersenneTime.png>] (./Report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4247 strings out of 493315
+ 63496 string characters out of 6137904
+ 163809 words of memory out of 5000000
+ 7629 multiletter control sequences out of 15000+600000
+ 39875 words of font info for 73 fonts, out of 8000000 for 9000
+ 960 hyphenation exceptions out of 8191
+ 38i,10n,32p,1756b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
+mes/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8
+a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Report.pdf (7 pages, 286242 bytes).
+PDF statistics:
+ 112 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
