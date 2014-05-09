@@ -931,6 +931,38 @@ T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
 \end{align}
 
 
+\begin{algorithm}                      % enter the algorithm environment
+\caption{Karatsuba Multiplication}          % give the algorithm a caption
+\label{alg_karatsuba}                           % and a label for \ref{} commands later in the document
+\begin{algorithmic}                    % enter the algorithmic environment
+    \REQUIRE two large numbers $n_1$ and $n_2$
+    \ENSURE product of $n_1$ and $n_2$
+
+   %\STATE Function($n_1$, $n_2$)
+    \IF{$n_1 < 10$ \OR $n_1 < 10$}
+    	\RETURN{$n_1 \times n_2$}
+    \ENDIF
+    
+    \IF{$n_1 > n_2$}
+    	\STATE{$m = n_1$}
+    \ELSE
+    	\STATE{$m = n_2$}
+    \ENDIF
+    
+    \STATE{$m_2 = \frac{m}{2}$}
+    
+    \COMMENT{split the digit sequences about the middle}
+    \STATE{$high_1, low_1 = split\_at(n_1, m_2)$}
+    \STATE{$high_2, low_2 = split\_at(n_2, m_2)$}
+    
+    \STATE{$z_0 = karatsuba(low_1, low_2)$}
+    \STATE{$z_1 = karatsuba((low_1+high_1), (low_2+high_2))$}
+    \STATE{$z_0 = karatsuba(high_1, high_2)$}
+    \RETURN{$(z_2 \times 10^{2 \times m_2})+ ((z_1 - z_2 - z_0)\times 10^{m_2})+(z_0)$}
+\end{algorithmic}
+\end{algorithm}
+
+
 Taking an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
 
 \begin{enumerate}[ {STEP }1{:} ]
@@ -952,12 +984,11 @@ Assuming that we replace two of the multiplications with only one makes the prog
 \label{fig:karatsube_image}
 \end{figure}
 
-\subsubsection{Algorithm}
-Following is the algorithm we followed to generate result for Karatsuba multiplication
+The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
 
-\parbox{\linewidth}{
-	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
-}
+%\parbox{\linewidth}{
+%	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
+%}
 
 We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers. All times are in milliseconds and Table \ref{table:karatsubaVSgrade} and Figure \ref{table:karatsubaVSgrade} shows results we obtained.
 
