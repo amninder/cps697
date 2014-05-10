@@ -721,13 +721,34 @@ Eratosthenes gave a method to generate all prime numbers between 1 and n. The al
 \end{enumerate}
 Since the time complexity is very large for this algorithm, this method was not reasonable for this project.
 
-Following is the algorithm\cite{eratos}:
+The algorithm\cite{eratos} is defined in Algorithm\ref{alg_sieve}
 
-
-\parbox{\linewidth}{
-	\lstinputlisting[label = samplecode, firstline=1,lastline=13]{algo.py}
-}
-
+\begin{algorithm}
+\caption{Sieve of Eratosthenes}
+\label{alg_sieve}
+\begin{algorithmic}
+	\REQUIRE $n$
+	\ENSURE list of prime numbers
+	
+	\FOR{$i := 2 \text{ to } n$}
+		\STATE{$a\{i\} \leftarrow 1$}
+	\ENDFOR
+	
+	\STATE{$p \leftarrow 2$}
+	
+	\WHILE{$p^{2} < n$}
+		\STATE{$j \leftarrow p^{2}$}
+		\WHILE{$j < n$}
+			\STATE{$a\{j\} \leftarrow$}
+			\STATE{$j \leftarrow j+p$}
+		\ENDWHILE
+		\REPEAT
+			\STATE{$p \leftarrow p+1$}
+		\UNTIL{$a\{p\} \leftarrow 1$}
+	\ENDWHILE
+	\RETURN{$a$}
+\end{algorithmic}
+\end{algorithm}
 
 The complexity of the algorithm is $O(n(\log n)(\log \log n))$\cite{sieve_complexity} bit operations with a memory requirement of $O(n)$.Time complexity in RAM machine model is $O(n\log \log n)$ operations; this is a direct consequence of the fact that the prime harmonic series asymptotically approaches $\frac{1}{(ln(\ln(N)))}$. The segmented version of the sieve of Eratosthenes, with basic optimizations, uses $O(n)$ operations and $O(n^{\frac{1}{2}}\log \log n / \log n)$ bits of memory.
 
@@ -791,6 +812,13 @@ The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\ci
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
 
  It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behaviour of the randomness. The main point of of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}. The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/plotRandomNumber.pdf}
+\caption{Normal Distribution of Random Number Generator}
+\label{fig:plotRandomNumber}
+\end{figure}
  
  The MT19937 algorithm is inherently 32-bit, but works nicely on 64-bit systems. While it uses the all 32 bits to express pseudo-random numbers, rand() does not. By design it will only return numbers in the range 0 ... INT32\_MAX, effectively using only 31 bits of randomness. This is a well known point of criticism for rand(). This assumes that the compiler is using two's complement for encoding negative numbers.
 
@@ -923,7 +951,7 @@ Assuming that we replace two of the multiplications with only one makes the prog
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{Karatsuba-Complexity.png}
+\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
 \caption{Karatsuba Multiplication Performance}
 \label{fig:karatsube_image}
 \end{figure}
@@ -959,7 +987,7 @@ We measured the program and found the results of multiplication for pairs of ran
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{karatsubaVSgradeSchool.jpg}
+\includegraphics[width=90mm]{images/karatsubaVSgradeSchool.jpg}
 \caption{Graph of results for Karatsuba and Grade School Multiplication}
 \label{fig:karatsubaVSgrade}
 \end{figure}
@@ -1028,16 +1056,16 @@ Our method for doing simple benchmarking and Mersenne Twister implementation gen
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{mt19937.png}
+\includegraphics[width=90mm]{images/Rplot.pdf}
 \caption{Mersenne Twister 19937 Performance}
 \label{fig:mersenne_performance}
 \end{figure}
 
-Also we tested to generation large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes.
+Also we tested to generation large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes. To find the normal distribution for prime numbers generated using MT19937 we generated 31 sets of 100, 200, 300, 400, 500, 600 and 700 numbers. We found that on average our system is generating somewhat 216 random prime numbers per second with the standard of almost 14. The normal distribution of the result is shown in Figure \ref{fig:mersenne_performance}.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{mersenneTime.png}
+\includegraphics[width=90mm]{images/mersenneTime.png}
 \caption{Time VS Mersenne Prime Number Generation}
 \label{fig:mersenne_time}
 \end{figure}
