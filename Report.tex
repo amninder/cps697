@@ -507,7 +507,7 @@
 %\boldmath
 The Secure RSA algorithm\cite{6021216} is generally 6 step algorithm and the security is based on the randomly selected 2 prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
 
-This paper introduces the concept and implementation of RSA algorithm for security purpose. We will enhance the performance of the system by adding one more prime numbers to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be more secure to be decrypted by crypto analyst.
+This paper introduces the concept and implementation of RSA algorithm for security purpose, Mersenne Twister for generating pseudorandom number with large key space and faster primality test to generate prime number. We will enhance the performance of the system by adding one more prime numbers to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be faster to encrypt and more secure to be decrypted by crypto analyst.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -929,7 +929,7 @@ Mersenne Twister implementations cannot be parallelized across parallel computin
 Figure \ref{fig:cdf_mersenne} shows the Cummulative Density Function (which is defined by $F(x) = P(X\leq x)$) graph for the random number generator with mean of 4600 and standard deviation of almost 74. 
 
 
-MT19937 has to following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
+MT19937 has the following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
 \begin{itemize}
 	\item {\bf Probability Density Function: }\\
 		$0.00535134e^{-0.0000899652 (x-4599.84)^{2}}$

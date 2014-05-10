@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 MAY 2014 18:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 MAY 2014 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -497,7 +497,7 @@ s/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (9 pages, 476581 bytes).
+Output written on Report.pdf (9 pages, 476660 bytes).
 PDF statistics:
  250 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams
