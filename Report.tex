@@ -822,6 +822,13 @@ The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by f
  
  The MT19937 algorithm is inherently 32-bit, but works nicely on 64-bit systems. While it uses the all 32 bits to express pseudo-random numbers, rand() does not. By design it will only return numbers in the range 0 ... INT32\_MAX, effectively using only 31 bits of randomness. This is a well known point of criticism for rand(). This assumes that the compiler is using two's complement for encoding negative numbers.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/cdf_mersenne.jpeg}
+\caption{Cumulative Density Function}
+\label{fig:cdf_mersenne}
+\end{figure}
+
 MT19937 has to following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
 \begin{itemize}
 	\item {\bf Probability Density Function: }$2.386863070221 \times 10^{-7}e^{-1.78980156233 \times 10^{-13}}(x-2.07283382666440 \times 10^{8})^{2}$

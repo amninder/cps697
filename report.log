@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 MAY 2014 13:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 MAY 2014 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -389,26 +389,37 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 818--819
  [][] 
  []
 
+<images/cdf_mersenne.jpeg, id=30, 200.75pt x 126.4725pt>
+File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
-Underfull \hbox (badness 3503) in paragraph at lines 827--828
+<use images/cdf_mersenne.jpeg>
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 827.
+(pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 827--828
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 834--835
 []\OT1/ptm/b/n/10 Probability Den-sity Func-tion: $\OT1/cmr/m/n/10 2\OML/cmm/m/
 it/10 :\OT1/cmr/m/n/10 386863070221 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 827--828
+Underfull \hbox (badness 5924) in paragraph at lines 834--835
 \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OM
 S/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0728338266
 6440 \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 828--829
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
 []\OT1/ptm/b/n/10 Cumulative Dis-tribu-tive Func-tion (CDF):
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 828--829
+Underfull \hbox (badness 2293) in paragraph at lines 835--836
 []\OML/cmm/m/it/10 erfc\OT1/cmr/m/n/10 (4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2306
 04640398 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[](2\OML/cmm/m/it/10 :\OT1/cmr/
 m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
@@ -417,60 +428,59 @@ m/n/10 07283382666440 \OMS/cmsy/m/n/10 ^^B
 
 Underfull \vbox (badness 1237) has occurred while \output is active []
 
- [4 <./images/plotRandomNumber.pdf>]
-<images/Karatsuba-Complexity.png, id=103, 602.25pt x 372.39125pt>
+ [4 <./images/plotRandomNumber.pdf> <./images/cdf_mersenne.jpeg>]
+<images/Karatsuba-Complexity.png, id=104, 602.25pt x 372.39125pt>
 File: images/Karatsuba-Complexity.png Graphic file (type png)
 
 <use images/Karatsuba-Complexity.png>
-Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 954
+Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 961
 .
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 954--955
- [][] 
- []
-
-<images/karatsubaVSgradeSchool.jpg, id=104, 722.7pt x 542.025pt>
-File: images/karatsubaVSgradeSchool.jpg Graphic file (type jpg)
-
-<use images/karatsubaVSgradeSchool.jpg>
-Package pdftex.def Info: images/karatsubaVSgradeSchool.jpg used on input line 9
-90.
-(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
-
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 990--991
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 961--962
  [][] 
  []
 
 [5 <./images/Karatsuba-Complexity.png (PNG copy)>]
-<images/Rplot.pdf, id=108, 506.21703pt x 506.21703pt>
-File: images/Rplot.pdf Graphic file (type pdf)
- <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1059.
-(pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
+<images/karatsubaVSgradeSchool.jpg, id=108, 722.7pt x 542.025pt>
+File: images/karatsubaVSgradeSchool.jpg Graphic file (type jpg)
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1059--1060
+<use images/karatsubaVSgradeSchool.jpg>
+Package pdftex.def Info: images/karatsubaVSgradeSchool.jpg used on input line 9
+97.
+(pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 997--998
  [][] 
  []
 
-[6 <./images/karatsubaVSgradeSchool.jpg> <./images/Rplot.pdf>]
-<images/mersenneTime.png, id=179, 722.7pt x 542.025pt>
+<images/Rplot.pdf, id=109, 506.21703pt x 506.21703pt>
+File: images/Rplot.pdf Graphic file (type pdf)
+ <use images/Rplot.pdf>
+Package pdftex.def Info: images/Rplot.pdf used on input line 1066.
+(pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1066--1067
+ [][] 
+ []
+
+<images/mersenneTime.png, id=110, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1068.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1075.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1068--1069
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1075--1076
  [][] 
  []
 
-(./Report.bbl
+[6 <./images/karatsubaVSgradeSchool.jpg>] (./Report.bbl
 Underfull \hbox (badness 2376) in paragraph at lines 46--50
 []\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
  []
 
-)
+[7 <./images/Rplot.pdf> <./images/mersenneTime.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -482,39 +492,41 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7 <./images/mersenneTime.png>] (./Report.aux) ) 
+[8
+
+] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4485 strings out of 493488
- 66424 string characters out of 3141326
- 138376 words of memory out of 3000000
- 7719 multiletter control sequences out of 15000+200000
+ 4492 strings out of 493488
+ 66578 string characters out of 3141326
+ 139384 words of memory out of 3000000
+ 7724 multiletter control sequences out of 15000+200000
  39875 words of font info for 73 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,10n,32p,1749b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-
-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (7 pages, 466931 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on Report.pdf (8 pages, 473052 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 251 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
