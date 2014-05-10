@@ -1052,7 +1052,7 @@ d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
 
 \section{Results}
 
-Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
+Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
 
 \begin{figure}[ht!]
 \centering
@@ -1070,6 +1070,7 @@ Also we tested to generation large prime number and our system showed significan
 \label{fig:mersenne_time}
 \end{figure}
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
+Also, We found that our system performed significant number random numbers with an average of 4600 random numbers per second with standard deviation of just 74 (\emph{i.e} 74 numbers away from average random number generation).
 
 Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
