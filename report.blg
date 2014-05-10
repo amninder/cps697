@@ -1,46 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
-You've used 17 entries,
+Warning--entry type for "lcg_cdf" isn't style-file defined
+--line 12 of file ref.bib
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            592 strings with 6072 characters,
-and the built_in function-call counts, 5066 in all, are:
-= -- 488
-> -- 173
+            596 strings with 6164 characters,
+and the built_in function-call counts, 5263 in all, are:
+= -- 505
+> -- 180
 < -- 7
-+ -- 70
-- -- 52
-* -- 281
-:= -- 797
-add.period$ -- 46
-call.type$ -- 17
-change.case$ -- 75
++ -- 73
+- -- 54
+* -- 287
+:= -- 829
+add.period$ -- 48
+call.type$ -- 18
+change.case$ -- 79
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 226
-empty$ -- 459
-format.name$ -- 52
-if$ -- 1116
+cite$ -- 18
+duplicate$ -- 233
+empty$ -- 481
+format.name$ -- 54
+if$ -- 1159
 int.to.chr$ -- 0
-int.to.str$ -- 17
+int.to.str$ -- 18
 missing$ -- 12
-newline$ -- 83
-num.names$ -- 35
-pop$ -- 103
+newline$ -- 87
+num.names$ -- 37
+pop$ -- 112
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 63
 quote$ -- 0
-skip$ -- 204
+skip$ -- 212
 stack$ -- 0
-substring$ -- 296
-swap$ -- 70
+substring$ -- 301
+swap$ -- 71
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 65
+type$ -- 69
 warning$ -- 0
-while$ -- 49
-width$ -- 19
-write$ -- 169
+while$ -- 51
+width$ -- 20
+write$ -- 177
+(There was 1 warning)

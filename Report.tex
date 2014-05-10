@@ -820,8 +820,104 @@ The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by f
 \label{fig:plotRandomNumber}
 \end{figure}
  
- The MT19937 algorithm is inherently 32-bit, but works nicely on 64-bit systems. While it uses the all 32 bits to express pseudo-random numbers, rand() does not. By design it will only return numbers in the range 0 ... INT32\_MAX, effectively using only 31 bits of randomness. This is a well known point of criticism for rand(). This assumes that the compiler is using two's complement for encoding negative numbers.
+ %The MT19937 algorithm is inherently 32-bit, but works nicely on 64-bit systems. While it uses the all 32 bits to express pseudo-random numbers, rand() does not. By design it will only return numbers in the range 0 ... INT32\_MAX, effectively using only 31 bits of randomness. This is a well known point of criticism for rand(). This assumes that the compiler is using two's complement for encoding negative numbers.
+ 
+The MT19937 generates sequence of word vectors, which are considered uniform pseudorandom integers between $0$ and $(2^{w}-1)$\cite{MT19937}. Dividing by $2^{w}-1$, each word vector can be a real number in $[0, 1]$. With the restriction that $2^{nw-r}-1$ is a Mersenne prime. For a word $x$ with $w$ bit width, it is expressed as the recurrence relation:
+\begin{equation}
+\label{eq:mersenne_recc}
+x_{k+n} =  x_{k+m} \oplus (x^{u}_{k} | x^{l}_{k+1})A; k=0,1,2.....
+\end{equation}
+In Equation \ref{eq:mersenne_recc} $|$ represent as the bitwise OR and $\oplus$ represent as the bitwise exclusive or XOR, $x_w, x_l$ being $x$ with upper and lower bit masks applied. We choose a form of a matrix $A$ so that multiplication by $A$ is very fast:
+\begin{align}
+A = R = \begin{pmatrix} 0 & I_{w-1} \\ a_{w-1} & (a_{w-2},.....a_{0}) \end{pmatrix} 
+\end{align}
+With $I_{n-1}$ as the $(n-1) \times (n-1)$ identity matrix (and in contrast to normal matrix multiplication, bitwise XOR replaces addition). The rational normal form has the benefit that it can be efficiently expressed as:
+\begin{align}
+xA = \begin{cases}
+	ShiftRight(x), & \text{if $x_0 = 0$}.\\
+    	ShifrRight(x)\oplus a, & \text{if $x_{0} = 1$}.
+	\end{cases}
+\end{align}
+Where
+\begin{align}
+x = (x^{u}_{k} | x^{l}_{k+1}); k = 0, 1, 2, .....
+\end{align}
+and
+\begin{align*}
+a &= (a_{w-1}, a_{w-2}, ......, a_{0}) \\
+%x &= (x_{w-1}, x_{w-2}, ......, x_{0})
+\end{align*}
 
+
+To improve $k$-distribution to $v$-bit accuracy, we multiply each generated word by a suitable $w \times w$ invertible matrix $T$ from the right. For the tempering $r \rightarrow z = xT$, we chose the following successive transformations:
+\begin{align}
+y &= x \oplus (x>>u) \\
+y &= x \oplus (x<<s) \text{ AND } b \\
+y &= x \oplus (y << t) \text{ AND } c \\
+y &= x \oplus (x >> l)
+\end{align}
+With $<< \text{ and }>>$ as the bitwise left and right shifts and $\&$ as the bitwise AND. The first and last transforms are added in order to improve lower bit equidistribution. From the property of TGFSR, $s+t \geq \lfloor \frac{w}{2}\rfloor -1$ is required to reach the upper bound of equidistribution for the upper bits. \\*
+According to MT19937\cite{MT19937} The coefficients are:
+\begin{align}
+(w,n,m,r) &= (32, 624, 397, 31) \notag \\
+a &= 9908B0DF_{16} \notag\\
+u &= 11 \notag \\
+(s, b) &= (7, 9D2C5680_{16}) \notag \\
+(t, c) &= (15, EFC60000_{16}) \notag \\
+l &= 18
+\label{eq:mersenne_table_values}
+\end{align}
+The algorithm for Equation \ref{eq:mersenne_recc} through Equation \ref{eq:mersenne_table_values} can be summarized in Algorithm \ref{alg_mersenne_twister} which is derived from "\emph{Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorndom number generator}"\cite{MT19937}.
+
+\begin{algorithm}                      % enter the algorithm environment
+\caption{Mersenne-Twister}
+\label{alg_mersenne_twister}                           % and a label for \ref{} commands later in the document
+\begin{algorithmic}                    % enter the algorithmic environment
+   %\REQUIRE $n>2$, an odd integer to be tested for primality; $k$, a parameter that determines the accuracy of the test
+    
+    %\ENSURE composite if $n$ is composite, otherwise probably prime.
+    
+    \STATE {\bf Step0: } \\
+    $u \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bitmast of upper w-r})$ \\ 
+    $ll \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bit mast of lower r bits})$ \\
+    $a \leftarrow a_{w-1}a_{w-2}a_{w-3}...a_{2}a_{1}$
+    
+    \STATE {\bf Step1: }\\
+    $i \leftarrow 0$ \\
+    $x[0], x[1], x[2].....x[n-1]\leftarrow \text{ "any non-zero initial values"}$
+    
+    \STATE {\bf Step2: }\\
+    $y \leftarrow (x[i] \text{ AND }u) \text{ OR } (x[(i+1) \mod n] \text{ AND }ll)$ \\
+    
+    \STATE {\bf Step3: }
+    $x[i] \leftarrow x[(i+m) \mod n] \text{ XOR } (y>>1)$ \\
+    	$
+		\text{ XOR } \begin{cases}
+					0, & \text{if least significant bit of y=0}.\\
+    					a, & \text{if least significant bit of y = 1}.
+				\end{cases}
+    	$
+    
+    \STATE {\bf Step4: } calculate $x[i]T$ \\ 
+    \begin{align*}
+    	y &\leftarrow x[i]\\
+	y &\leftarrow y \text{ XOR } (y>>u) \\
+	y &\leftarrow y \text{ XOR } ((y<<s) \text{ AND } b) \\
+	y &\leftarrow y \text{ XOR } ((y << t) \text{ AND } c) \\
+	y &\leftarrow y \text{ XOR } (y >> l)
+\end{align*}
+    
+    \STATE {\bf Step5: } \\
+    \begin{align*}
+    	i \leftarrow (i+1) \mod n
+    \end{align*}
+    
+    \STATE {\bf Step6: }Goto {\bf Step2}
+\end{algorithmic}
+\end{algorithm}
+Also, the authors of MT19937\cite{MT19937} mentioned for Equation \ref{eq:mersenne_table_values} that "\emph{If $r=0$, then this recurrence reduces to the previous TGFSR}" which was the reason we included this version of algorithm in our work and change the value of $r$ to user's need.
+
+Mersenne Twister implementations cannot be parallelized across parallel computing cores simply through changing the initial seed for each core as this does not provide uncorrelated sequences on each generator sharing identical parameters. To solve this problem and enable Mersenne twister parallel implementations, the authors of MT19937\cite{MT19937} developed a library for the dynamic creation of Mersenne Twister parameters. This library receives user's specification such as word length, period, size of working area and a process ID, so that ID number is encoded in the characteristic polynomial of Mersenne Twister.
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{images/cdf_mersenne.jpeg}
@@ -829,10 +925,16 @@ The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by f
 \label{fig:cdf_mersenne}
 \end{figure}
 
+
+Figure \ref{fig:cdf_mersenne} shows the Cummulative Density Function (which is defined by $F(x) = P(X\leq x)$) graph for the random number generator with mean of 4600 and standard deviation of almost 74. 
+
+
 MT19937 has to following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
 \begin{itemize}
-	\item {\bf Probability Density Function: }$2.386863070221 \times 10^{-7}e^{-1.78980156233 \times 10^{-13}}(x-2.07283382666440 \times 10^{8})^{2}$
-	\item {\bf Cumulative Distributive Function (CDF): }$\frac{1}{2}erfc(4.230604640398 \times 10^{-7} (2.07283382666440 \times 10^{8}-x))$
+	\item {\bf Probability Density Function: }\\
+		$0.00535134e^{-0.0000899652 (x-4599.84)^{2}}$
+	\item {\bf Cumulative Distributive Function (CDF): }\\
+		$\frac{1}{2}erfc(0.009485(4599.84-x))$
 \end{itemize}
 
 
@@ -1059,7 +1161,8 @@ d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
 
 \section{Results}
 
-Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 200 million pseudo-random numbers per second which is very large. The other implementations we performed around 180M numbers/second, which is significant either. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}
+\subsection{Random Numbers}
+Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The other implementations we performed around 4600 numbers/second, which is significant either. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
 
 \begin{figure}[ht!]
 \centering
@@ -1077,10 +1180,12 @@ Also we tested to generation large prime number and our system showed significan
 \label{fig:mersenne_time}
 \end{figure}
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
-Also, We found that our system performed significant number random numbers with an average of 4600 random numbers per second with standard deviation of just 74 (\emph{i.e} 74 numbers away from average random number generation).
 
+
+\subsection{Large Multiplication}
 Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
+\subsection{Encryption \& Decryption}
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
 
 

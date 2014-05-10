@@ -4,6 +4,10 @@
 W.~Alpha.
 \newblock Statistical performance of mersenne twister mt19937.
 
+\bibitem{lcg_cdf}
+D.~Biebighauser.
+\newblock Testing random number generators, 2000.
+
 \bibitem{karatsuba_multiplication}
 G.~CESARI and R.~MAEDER.
 \newblock Performance analysis of the parallel karatsuba multiplication
