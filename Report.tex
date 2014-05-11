@@ -694,7 +694,7 @@ The ElGamal System \cite{elgamal} provides an alternative to rya for public key 
 The ElGamal signature algorithm is similar to encryption algorithm in that the public key and private key have the same form; however encryption is not the same as signature verification, nor is decryption the same as signature creation. Signature creation depends on the ElGamal signature algorithm. The main disadvantage of ElGamal is the need for randomness and it's slower speed.  ElGamal has the disadvantage that the cipher text is twice as long as the plain text. ElGamal is not semantically secure.
 
 \subsection{DSS (Digital Signature Standard)}
-A digital signature is represented in a computer as a string of binary digits. A digital signature\cite{dss} is computed using a set of rules and a set of parameters such that the identity of the signatory and integrity of the data can be verified. An algorithm provides capability to generate and verify signatures. Signature generation\cite{dss} makes use of a private key to generate a digital signature. Signature verification\cite{dss} makes use of a public key which corresponds to, but is not the same as, the private key. Each user possesses a private and public key pair. Public key are assumed to be known to the public in general. Private keys are never shared. Anyone can verify the signature of a user by employing the user's public key. Signature generation can be performed only by the possessor of the private key.
+A digital signature is represented in a computer as a string of binary digits\cite{dss}. A digital signature is computed using a set of rules and a set of parameters such that the identity of the signatory and integrity of the data can be verified. An algorithm provides capability to generate and verify signatures. Signature generation\cite{dss} makes use of a private key to generate a digital signature. Signature verification\cite{dss} makes use of a public key which corresponds to, but is not the same as, the private key. Each user possesses a private and public key pair. Public key are assumed to be known to the public in general. Private keys are never shared. Anyone can verify the signature of a user by employing the user's public key. Signature generation can be performed only by the possessor of the private key.
 
 The advantages of this system are
 \begin{itemize}
@@ -710,10 +710,10 @@ Drawbacks of DSS are
 \end{itemize}
 
 \subsection{Diffie-Hellman key agreement protocol}
-Although Diffie–Hellman key agreement itself is an anonymous (non-authenticated) key-agreement protocol, it provides the basis for a variety of authenticated protocols, and is used to provide perfect forward secrecy in Transport Layer Security's ephemeral modes (referred to as EDH or DHE depending on the cipher suite). In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. \cite{diffie} A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. Secure Sockets Layer (SSL)/Transport Layer Security (TLS), Diffie-Hellman protocol is used in Secure Shell (SSH), Internet Protocol Security (IPSec), Public Key Infrastructure (PKI).
+Although Diffie-Hellman\cite{diffie} key agreement itself is an anonymous (non-authenticated) key-agreement protocol, it provides the basis for a variety of authenticated protocols, and is used to provide perfect forward secrecy in Transport Layer Security's ephemeral modes (referred to as EDH or DHE depending on the cipher suite). In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. \cite{diffie} A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. Secure Sockets Layer (SSL)/Transport Layer Security (TLS), Diffie-Hellman protocol is used in Secure Shell (SSH), Internet Protocol Security (IPSec), Public Key Infrastructure (PKI).
 
 \subsection{The Sieve of Eratosthenes}
-Eratosthenes gave a method to generate all prime numbers between 1 and n. The algorithm is as follows:
+Eratosthenes gave a method to generate all prime numbers between 1 and n.\cite{sieve_complexity} The algorithm is as follows:
 \begin{enumerate}[ {STEP }1{:}]
 \item Write down all numbers from 2 to $n$.
 \item Take the first uncrossed number, say $P$ and cross all multiple of $P$, except $P$.
@@ -1146,6 +1146,7 @@ Secure RSA file transmission can be summarized as follows:
 	\item \emph{ Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
 	\item \emph{ Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
 	\item \emph{Choose an integer $e, 1 < e < \phi$, such that GCD($e, \phi$) = 1}
+		\label{itm:step3}
 	\item \emph{Compute the secret exponent $d, 1 < d < \phi$, such that $e \times d (\mod \phi) = 1$}
 		\label{itm:step6}
 	\item \emph{Select an integer $g = m+1$}
@@ -1165,6 +1166,14 @@ Compute origin message:
 	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
 \end{center}
 
+
+For STEP \ref{itm:step3} of algorithm of Section \ref{sec:secureMrea}, there are only two possibilities:
+
+\begin{enumerate}
+	\item First, $e$ has to be prime.
+	\item Second, $e$ should not be multiple of $\phi$
+\end{enumerate}
+This reduced the time complexity of generation of $e$ since we need to consider only two conditions.
 
 We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
 \begin{equation}
