@@ -42,6 +42,12 @@ E.~R.~R. Inc.
 \newblock Diffie-hellman key agreement method.
 \newblock {\em The Internet Society}, 1999.
 
+\bibitem{securersa}
+R.~S. Jamgekar and G.~S. Joshi.
+\newblock File encryption and decryption using secure rsa.
+\newblock In {\em International Journal of Emergine Science and Engineering},
+  pages 426--429, February 2013.
+
 \bibitem{karatsuba}
 A.~Karatsuba and Y.~Ofman.
 \newblock Multiplication of many-digital numbers by automatic computers.

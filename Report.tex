@@ -1192,6 +1192,16 @@ Value of $d$ in STEP \ref{itm:step6} can be written as
 d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
 \end{equation}
 
+Now, STEP 4 of the algorithm can be rewritten as:
+
+
+\begin{enumerate}[ {STEP }4{:} ]
+\item \emph{Compute the secret exponent }
+	\begin{align}
+		d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
+		\text{where } x < e& \notag
+	\end{align}
+\end{enumerate}
 
 \section{Results}
 
@@ -1217,10 +1227,29 @@ Also we tested to generation large prime number and our system showed significan
 
 
 \subsection{Large Multiplication}
-Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. The multipliers have significantly lower area-delay products compared with previous designs\cite{karatsuba_multiplication}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
 \subsection{Encryption \& Decryption}
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/encryptionTime.jpg}
+\caption{Encryption \& Decryption of file}
+\label{fig:rsa_time}
+\end{figure}
+
+Though, introduction to the third random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. On performing Cumulative Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
+
+Comparing this results with the \emph{File Encryption and Decryption using Secure RSA}\cite{securersa}, we found that our system performed significantly.
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/rsaPlot.pdf}
+\caption{Normal distribution of Encryption \& Decryption of file}
+\label{fig:rsa_cdf}
+\end{figure}
 
 
 \section{Conclusion}

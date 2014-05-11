@@ -5,45 +5,45 @@ The style file: abbrv.bst
 Database file #1: ref.bib
 Warning--entry type for "lcg_cdf" isn't style-file defined
 --line 12 of file ref.bib
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            605 strings with 6407 characters,
-and the built_in function-call counts, 5539 in all, are:
-= -- 535
-> -- 187
-< -- 7
-+ -- 76
-- -- 56
-* -- 306
-:= -- 876
-add.period$ -- 51
-call.type$ -- 19
-change.case$ -- 83
+            610 strings with 6567 characters,
+and the built_in function-call counts, 5982 in all, are:
+= -- 579
+> -- 200
+< -- 8
++ -- 81
+- -- 60
+* -- 331
+:= -- 936
+add.period$ -- 54
+call.type$ -- 20
+change.case$ -- 88
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 244
-empty$ -- 505
-format.name$ -- 56
-if$ -- 1215
+cite$ -- 20
+duplicate$ -- 267
+empty$ -- 546
+format.name$ -- 60
+if$ -- 1321
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 13
-newline$ -- 92
-num.names$ -- 39
-pop$ -- 114
+int.to.str$ -- 20
+missing$ -- 14
+newline$ -- 97
+num.names$ -- 41
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 70
 quote$ -- 0
-skip$ -- 219
+skip$ -- 240
 stack$ -- 0
-substring$ -- 325
-swap$ -- 72
-text.length$ -- 7
+substring$ -- 358
+swap$ -- 83
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 73
+type$ -- 77
 warning$ -- 0
-while$ -- 55
-width$ -- 21
-write$ -- 188
+while$ -- 59
+width$ -- 22
+write$ -- 199
 (There was 1 warning)
