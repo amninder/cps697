@@ -31,6 +31,12 @@ K.~Huang and R.~Tso.
 \newblock In {\em Information Security and Intelligence Control (ISIC), 2012
   International Conference on}, pages 156--159, Aug 2012.
 
+\bibitem{chinese_theorem}
+S.~Iftene.
+\newblock General secret sharing based on the chinese remainder theorem with
+  applications in e-voting.
+\newblock {\em Electron. Notes Theor. Comput. Sci.}, 186:67--84, July 2007.
+
 \bibitem{diffie}
 E.~R.~R. Inc.
 \newblock Diffie-hellman key agreement method.

@@ -878,8 +878,8 @@ The algorithm for Equation \ref{eq:mersenne_recc} through Equation \ref{eq:merse
     %\ENSURE composite if $n$ is composite, otherwise probably prime.
     
     \STATE {\bf Step0: } \\
-    $u \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bitmast of upper w-r})$ \\ 
-    $ll \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bit mast of lower r bits})$ \\
+    $u \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bitmask of upper w-r})$ \\ 
+    $ll \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bitmask of lower r bits})$ \\
     $a \leftarrow a_{w-1}a_{w-2}a_{w-3}...a_{2}a_{1}$
     
     \STATE {\bf Step1: }\\
@@ -929,7 +929,7 @@ Mersenne Twister implementations cannot be parallelized across parallel computin
 Figure \ref{fig:cdf_mersenne} shows the Cummulative Density Function (which is defined by $F(x) = P(X\leq x)$) graph for the random number generator with mean of 4600 and standard deviation of almost 74. 
 
 
-MT19937 has the following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
+MT19937 we worked with showed the following statistical property which makes it preferable over other pseudorandom number generators.\cite{wolfram_mt}
 \begin{itemize}
 	\item {\bf Probability Density Function: }\\
 		$0.00535134e^{-0.0000899652 (x-4599.84)^{2}}$
@@ -939,9 +939,42 @@ MT19937 has the following statistical property which makes it preferable over ot
 
 
 \subsection{Miller-Rabin Primality Test\cite{miller-rabin}}
-In Miller-Rabin primality test the number to be tested say $p$ and $y$ be a non trivial square root of $1 (\mod p)$.\cite{miller-rabin} Then we must have that $y^{2} = 1 (\mod p)$ and so $(y-1)(y+1) = 0(\mod p)$. This implies that either $y = 1 \mod p$ or $y = -1 \mod p$, which implies that $y$ is a trivial square root.
+We know of two ways to prove that a number $n$ is composite:
+\begin{enumerate}
+\item Exhibit a factorization $n = ab$, where $a,b >1$
+\item Exhibit a Fermat\cite{fermat} witness for $n$, \emph{i.e} a number $x$ satisfying $x^{n-1}\not\equiv 1 (\mod n)$
+\end{enumerate}
+The Miller-Rabin test is based on a third way to prove that a number is composite
+\begin{enumerate}[ {}3{)} ]
+\item Exhibit a "fake square root of $1 \mod n$" \emph{i.e} a number $x$ satisfying $x^{2} \equiv 1(\mod n)$ but $x \not \equiv \pm1 (\mod n)$
+\end{enumerate}
+
+If $x, n$ are positive integers such that $x^{2} \equiv 1 (\mod n)$ but not $x \not \equiv \pm1 (\mod n)$ then $n$ is composite. Generally this can be proved that for any nonzero polynomial
+\begin{align}
+P(x) = a_0 + a_1x + ... + a_kx^k \notag
+\end{align}
+The numder of $x \in {1, 2, 3, ... , p-1}$ satisfying $P(x) \equiv 0 (\mod p)$ is at most $k$. The proof is by induction on $k$, the base case $k = 0$ being trivial. Otherwise, suppose $a$ satisfies $P(a) \equiv 0 (\mod p)$. We may write $P(x) = (x - a)Q(x) + c$ where $Q(x)$ is a polynomial of degree $k-1$ with integer coefficients. The congruence $P(a) \equiv 0 (\mod p)$ implies that $c$ is divisible by $p$. If $b$ satisfies $P(b) \equiv 0 (mod p)$ but $Q(b) \not \equiv 0 (\mod p)$ then $p$ is a divisio of $(b-a)Q(b)$ but not $Q(b)$, hence $b \equiv a (mod p)$. It follows that every $b \in {1,2,3,...,p-1}$ satisfying $P(b) \equiv 0 (\mod p)$ satisfies either $b = a$ or $Q(b)\equiv 0(\mod p)$. By the induction hypothesis, at most $k-1$ elements of ${1, 2,...,p-1}$ satisfy the second congruence\cite{miller-rabin}
+%The Miller-Rabin test is shown in Algorithm \ref{alga}. 
+
+The idea of test is to pick a random $x$ in ${1,2,3,.....,n-1}$ and use it to try finding either a Fermat witness\cite{fermat} or a fake square root of $1 \mod n$. Why Miller-Rabin test works? We have seen that when $n$ is prime, the test always outputs "probably prime". When $n$ is composite but is not a \emph{Carmichael} number, we have seen that it outputs "composite" with probability at least $\frac{1}{2}$. The working on Miller-Rabin test in this case best be understood in terms of \emph{Chinese Remainder Theorem}\cite{chinese_theorem} which is;
+
+
+"\emph{Let $n_1, n_2,...,n_k$ be numbers, no two of which have a common factor. For any numbers $a_1, a_2, a_3,...,a_k$, the system of congruences }
+\begin{align*}
+x &\equiv a_1 (\mod n_1) \\
+x &\equiv a_2 (\mod n_2) \\
+&.\\
+&.\\
+x &\equiv a_k (\mod n_k) \\
+\end{align*}
+\emph{has a solution. Any two solutions $x_1, x_2$ are congruent $\mod n_1 n_2 ... n_k$"}. If $n$ is a \emph{Carmichael} number, then Miller-Rabin outputs "composite" with probability at-least $\frac{3}{4}$. %By analogy with the definitions of Fermat Witness and Fermat Liar\cite{fermat}, let us call a number $x$ a "Miller-Rabin witness"
+
+
+The Miller-Rabin can be summarized that the number to be tested say $p$ and $y$ be a non trivial square root of $1 (\mod p)$.\cite{miller-rabin} Then we must have that $y^{2} = 1 (\mod p)$ and so $(y-1)(y+1) = 0(\mod p)$. This implies that either $y = 1 \mod p$ or $y = -1 \mod p$, which implies that $y$ is a trivial square root.
+
 
 Thus, if there is a non trivial square root of $1 \mod p$, then $p$ has to composite. For an example of a non trivial square root of a composite, consider $p = 15$. We have that $4^{2} = 16 = 1 (\mod 15)$, thus 15 is composite. The fact about non trivial square roots can be used to prove that if $p$ is prime, then for any $a$ relatively prime to $p$, some power of $a$ from a given set of powers must be $-1$ or a specific odd power of $a$ must be $1$.
+
 
 If for some $a$ none of the above set of powers is $-1$ and the specific odd power is not 1, then it must be the fact that p is composite. It can also be shown that for composite $p$, the chances of finding such $a$ is at least $\frac{3}{4}$. This $a$ is the witness in the primality test and is not necessarily a non-trivial square root of $1 \mod p$. The algorithm is defined in Algorithm \ref{alg1}
 
@@ -1131,6 +1164,7 @@ Compute origin message:
 \begin{center}
 	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
 \end{center}
+
 
 We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
 \begin{equation}
