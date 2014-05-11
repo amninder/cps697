@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 11:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 13:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -149,6 +149,11 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -268,18 +273,18 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
 \c@lstlisting=\count118
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -342,48 +347,43 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-** WARNING: \IEEEPARstart is locked out when in conference mode (line 555).
+** WARNING: \IEEEPARstart is locked out when in conference mode (line 560).
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 654.
+(Font)              <7> on input line 659.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 654.
+(Font)              <5> on input line 659.
 [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-[2]
+[2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 787.
+(Font)              <8> on input line 792.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 787.
+(Font)              <6> on input line 792.
 
-Overfull \hbox (11.16812pt too wide) in paragraph at lines 787--798
+Overfull \hbox (2.668pt too wide) in paragraph at lines 792--803
  [] 
  []
 
-[3]
-Underfull \hbox (badness 7522) in paragraph at lines 803--804
-[]\OT1/ptm/m/n/10 The prime counts in the Ta-ble I[] are taken from
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 830--831
 \OT1/ptm/m/n/10 The pub-lic key is ($\OML/cmm/m/it/10 n; m; g; e$\OT1/ptm/m/n/1
 0 ) and pri-vate key is
  []
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {STEP }4{:}\space  on input line 880.
+             The label is: \space {STEP }4{:}\space  on input line 885.
 
 [4] <images/plotRandomNumber.pdf, id=33, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 896.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 901.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 896--897
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 901--902
  [][] 
  []
 
@@ -391,27 +391,27 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 896--897
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1001.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1006.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1001--1002
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1006--1007
  [][] 
  []
 
 [5 <./images/plotRandomNumber.pdf>]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1026.
+             The label is: \space {}3{)}\space  on input line 1031.
 
 [6 <./images/cdf_mersenne.jpeg>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1146
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1151
 .
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1146.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1151.
 
  [7]
 <images/Karatsuba-Complexity.png, id=114, 602.25pt x 372.39125pt>
@@ -419,10 +419,10 @@ File: images/Karatsuba-Complexity.png Graphic file (type png)
 
 <use images/Karatsuba-Complexity.png>
 Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 117
-4.
+9.
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1174--1175
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1179--1180
  [][] 
  []
 
@@ -431,20 +431,20 @@ File: images/karatsubaVSgradeSchool.jpg Graphic file (type jpg)
 
 <use images/karatsubaVSgradeSchool.jpg>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.jpg used on input line 1
-210.
+215.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1210--1211
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1215--1216
  [][] 
  []
 
 <images/Rplot.pdf, id=116, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1222.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1227.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1222--1223
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1227--1228
  [][] 
  []
 
@@ -453,10 +453,10 @@ ool.jpg>] <images/mersenneTime.png, id=120, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1231.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1236.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1231--1232
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1236--1237
  [][] 
  []
 
@@ -468,10 +468,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/encryptionTime.jpg Graphic file (type jpg)
 
 <use images/encryptionTime.jpg>
-Package pdftex.def Info: images/encryptionTime.jpg used on input line 1248.
+Package pdftex.def Info: images/encryptionTime.jpg used on input line 1253.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1248--1249
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1253--1254
  [][] 
  []
 
@@ -479,10 +479,10 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1248--1249
 g>] <images/rsaPlot.pdf, id=193, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1260.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1265.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1260--1261
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1265--1266
  [][] 
  []
 
@@ -505,11 +505,11 @@ Before submitting the final camera ready copy, remember to:
 
 [10 <./images/rsaPlot.pdf>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4519 strings out of 493488
- 67202 string characters out of 3141326
- 143515 words of memory out of 3000000
- 7746 multiletter control sequences out of 15000+200000
- 39875 words of font info for 73 fonts, out of 3000000 for 9000
+ 4616 strings out of 493488
+ 68429 string characters out of 3141326
+ 144375 words of memory out of 3000000
+ 7837 multiletter control sequences out of 15000+200000
+ 43813 words of font info for 77 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,19n,32p,1762b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist
@@ -531,7 +531,7 @@ b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 l/texlive/2012/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (10 pages, 603275 bytes).
+Output written on Report.pdf (10 pages, 603507 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams
