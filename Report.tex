@@ -102,7 +102,6 @@
 \usepackage{array}
 \usepackage{url}
 
-
 \lstloadlanguages{Python}
 %\usepackage{amsmath}
 
@@ -398,7 +397,7 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
-
+\usepackage[parfill]{parskip}
 \begin{document}
 
 %\author{
@@ -440,21 +439,20 @@
 % 
 \author{
 	\IEEEauthorblockN{
-		Amninder Singh Narota, Roger Lee\\
+		Amninder Singh Narota\\
 	}
 	\IEEEauthorblockA{
-		SEITI, Department of Computer Science\\
 		Central Michigan University, U.S.A\\
-		Email: \{narot1a, lee1ry\}@cmich.edu
+		Email: narot1a@cmich.edu
 	}\\  
 	%\and
 	%\IEEEauthorblockN{
-	%	Tokuro Matsuo\\
+	%	Amninder Singh Narota\\
 	%}
 	%\IEEEauthorblockA{
-	%	Advanced Institute of Industrial Technology, Tokyo, Japan\\
-	%	Email: tokuro@tokuro.net
-	%}
+	%	Central Michigan University, U.S.A\\
+	%	Email: narot1a@cmich.edu
+	%}\\
 }
 %                     ^------------^------------^----Do not want these spaces!
 %
@@ -518,8 +516,7 @@ This paper introduces the concept and implementation of RSA algorithm for securi
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-
-Cryptography, RSA, MT19937, Mersenne Twister, Miller-Rabin, Prime Numbers, Pseudorandom Numbers
+Cryptography, RSA, MT19937, Mersenne Twister, Miller-Rabin, Prime Numbers, Pseudorandom Numbers, Karatsuba Multiplication
 \end{IEEEkeywords}
 
 
@@ -806,6 +803,87 @@ Error difference is just 1700
 The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
 
 \section{Method}
+
+\subsection{Secure RSA for File Transfer}
+\label{sec:secureMrea}
+
+Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for Secure RSA crypto system. We have removed the drawback using Secure RSA for safe transmission of file from one user to another.
+
+\subsubsection{\bf Secure RSA can be summarized as follows:}
+
+
+\begin{enumerate}[ {STEP }1{:} ]
+	\item \emph{Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
+	\item \emph{Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
+	\item \emph{Choose an integer $e, 1 < e < \phi$, such that GCD($e, \phi$) = 1}
+		\label{itm:step3}
+	\item \emph{Compute the secret exponent $d, 1 < d < \phi$, such that $e \times d (\mod \phi) = 1$}
+		\label{itm:step6}
+	\item \emph{Select an integer $g = m+1$}
+	\item \emph{Compute the modular multiplicative inverse: $\mu = \lambda^{-1} (\mod m)$}
+\end{enumerate}
+The public key is ($n, m, g, e$) and private key is ($d, \lambda, \mu$). 
+
+%\subsection{Encryption:}
+Let F be a file to be encrypted where the contents of file are taken into string $S$. Select random number $r$, where $r<m$ Compute cipher text as:
+\begin{center}
+	$c = g^{s^{e}\mod n} \times r^{m}\mod m^{2}$
+\end{center}
+
+%\subsection{Decryption: }
+Compute origin message:
+\begin{center}
+	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
+\end{center}
+
+\par
+
+\subsubsection{\bf The proposed algorithm\cite{securersa} can be further enhanced by following two methods}
+\par \par
+For STEP \ref{itm:step3} of algorithm of Section \ref{sec:secureMrea}, we found that there are only two possibilities:
+
+\begin{enumerate}
+	\item First, $e$ has to be prime.
+	\item Second, $e$ should not be multiple of $\phi$
+\end{enumerate}
+This reduced the time complexity of generation of $e$ since we need to consider only two conditions.
+
+Also, STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
+\begin{equation}
+e \times d = 1 + x(\phi)
+\end{equation}
+
+\begin{align*}
+	d &= \frac{1 + x(\phi)}{e}
+\end{align*}
+
+since $d < \phi$
+
+\begin{align*}
+	\frac{1 + x(\phi)}{e} &< \phi \\
+	x(\phi) &< e(\phi) -1 \\
+	x &< \frac{e(\phi) -1}{\phi} \\
+\end{align*}
+
+since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will be:
+\begin{equation}
+	x < e
+\end{equation}
+Value of $d$ in STEP \ref{itm:step6} can be written as
+\begin{equation}
+d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
+\end{equation}
+
+Now, STEP 4 of the algorithm can be rewritten as:
+
+
+\begin{enumerate}[ {STEP }4{:} ]
+\item \emph{Compute the secret exponent $d$}
+	\begin{align}
+		%d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
+		d = \frac{1 + x(\phi)}{e}; \text{ where } x < e&
+	\end{align}
+\end{enumerate}
 
 \subsection{Pseudorandom Number Generation}
 \label{sec:mersenne}
@@ -1133,84 +1211,6 @@ We measured the program and found the results of multiplication for pairs of ran
 \caption{Graph of results for Karatsuba and Grade School Multiplication}
 \label{fig:karatsubaVSgrade}
 \end{figure}
-
-
-\subsection{Secure RSA File Transmission}
-\label{sec:secureMrea}
-
-MREA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for MREA crypto system. We have removed the drawback using MREA for safe transmission of file from one user to another.
-
-Secure RSA file transmission can be summarized as follows:
-
-\begin{enumerate}[ {STEP }1{:} ]
-	\item \emph{ Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
-	\item \emph{ Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
-	\item \emph{Choose an integer $e, 1 < e < \phi$, such that GCD($e, \phi$) = 1}
-		\label{itm:step3}
-	\item \emph{Compute the secret exponent $d, 1 < d < \phi$, such that $e \times d (\mod \phi) = 1$}
-		\label{itm:step6}
-	\item \emph{Select an integer $g = m+1$}
-	\item \emph{Compute the modular multiplicative inverse: $\mu = \lambda^{-1} (\mod m)$}
-\end{enumerate}
-The public key is ($n, m, g, e$) and private key is ($d, \lambda, \mu$). 
-
-\subsection{Encryption:}
-Let F be a file to be encrypted where the contents of file are taken into string $S$. Select random number $r$, where $r<m$ Compute cipher text as:
-\begin{center}
-	$c = g^{s^{e}\mod n} \times r^{m}\mod m^{2}$
-\end{center}
-
-\subsection{Decryption: }
-Compute origin message:
-\begin{center}
-	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
-\end{center}
-
-
-For STEP \ref{itm:step3} of algorithm of Section \ref{sec:secureMrea}, there are only two possibilities:
-
-\begin{enumerate}
-	\item First, $e$ has to be prime.
-	\item Second, $e$ should not be multiple of $\phi$
-\end{enumerate}
-This reduced the time complexity of generation of $e$ since we need to consider only two conditions.
-
-We found that STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
-\begin{equation}
-e \times d = 1 + x(\phi)
-\end{equation}
-
-\begin{align*}
-	d &= \frac{1 + x(\phi)}{e}
-\end{align*}
-
-since $d < \phi$
-
-\begin{align*}
-	\frac{1 + x(\phi)}{e} &< \phi \\
-	x(\phi) &< e(\phi) -1 \\
-	x &< \frac{e(\phi) -1}{\phi} \\
-\end{align*}
-
-since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will be:
-\begin{equation}
-	x < e
-\end{equation}
-Value of $d$ in STEP \ref{itm:step6} can be written as
-\begin{equation}
-d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
-\end{equation}
-
-Now, STEP 4 of the algorithm can be rewritten as:
-
-
-\begin{enumerate}[ {STEP }4{:} ]
-\item \emph{Compute the secret exponent }
-	\begin{align}
-		d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
-		\text{where } x < e& \notag
-	\end{align}
-\end{enumerate}
 
 \section{Results}
 
