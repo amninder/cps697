@@ -507,7 +507,7 @@
 %\boldmath
 The Secure RSA algorithm\cite{6021216} is generally 6 step algorithm and the security is based on the randomly selected 2 prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
 
-This paper introduces the concept and implementation of RSA algorithm for security purpose, Mersenne Twister for generating pseudorandom number with large key space and faster primality test to generate prime number. We will enhance the performance of the system by adding one more prime numbers to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be faster to encrypt and more secure to be decrypted by crypto analyst.
+This paper introduces the concept and implementation of RSA algorithm for security purpose, Mersenne Twister for generating pseudorandom number with large key space and faster primality test to generate prime number. We will enhance the performance of the system by adding one more prime number to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be faster to encrypt and more secure to be decrypted by crypto analyst.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -1229,6 +1229,8 @@ Also we tested to generation large prime number and our system showed significan
 \subsection{Large Multiplication}
 Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. The multipliers have significantly lower area-delay products compared with previous designs\cite{karatsuba_multiplication}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
+To further boost the multiplicative performance we used third party library for mathematical computation called GMPY2\cite{gmpy2} which is a Python module that provides access to the GNU Multiple Precision (GMP) library. GMP provides very fast and highly optimized routines for working with arbitrary precision integers, rationals, and floating point numbers.
+
 \subsection{Encryption \& Decryption}
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.
 
@@ -1239,7 +1241,7 @@ Secure RSA algorithm is used to encrypt files and transmit encrypted files to ot
 \label{fig:rsa_time}
 \end{figure}
 
-Though, introduction to the third random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. On performing Cumulative Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
+Though, introduction to the third random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. We performing Cumulative Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
 
 Comparing this results with the \emph{File Encryption and Decryption using Secure RSA}\cite{securersa}, we found that our system performed significantly.
 
@@ -1253,11 +1255,14 @@ Comparing this results with the \emph{File Encryption and Decryption using Secur
 
 
 \section{Conclusion}
-Our method have showed a new approach to make secure by increasing the bit size of the key generated. Our system showed good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption. 
+Our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption. 
 
 With the increasing computing power available to even casual users, the security conscious have had to move on to increasingly robust encryption, lest they find their information vulnerable to brute-force attacks. The latest milestone to fall is 768-bit RSA. In "\emph{Factorization of a 768-bit RSA modulus}"\cite{768_key} announced that they factored one of these keys. 
 
 Most modern cryptography relies on single large number that are the product of two primes. By knowing the numbers, it is relatively easy to encrypt and decrypt data, otherwise finding by brute force is big computational challenge. "\emph{There is nothing new to be reported for the square root step, except for the resulting factorization of RSA-768. Nevertheless, and for the record, we present some of the details}"\cite{768_key} they wrote.
+
+
+As future work multiple file encryption and decryption can be possible. It has broad development prospects. 
 
 {
 \bibliographystyle{abbrv} %plain; ieeetr; alpha

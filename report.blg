@@ -3,47 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
-Warning--entry type for "lcg_cdf" isn't style-file defined
+Warning--entry type for "gmpy2" isn't style-file defined
 --line 12 of file ref.bib
-You've used 20 entries,
+Warning--entry type for "lcg_cdf" isn't style-file defined
+--line 21 of file ref.bib
+Warning--to sort, need author or key in gmpy2
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            610 strings with 6567 characters,
-and the built_in function-call counts, 5982 in all, are:
-= -- 579
-> -- 200
+            613 strings with 6607 characters,
+and the built_in function-call counts, 6136 in all, are:
+= -- 592
+> -- 201
 < -- 8
-+ -- 81
++ -- 82
 - -- 60
-* -- 331
-:= -- 936
-add.period$ -- 54
-call.type$ -- 20
-change.case$ -- 88
+* -- 339
+:= -- 951
+add.period$ -- 55
+call.type$ -- 21
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 267
-empty$ -- 546
+cite$ -- 22
+duplicate$ -- 274
+empty$ -- 569
 format.name$ -- 60
-if$ -- 1321
+if$ -- 1359
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 21
 missing$ -- 14
-newline$ -- 97
+newline$ -- 100
 num.names$ -- 41
-pop$ -- 122
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 72
 quote$ -- 0
-skip$ -- 240
+skip$ -- 248
 stack$ -- 0
-substring$ -- 358
-swap$ -- 83
+substring$ -- 363
+swap$ -- 84
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
-warning$ -- 0
+type$ -- 81
+warning$ -- 1
 while$ -- 59
-width$ -- 22
-write$ -- 199
-(There was 1 warning)
+width$ -- 23
+write$ -- 205
+(There were 3 warnings)
