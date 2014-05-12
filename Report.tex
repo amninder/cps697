@@ -855,7 +855,9 @@ This reduced the time complexity of generation of $e$ since we need to consider 
 
 Also, STEP \ref{itm:step6} of algorithm of Section \ref{sec:mrea_algo} can be further enhanced by introducing one more random prime number $x$. \\*
 
-STEP \ref{itm:step6} of Section \ref{sec:mrea_algo} can be written as:\\* $e \times d \mod \phi = 1$, \emph{i.e}
+STEP \ref{itm:step6} of Section \ref{sec:mrea_algo} which is $e \times d \mod \phi = 1$, can be written as:\\* 
+
+\emph{i.e}
 \begin{equation}
 e \times d = 1 + (x \times \phi)
 \end{equation}
@@ -878,7 +880,7 @@ since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will
 \end{equation}
 
 
-Now, STEP 4 of the algorithm can be rewritten as:
+STEP 4 of the algorithm can be rewritten as:
 
 \begin{enumerate}[ {STEP }4{:} ]
 \item \emph{Compute the secret exponent $d$}

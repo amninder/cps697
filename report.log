@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 23:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -378,16 +378,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 856--857
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
+
+ []
+
+
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {STEP }4{:}\space  on input line 883.
+             The label is: \space {STEP }4{:}\space  on input line 885.
 
 <images/rsaVSjava.pdf, id=24, 722.7pt x 505.89pt>
 File: images/rsaVSjava.pdf Graphic file (type pdf)
  <use images/rsaVSjava.pdf>
-Package pdftex.def Info: images/rsaVSjava.pdf used on input line 914.
+Package pdftex.def Info: images/rsaVSjava.pdf used on input line 916.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 914--915
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 916--917
  [][] 
  []
 
@@ -395,21 +400,21 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 914--915
 File: images/Karatsuba-Complexity.png Graphic file (type png)
 
 <use images/Karatsuba-Complexity.png>
-Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 973
+Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 975
 .
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 973--974
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 975--976
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1001
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1003
 .
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1001.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1003.
 
  [5 <./images/rsaVSjava.pdf> <./images/Karatsuba-Complexity.png (PNG copy)>]
 <images/karatsubaVSgradeSchool.pdf, id=43, 722.7pt x 505.89pt>
@@ -417,25 +422,21 @@ File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.pdf used on input line 1
-040.
+042.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1040--1041
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1042--1043
  [][] 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 <images/plotRandomNumber.pdf, id=44, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1055.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1057.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1055--1056
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1057--1058
  [][] 
  []
 
@@ -444,47 +445,47 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1055--1056
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1160.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1162.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1160--1161
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1162--1163
  [][] 
  []
 
 [7]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1185.
+             The label is: \space {}3{)}\space  on input line 1187.
 
 [8 <./images/cdf_mersenne.jpeg>]
 <images/encryptionTime.pdf, id=130, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
-Package pdftex.def Info: images/encryptionTime.pdf used on input line 1262.
+Package pdftex.def Info: images/encryptionTime.pdf used on input line 1264.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1262--1263
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1264--1265
  [][] 
  []
 
 <images/rsaPlot.pdf, id=131, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1275.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1277.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1275--1276
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1277--1278
  [][] 
  []
 
 <images/Rplot.pdf, id=132, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1285.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1287.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1285--1286
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1287--1288
  [][] 
  []
 
@@ -492,10 +493,10 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1285--1286
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1294.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1296.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1294--1295
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1296--1297
  [][] 
  []
 
@@ -550,7 +551,7 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/
 fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 566605 bytes).
+Output written on Report.pdf (11 pages, 566707 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  247 compressed objects within 3 object streams
