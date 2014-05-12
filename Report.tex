@@ -1035,7 +1035,7 @@ We measured the program and found the results of multiplication for pairs of ran
 
 
 %MERSENNE PRIME
-\subsection{{Pseudorandom Number Generation}}
+\subsection{{Pseudorandom Number Generation (MT19937)}}
 \label{sec:mersenne}
 
 To increase the security of encryption we need pseudorandom number generator with large period. To achieve so Linear Congruential Generator (LCG)\cite{lcg_cryptography} can be used which is fast and require minimal memory (typically 32 or 64 bits) to retain state. This makes them valuable for simulating multiple independent streams but it is not recommended where high-quality randomness is critical which is highly prioritized in cryptography. If a linear congruential generator is seeded with a character and then iterated once, the result is simple classical cipher called an affine cipher\cite{affine_cipher}; this cipher is easily broken by standard frequency analysis. Also, LCG tend to exhibit some severe defects. for instance, if a LCG is used to choose points in $n$-dimensional space, the points will lie on, at most $m^{\frac{1}{m}}$ hyperplanes\cite{marsaglia_theorem}. For this research, we introduced Mersenne Twister (MT19937) pseudorandom number generator which we will explain in this section.
@@ -1289,7 +1289,7 @@ Performance wise introduction of new method of finding the value of $d$ reduced 
 	\label{table:4.2}
 \end{table}
 
-\subsection{{Pseudorandom Number Generation}}
+\subsection{{Pseudorandom Number Generation (MT19937)}}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
 
 \begin{figure}[ht!]

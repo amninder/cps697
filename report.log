@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 14:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -502,7 +502,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1031--1032
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
- \OT1/phv/b/n/12 3.4 Pseu-do-ran-dom Num-ber Gen-er-a-
+ \OT1/phv/b/n/12 3.4 Pseu-do-ran-dom Num-ber Gen-er-a-tion
  []
 
 [7 <./images/karatsubaVSgradeSchool.pdf>]
@@ -560,7 +560,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1272.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1292--1292
- \OT1/phv/b/n/12 4.3 Pseu-do-ran-dom Num-ber Gen-er-a-
+ \OT1/phv/b/n/12 4.3 Pseu-do-ran-dom Num-ber Gen-er-a-tion
  []
 
 [11] <images/Rplot.pdf, id=133, 506.21703pt x 506.21703pt>
@@ -662,7 +662,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist
 urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/pal
 atino/uplri8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/
 uzdr.pfb>
-Output written on Report.pdf (15 pages, 576249 bytes).
+Output written on Report.pdf (15 pages, 576412 bytes).
 PDF statistics:
  356 PDF objects out of 1000 (max. 8388607)
  259 compressed objects within 3 object streams
