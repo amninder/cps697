@@ -863,7 +863,7 @@ Also, STEP \ref{itm:step6} of algorithm of Section \ref{sec:mrea_algo} can be fu
 
 STEP \ref{itm:step6} of Section \ref{sec:mrea_algo} which is $e \times d \mod \phi = 1$, can be written as:\\* 
 
-\emph{i.e}
+%\emph{i.e}
 \begin{equation}
 e \times d = 1 + (x \times \phi)
 \end{equation}
@@ -887,14 +887,19 @@ since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will
 
 
 STEP 4 of the algorithm can be rewritten as:
-
-\begin{enumerate}[ {STEP }4{:} ]
-\item \emph{Compute the secret exponent $d$}
+\emph{Compute the secret exponent $d$}
 	\begin{align}
 		%d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
 		d = \frac{1 + (x \times \phi)}{e}; \text{ where } x < e&
 	\end{align}
-\end{enumerate}
+	
+%\begin{enumerate}[ {STEP }4{:} ]
+%\item \emph{Compute the secret exponent $d$}
+%	\begin{align}
+%		%d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
+%		d = \frac{1 + (x \times \phi)}{e}; \text{ where } x < e&
+%	\end{align}
+%\end{enumerate}
 
 
 

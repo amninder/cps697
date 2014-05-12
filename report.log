@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 10:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -469,70 +469,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 864--865
  []
 
 
-LaTeX Warning: The counter will not be printed.
-             The label is: \space {STEP }4{:}\space  on input line 891.
-
-
-Underfull \hbox (badness 4217) in paragraph at lines 901--902
+Underfull \hbox (badness 4217) in paragraph at lines 906--907
 \OT1/ppl/m/n/12 large mul-ti-plica-tive com-pu-ta-tion for large
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 908.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 913.
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 960--960
+Underfull \hbox (badness 10000) in paragraph at lines 965--965
  \OT1/phv/m/sl/12 3.3.2 \OT1/ppl/b/n/12 Karat-suba Al-go-rithm Im-ple-men-ta-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 983.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 988.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 983.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 988.
 
 <images/karatsubaVSgradeSchool.pdf, id=40, 722.7pt x 505.89pt>
 File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.pdf used on input line 1
-025.
+030.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1025--1026
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1030--1031
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1032
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1037
  \OT1/phv/b/n/12 3.4 Pseu-do-ran-dom Num-ber Gen-er-a-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-<images/plotRandomNumber.pdf, id=45, 505.89pt x 505.89pt>
+[7] <images/plotRandomNumber.pdf, id=45, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1040.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1045.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1040--1041
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1045--1046
  [][] 
  []
 
-[8 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
+
+Underfull \vbox (badness 3482) has occurred while \output is active []
+
+ [8 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
 []$\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [0]\OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [1]
 \OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [2]\OML/cmm/m/it/12 :::::x\OT1/cmr/m/n/12 [
 \OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1112--1112
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1117
 []$\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT
 1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][]\OML/cmm/m/it/12 u\OT1/cmr/m
 /n/12 )[](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 i \OT1/cmr/m/n/1
@@ -543,87 +538,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 1112--1112
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1145.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1150.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1145--1146
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1150--1151
  [][] 
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 1151--1152
+Underfull \hbox (badness 2277) in paragraph at lines 1156--1157
 []\OT1/ppl/m/n/12 Figure 3[] shows the Cum-mu-la-tive Den-sity
  []
 
 [9]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1172.
+             The label is: \space {}3{)}\space  on input line 1177.
 
 [10 <./images/cdf_mersenne.jpeg>]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1265.
- [11]
-<images/rsaVSjava.pdf, id=133, 722.7pt x 505.89pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1270.
+
+<images/rsaVSjava.pdf, id=130, 722.7pt x 505.89pt>
 File: images/rsaVSjava.pdf Graphic file (type pdf)
  <use images/rsaVSjava.pdf>
-Package pdftex.def Info: images/rsaVSjava.pdf used on input line 1308.
+Package pdftex.def Info: images/rsaVSjava.pdf used on input line 1313.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1308--1309
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1313--1314
  [][] 
  []
 
-<images/encryptionTime.pdf, id=134, 722.7pt x 505.89pt>
+[11] <images/encryptionTime.pdf, id=134, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
-Package pdftex.def Info: images/encryptionTime.pdf used on input line 1318.
+Package pdftex.def Info: images/encryptionTime.pdf used on input line 1323.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1318--1319
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1323--1324
  [][] 
  []
 
 <images/rsaPlot.pdf, id=135, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1331.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1336.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1331--1332
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1336--1337
  [][] 
  []
 
-<images/Rplot.pdf, id=136, 506.21703pt x 506.21703pt>
+
+Underfull \vbox (badness 5316) has occurred while \output is active []
+
+ [12 <./images/rsaVSjava.pdf> <./images/encryptionTime.pdf> <./images/rsaPlot.p
+df>]
+<images/Rplot.pdf, id=215, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1341.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1346.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1341--1342
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1346--1347
  [][] 
  []
 
-[12 <./images/rsaVSjava.pdf> <./images/encryptionTime.pdf>]
-<images/mersenneTime.png, id=150, 722.7pt x 542.025pt>
+<images/mersenneTime.png, id=216, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1350.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1355.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1350--1351
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1355--1356
  [][] 
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 1360--1361
+Underfull \hbox (badness 2012) in paragraph at lines 1365--1366
 []\OT1/ppl/m/n/12 To fur-ther boost the mul-ti-plica-tive per-for-
  []
 
-[13 <./images/rsaPlot.pdf> <./images/Rplot.pdf> <./images/mersenneTime.png>]
-Underfull \hbox (badness 1484) in paragraph at lines 1370--1371
+[13 <./images/Rplot.pdf> <./images/mersenneTime.png>]
+Underfull \hbox (badness 1484) in paragraph at lines 1375--1376
 \OT1/ppl/m/n/12 the ef-fi-ciency and reusabil-ity into ac-count.
  []
 
@@ -658,7 +657,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist
 urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/pal
 atino/uplri8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/
 uzdr.pfb>
-Output written on Report.pdf (15 pages, 576504 bytes).
+Output written on Report.pdf (15 pages, 576396 bytes).
 PDF statistics:
  356 PDF objects out of 1000 (max. 8388607)
  259 compressed objects within 3 object streams
