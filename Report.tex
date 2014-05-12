@@ -1054,7 +1054,7 @@ To increase the security of encryption we need pseudorandom number generator wit
 \label{sec:mersenne}
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
 
- It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behavior of the randomness. The main point of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}\cite{1347044}. The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. 
+ It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behavior of the randomness. The main point of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}\cite{1347044}.
 
 \begin{figure}[ht!]
 \centering
@@ -1110,7 +1110,7 @@ u &= 11 \notag \\
 l &= 18
 \label{eq:mersenne_table_values}
 \end{align}
-The algorithm for Equation \ref{eq:mersenne_recc} through Equation \ref{eq:mersenne_table_values} can be summarized in Algorithm \ref{alg_mersenne_twister} which is derived from "\emph{Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorndom number generator}"\cite{MT19937}.
+The algorithm for Equation \ref{eq:mersenne_recc} through Equation \ref{eq:mersenne_table_values} can be summarized in Algorithm \ref{alg_mersenne_twister} which is derived from "\emph{Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorndom number generator}"\cite{MT19937} The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. .
 
 \begin{algorithm}                      % enter the algorithm environment
 \caption{Mersenne-Twister}
@@ -1272,7 +1272,7 @@ Though, introduction to one more random prime number slowed the performance but 
 \label{fig:rsa_time}
 \end{figure}
 
-The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficulty to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
+The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
 
 
 Furthermore, comparing this results with the "\emph{File Encryption and Decryption using Secure RSA}"\cite{securersa}, we found that our system had significant performance.
@@ -1286,7 +1286,7 @@ Furthermore, comparing this results with the "\emph{File Encryption and Decrypti
 \end{figure}
 
 \subsection{{\large Random Numbers}}
-Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The other implementations we performed around 4600 numbers/second, which is significant either. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
+Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
 
 \begin{figure}[ht!]
 \centering
@@ -1295,7 +1295,7 @@ Our method for doing simple benchmarking and Mersenne Twister implementation gen
 \label{fig:mersenne_performance}
 \end{figure}
 
-Also, we tested to generate large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes. To find the normal distribution for prime numbers generated using MT19937 we generated 31 sets of 100, 200, 300, 400, 500, 600 and 700 numbers. We found that on average our system is generating somewhat 216 random prime numbers per second with the standard of almost 14. The normal distribution of the result is shown in Figure \ref{fig:mersenne_performance}.
+Also, we tested to generate large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes. To find the normal distribution for prime numbers generated using MT19937 we generated 31 sets of 100, 200, 300, 400, 500, 600 and 700 numbers. We found that on average our system is generating somewhat 216 random prime numbers per second with the standard of almost 14.
 
 \begin{figure}[ht!]
 \centering
