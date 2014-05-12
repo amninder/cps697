@@ -1253,7 +1253,7 @@ We found that that time consuming step in the algorithm as mentioned in Section 
 	\begin{center}
 	\begin{tabular}{|c|c|}
     	\hline
-       		\emph{bits}	&		Secure RSA\\
+       		\emph{bits}	&		milliseconds\\
 	\hline
     		33			&	78.310144\\
 		96			&	320.994816\\
@@ -1275,7 +1275,7 @@ Performance wise introduction of new method of finding the value of $d$ reduced 
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
     	\hline
-       		\emph{bits}	&		Our result\\
+       		\emph{bits}	&		milliseconds\\
 	\hline
     		33			&	27.386368\\
 		96			&	33.817088\\
@@ -1288,6 +1288,11 @@ Performance wise introduction of new method of finding the value of $d$ reduced 
 	\caption{Time taken to encrypt and decrypt with new method}
 	\label{table:4.2}
 \end{table}
+
+
+\subsection{Analysis \& Discussion}
+By comparing the result of old method of encryption and the method we developed we are in state to advocate that our method is working better than old method. The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
+
 
 \subsection{{Pseudorandom Number Generation (MT19937)}}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
@@ -1348,6 +1353,8 @@ To test with new value of $d$ for Secure RSA, we collected average time taken fo
 
 Though, introduction to one more random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. We performed Normal Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
 
+
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{images/encryptionTime.pdf}
@@ -1363,12 +1370,12 @@ Though, introduction to one more random prime number slowed the performance but 
 \label{fig:rsa_cdf}
 \end{figure}
 
-\section{{Conclusion}}
+\section{Conclusion of using 2 pair of prime number VS introducing 3\textsuperscript{rd} prime number}
 
-The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
+%The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
 
 
-Furthermore, comparing this results with the "\emph{File Encryption and Decryption using Secure RSA}"\cite{securersa}, we found that our system had significant performance.
+Comparing this results with the "\emph{File Encryption and Decryption using Secure RSA}"\cite{securersa}, we found that time taken for 32 bits-number reduced exponentially as we increase key space. on average our system performed 15 times more than old method.
 
 The digital world of cryptography is getting bigger and bigger, not smaller and our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption.  Our method indicated we can reduce the time complexity of computation to generate private key using newly introduced method.
 
