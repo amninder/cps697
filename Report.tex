@@ -801,9 +801,9 @@ Error difference is just 1700
 	\hline
     		$10^{4}$	&	1,229					&	1085.7				&	1246.1	\\
 		$10^{8}$	&	5,761,455					&	$5.42 \times 10^6$		&	$5.762 \times 10^6$	\\
-		$10^{12}$	&	37,607,912,018				&	$3.61 \times 10^10$		&	$3.760  \times 10^{10}$		\\
-		$10^{16}$	&	279,238,341,033,925		&	$2.71 \times 10^14$		&	$2.792 \times 10^{14}$	\\
-		$10^{18}$	&	24,739,954,287,740,860		&	$2.41 \times 10^16$		&	$2.473 \times 10^{16}$	\\
+		$10^{12}$	&	37,607,912,018				&	$3.61 \times 10^{10}$		&	$3.760  \times 10^{10}$		\\
+		$10^{16}$	&	279,238,341,033,925		&	$2.71 \times 10^{14}$		&	$2.792 \times 10^{14}$	\\
+		$10^{18}$	&	24,739,954,287,740,860		&	$2.41 \times 10^{16}$		&	$2.473 \times 10^{16}$	\\
 	\hline
 	\end{tabular}
 	\end{center}
@@ -813,13 +813,15 @@ Error difference is just 1700
 \end{table}
 The prime counts in the TABLE \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
 
+
+%METHOD
 \section{{Method}}
 
 \subsection{{Using 2 pairs of prime numbers}}
 %\label{sec:secureMrea}
 \label{sec:mrea_algo}
 
-Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for Secure RSA crypto system. We have removed the drawback using Secure RSA for safe transmission of file from one user to another.
+Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption.
 
 %\subsubsection{\bf Secure RSA can be summarized as follows:}
 %\label{sec:mrea_algo}
@@ -902,13 +904,13 @@ STEP 4 of the algorithm can be rewritten as:
 %	\end{align}
 %\end{enumerate}
 
-
-
-Secure RSA as defined in Section \ref{sec:mrea_algo} needs large multiplicative computation for large prime numbers which will take $O(n^2)$ digit operation thus limiting the performance. To overcome this we needed faster algorithm for multiplication which we are going to explain in the next section.
-
 %KARATSUBA MULTIPLICATION
 \subsection{{Karatsuba Multiplication}}
 \label{sec: karatsuba_code}
+
+Secure RSA as defined in Section \ref{sec:mrea_algo} needs large multiplicative computation for large prime numbers which will take $O(n^2)$ digit operation thus limiting the performance. To overcome this we needed faster algorithm for multiplication which we are going to explain in the this section.
+
+
 Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods of integer multiplication beyond what we learnt called conventional long multiplication and this is one of them. 
 
 \subsubsection{\bf Mathematical Derivation}
@@ -1002,8 +1004,6 @@ The algorithm we followed to generate result for Karatsuba multiplication is exp
 
 We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers which is in TABLE \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade}. All times are in milliseconds and  shows results we obtained.
 
-To increase the security of encryption we need pseudorandom number generator with large period. To achieve so Linear Congruential Generator (LCG)\cite{lcg_cryptography} can be used which is fast and require minimal memory (typically 32 or 64 bits) to retain state. This makes them valuable for simulating multiple independent streams but it is not recommended where high-quality randomness is critical which is highly prioritized in cryptography. If a linear congruential generator is seeded with a character and then iterated once, the result is simple classical cipher called an affine cipher\cite{affine_cipher}; this cipher is easily broken by standard frequency analysis. Also, LCG tend to exhibit some severe defects. for instance, if a LCG is used to choose points in $n$-dimensional space, the points will lie on, at most $m^{\frac{1}{m}}$ hyperplanes\cite{marsaglia_theorem}. For this research, we introduced Mersenne Twister (MT19937) pseudorandom number generator which we will explain in next section.
-
 
 \begin{table}[ht]
 	\begin{center}
@@ -1037,6 +1037,10 @@ To increase the security of encryption we need pseudorandom number generator wit
 %MERSENNE PRIME
 \subsection{{Pseudorandom Number Generation}}
 \label{sec:mersenne}
+
+To increase the security of encryption we need pseudorandom number generator with large period. To achieve so Linear Congruential Generator (LCG)\cite{lcg_cryptography} can be used which is fast and require minimal memory (typically 32 or 64 bits) to retain state. This makes them valuable for simulating multiple independent streams but it is not recommended where high-quality randomness is critical which is highly prioritized in cryptography. If a linear congruential generator is seeded with a character and then iterated once, the result is simple classical cipher called an affine cipher\cite{affine_cipher}; this cipher is easily broken by standard frequency analysis. Also, LCG tend to exhibit some severe defects. for instance, if a LCG is used to choose points in $n$-dimensional space, the points will lie on, at most $m^{\frac{1}{m}}$ hyperplanes\cite{marsaglia_theorem}. For this research, we introduced Mersenne Twister (MT19937) pseudorandom number generator which we will explain in this section.
+
+
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
 
  It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behavior of the randomness. The main point of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}\cite{1347044}.
@@ -1097,13 +1101,10 @@ l &= 18
 \end{align}
 The algorithm for Equation \ref{eq:mersenne_recc} through Equation \ref{eq:mersenne_table_values} can be summarized in Algorithm \ref{alg_mersenne_twister} which is derived from "\emph{Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorndom number generator}"\cite{MT19937} The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. .
 
-\begin{algorithm}                      % enter the algorithm environment
+\begin{algorithm}                      
 \caption{Mersenne-Twister}
-\label{alg_mersenne_twister}                           % and a label for \ref{} commands later in the document
-\begin{algorithmic}                    % enter the algorithmic environment
-   %\REQUIRE $n>2$, an odd integer to be tested for primality; $k$, a parameter that determines the accuracy of the test
-    
-    %\ENSURE composite if $n$ is composite, otherwise probably prime.
+\label{alg_mersenne_twister}
+\begin{algorithmic}
     
     \STATE {\bf Step0: } \\
     $u \leftarrow \underbrace{1...1}_{w-r}\underbrace{0...0}_{r}; (\text{ bitmask of upper w-r})$ \\ 
@@ -1288,9 +1289,33 @@ Performance wise introduction of new method of finding the value of $d$ reduced 
 	\label{table:4.2}
 \end{table}
 
-\subsection{Comparision}
-To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values of comparison are provided in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+\subsection{{Pseudorandom Number Generation}}
+Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/Rplot.pdf}
+\caption{Mersenne Twister 19937 Performance}
+\label{fig:mersenne_performance}
+\end{figure}
+
+Also, we tested to generate large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes. To find the normal distribution for prime numbers generated using MT19937 we generated 31 sets of 100, 200, 300, 400, 500, 600 and 700 numbers. We found that on average our system is generating somewhat 216 random prime numbers per second with the standard of almost 14.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/mersenneTime.png}
+\caption{Time VS Mersenne Prime Number Generation}
+\label{fig:mersenne_time}
+\end{figure}
+%Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
+
+
+\subsection{{Large Multiplication (Karatsuba Multiplication)}}
+Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. The multipliers have significantly lower area-delay products compared with previous designs\cite{karatsuba_multiplication}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
+
+To further boost the multiplicative performance we used third party library for mathematical computation called GMPY2\cite{gmpy2} which is a Python module that provides access to the GNU Multiple Precision (GMP) library. GMP provides very fast and highly optimized routines for working with arbitrary precision integers, rationals, and floating point numbers.
+
+\subsection{Comparision}
 \begin{table}[ht]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -1315,6 +1340,10 @@ To test with new value of $d$ we collected average time taken for 10 sets of 33,
 \caption{Time comparison of performance}
 \label{fig:rsaVSjava}
 \end{figure}
+
+To test with new value of $d$ for Secure RSA, we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values of comparison are provided in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+
+
 %\subsection{{Encryption \& Decryption}}
 
 Though, introduction to one more random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. We performed Normal Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
@@ -1326,11 +1355,6 @@ Though, introduction to one more random prime number slowed the performance but 
 \label{fig:rsa_time}
 \end{figure}
 
-The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
-
-
-Furthermore, comparing this results with the "\emph{File Encryption and Decryption using Secure RSA}"\cite{securersa}, we found that our system had significant performance.
-
 
 \begin{figure}[ht!]
 \centering
@@ -1339,36 +1363,12 @@ Furthermore, comparing this results with the "\emph{File Encryption and Decrypti
 \label{fig:rsa_cdf}
 \end{figure}
 
-\subsection{{Random Numbers}}
-Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/Rplot.pdf}
-\caption{Mersenne Twister 19937 Performance}
-\label{fig:mersenne_performance}
-\end{figure}
-
-Also, we tested to generate large prime number and our system showed significant performance to generate 34\textsuperscript{th} mersenne prime with negligible load on the system. Fig. \ref{fig:mersenne_time} shows the performance graph of the test conducted to compute time (in nano seconds) to generate large primes. To find the normal distribution for prime numbers generated using MT19937 we generated 31 sets of 100, 200, 300, 400, 500, 600 and 700 numbers. We found that on average our system is generating somewhat 216 random prime numbers per second with the standard of almost 14.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/mersenneTime.png}
-\caption{Time VS Mersenne Prime Number Generation}
-\label{fig:mersenne_time}
-\end{figure}
-%Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
-
-
-\subsection{{Large Multiplication}}
-Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. The multipliers have significantly lower area-delay products compared with previous designs\cite{karatsuba_multiplication}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
-
-To further boost the multiplicative performance we used third party library for mathematical computation called GMPY2\cite{gmpy2} which is a Python module that provides access to the GNU Multiple Precision (GMP) library. GMP provides very fast and highly optimized routines for working with arbitrary precision integers, rationals, and floating point numbers.
-
-
 \section{{Conclusion}}
 
+The algorithm have many important parameters affecting it's level of security and speed. By increasing the modulus length it is caused of increasing the complexity of decomposing it into it's factors. This also increases the length of private key and hence difficult to detect the key. Another parameter is modular multiplicative inverse $\mu$, which is new factor of private key, so it will be more difficult to choose $\mu$ by trying all possible private keys (brute force attack) hence the security also increases as well as difficulty of detecting the private key.
 
+
+Furthermore, comparing this results with the "\emph{File Encryption and Decryption using Secure RSA}"\cite{securersa}, we found that our system had significant performance.
 
 The digital world of cryptography is getting bigger and bigger, not smaller and our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption.  Our method indicated we can reduce the time complexity of computation to generate private key using newly introduced method.
 
