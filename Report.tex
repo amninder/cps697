@@ -447,6 +447,7 @@
 		Amninder Singh Narota\\
 	}
 	\IEEEauthorblockA{
+		Department of Computer Science\\
 		Central Michigan University, U.S.A\\
 		Email: narot1a@cmich.edu
 	}\\  
@@ -805,7 +806,7 @@ Error difference is just 1700
 	\label{table:gauss_values}
 
 \end{table}
-The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
+The prime counts in the TABLE \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
 
 \section{{\LARGE Method}}
 
@@ -815,8 +816,7 @@ The prime counts in the Table \ref{table:gauss_values} are taken from Edwards\ci
 Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for Secure RSA crypto system. We have removed the drawback using Secure RSA for safe transmission of file from one user to another.
 
 \subsubsection{\bf Secure RSA can be summarized as follows:}
-
-
+\label{sec:mrea_algo}
 \begin{enumerate}[ {STEP }1{:} ]
 	\item \emph{Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
 	\item \emph{Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
@@ -836,7 +836,7 @@ Let F be a file to be encrypted where the contents of file are taken into string
 \end{center}
 
 %\subsection{Decryption: }
-Compute origin message:
+Compute original message:
 \begin{center}
 	$S = (\frac{c^{\lambda}\mod m^{2}-1}{m}\times \mu \mod m)^{d} \mod n$
 \end{center}
@@ -845,7 +845,7 @@ Compute origin message:
 
 \subsubsection{\bf The proposed algorithm\cite{securersa} can be further enhanced by following two methods}
 \par \par
-For STEP \ref{itm:step3} of algorithm of Section \ref{sec:secureMrea}, we found that there are only two possibilities:
+For STEP \ref{itm:step3} of algorithm of Section \ref{sec:mrea_algo}, we found that there are only two possibilities:
 
 \begin{enumerate}
 	\item First, $e$ has to be prime.
@@ -853,43 +853,199 @@ For STEP \ref{itm:step3} of algorithm of Section \ref{sec:secureMrea}, we found 
 \end{enumerate}
 This reduced the time complexity of generation of $e$ since we need to consider only two conditions.
 
-Also, STEP \ref{itm:step6} of algorithm of Section \ref{sec:secureMrea} can be further enhanced by introducing third random prime number $x$. STEP \ref{itm:step6} of Section \ref{sec:secureMrea} can be written as: $e \times d \mod \phi = 1$, \emph{i.e}
+Also, STEP \ref{itm:step6} of algorithm of Section \ref{sec:mrea_algo} can be further enhanced by introducing third random prime number $x$. \\*
+STEP \ref{itm:step6} of Section \ref{sec:mrea_algo} can be written as:\\* $e \times d \mod \phi = 1$, \emph{i.e}
 \begin{equation}
-e \times d = 1 + x(\phi)
+e \times d = 1 + (x \times \phi)
 \end{equation}
 
 \begin{align*}
-	d &= \frac{1 + x(\phi)}{e}
+	d &= \frac{1 + (x\times\phi)}{e}
 \end{align*}
 
 since $d < \phi$
 
 \begin{align*}
-	\frac{1 + x(\phi)}{e} &< \phi \\
-	x(\phi) &< e(\phi) -1 \\
-	x &< \frac{e(\phi) -1}{\phi} \\
+	\frac{1 + (x \times \phi)}{e} &< \phi \\
+	(x \times \phi) &< (e \times \phi) -1 \\
+	x &< \frac{(e \times \phi) -1}{\phi} \\
 \end{align*}
 
 since $\phi$ is very large $\frac{1}{\phi}$ can be ignored and value of $x$ will be:
 \begin{equation}
 	x < e
 \end{equation}
-Value of $d$ in STEP \ref{itm:step6} can be written as
-\begin{equation}
-d = \frac{1 + x(\phi)}{e}; \text{ where } x < e
-\end{equation}
+
 
 Now, STEP 4 of the algorithm can be rewritten as:
-
 
 \begin{enumerate}[ {STEP }4{:} ]
 \item \emph{Compute the secret exponent $d$}
 	\begin{align}
 		%d, 1 < d < \phi\text{, such that }e \times d (\mod \phi) = 1& \notag \\
-		d = \frac{1 + x(\phi)}{e}; \text{ where } x < e&
+		d = \frac{1 + (x \times \phi)}{e}; \text{ where } x < e&
 	\end{align}
 \end{enumerate}
 
+To test with new value of $d$ we collected time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found the performance was improved. The values are provided in in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+    	\hline
+       		\emph{bits}	&		Java		&	Python\\
+	\hline
+    		33			&	78.310144	&	27.386368\\
+		96			&	320.994816	&	33.817088\\
+		160			&	963.48288	&	160.193792\\
+		220			&	10155.14112	&	2901.262848\\
+		273			&	33831.1593	&	4219.404032\\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Time comparison of java and python}
+	\label{table:rsaVSjava}
+
+\end{table}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/rsaVSjava.pdf}
+\caption{Time comparison of performance}
+\label{fig:rsaVSjava}
+\end{figure}
+
+
+Secure RSA as defined in Section \ref{sec:mrea_algo} needs large multiplicative computation for large prime numbers which will take $O(n^2)$ digit operation thus limiting the performance. To overcome this we needed faster algorithm for multiplication which we are going to explain in the next section.
+
+%KARATSUBA MULTIPLICATION
+\subsection{{\large Karatsuba Multiplication}}
+\label{sec: karatsuba_code}
+Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods of integer multiplication beyond what we learnt called conventional long multiplication and this is one of them. 
+
+\subsubsection{\bf Mathematical Derivation}
+
+To illustrate the algorithm, we let $X$ and $Y$ be two $2k$-bit unsigned integer and split them both in half
+\begin{align}
+X &= 2^{k}X_{1} + X_{0} \notag \\
+Y &= 2^{k}Y_{1} + Y_{0} 
+\end{align}
+In conventional long multiplication, the product $XY$ is computed with four $k$-bit multiplications and three additions as shown in Equation \ref{eq:eq1}
+
+\begin{align*}
+XY &= 2^{2k}z_{2} + 2^{k}z_{1} + z_{0}
+\end{align*}
+
+\begin{align}
+\label{eq:eq1}
+z_2 = X_{1}Y_{1}, z_{1} = X_{0}Y_{1} + X_{1}Y_{0}, z_{0} = X_{0}Y_{0}
+\end{align}
+
+As shown in Equation \ref{eq:eq1}, Karatsuba\cite{karatsuba} noticed that the middle term $z_1$ can be computed reusing the terms $z_2$ and $z_0$. Reusing these terms allow us to  replace two of the multiplications and one addition with four additions/subtractions and one multiplication
+
+\begin{align}
+z_{1} &=  X_{0}Y_{1} + X_{1}Y_{0} \notag\\
+&=  X_{1}Y_{1} + X_{0}Y_{0} - (X_{1} - X_{0})(Y_{1} - Y_{0}) \notag\\
+XY &= T_{1} - T_{2} \notag \\
+T_{1} &= 2^{2k}z_{2} + z_{0} + 2^{k}(z_{2} + z_{0}) \notag \\
+T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
+\label{eq:eq2}
+\end{align}
+
+
+\begin{algorithm}                      % enter the algorithm environmen\LARGEt
+\caption{Karatsuba Multiplication}          % give the algorithm a caption
+\label{alg_karatsuba}                           % and a label for \ref{} commands later in the document
+\begin{algorithmic}                    % enter the algorithmic environment
+    \REQUIRE two large numbers $n_1$ and $n_2$
+    \ENSURE product of $n_1$ and $n_2$
+
+   %\STATE Function($n_1$, $n_2$)
+    \IF{$n_1 < 10$ \OR $n_1 < 10$}
+    	\RETURN{$n_1 \times n_2$}
+    \ENDIF
+    
+    \IF{$n_1 > n_2$}
+    	\STATE{$m = n_1$}
+    \ELSE
+    	\STATE{$m = n_2$}
+    \ENDIF
+    
+    \STATE{$m_2 = \frac{m}{2}$}
+    
+    \COMMENT{split the digit sequences about the middle}
+    \STATE{$high_1, low_1 = split\_at(n_1, m_2)$}
+    \STATE{$high_2, low_2 = split\_at(n_2, m_2)$}
+    
+    \STATE{$z_0 = karatsuba(low_1, low_2)$}
+    \STATE{$z_1 = karatsuba((low_1+high_1), (low_2+high_2))$}
+    \STATE{$z_0 = karatsuba(high_1, high_2)$}
+    \RETURN{$(z_2 \times 10^{2 \times m_2})+ ((z_1 - z_2 - z_0)\times 10^{m_2})+(z_0)$}
+\end{algorithmic}
+\end{algorithm}
+
+
+To elaborate, let's take an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
+
+\begin{enumerate}[ {STEP }1{:} ]
+	\item Compute $a \times c = 672$
+	\item Compute $b \times d = 2652$
+	\item Compute sum of $(a + b)\times (c +d) = 134 \times 46 = 6164$
+	\item Compute STEP 3 - STEP 2 - STEP 1 = 2840
+	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
+\end{enumerate}
+
+Also, Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: Chinese remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
+
+Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
+\caption{Karatsuba Multiplication Performance}
+\label{fig:karatsube_image}
+\end{figure}
+
+\subsubsection{\bf Karatsuba Algorithm}
+
+The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
+
+%\parbox{\linewidth}{
+%	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
+%}
+
+We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers. All times are in milliseconds and TABLE \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade} shows results we obtained.
+
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+    	\hline
+       		digits 	&		Karatsuba					&	Long Conventional Multiplication\\
+	\hline
+    		8		&		0.059923					&	0.063902 \\
+		16		&		0.006230					&	0.006141 \\
+		32		&		0.016622					&	0.017437 \\
+		64		&		0.048354					&	0.058411 \\
+		128		&		0.140272					&	0.212314 \\
+		256		&		0.437445					&	0.808407 \\
+		512		&		1.317523					&	3.164557 \\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Karatsube VS Long Conventional Multiplication Time}
+	\label{table:karatsubaVSgrade}
+
+\end{table}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/karatsubaVSgradeSchool.jpg}
+\caption{Graph of results for Karatsuba and Grade School Multiplication}
+\label{fig:karatsubaVSgrade}
+\end{figure}
+
+
+%MERSENNE PRIME
 \subsection{{\large Pseudorandom Number Generation}}
 \label{sec:mersenne}
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
@@ -1095,128 +1251,7 @@ If for some $a$ none of the above set of powers is $-1$ and the specific odd pow
 \end{algorithmic}
 \end{algorithm}
  
-
-\subsection{{\large Karatsuba Multiplication}}
-\label{sec: karatsuba_code}
-Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods methods of integer multiplication beyond what we learnt in third grade and this is one of them. 
-
-To illustrate the algorithm, we let $X$ and $Y$ be two $2k$-bit unsigned integer and split them both in half
-\begin{align}
-X &= 2^{k}X_{1} + X_{0} \notag \\
-Y &= 2^{k}Y_{1} + Y_{0} 
-\end{align}
-In conventional long multiplication, the product $XY$ is computed with four $k$-bit multiplications and three additions as shown in Equation \ref{eq:eq1}
-
-\begin{align*}
-XY &= 2^{2k}z_{2} + 2^{k}z_{1} + z_{0}
-\end{align*}
-
-\begin{align}
-\label{eq:eq1}
-z_2 = X_{1}Y_{1}, z_{1} = X_{0}Y_{1} + X_{1}Y_{0}, z_{0} = X_{0}Y_{0}
-\end{align}
-
-As shown in Equation \ref{eq:eq2}, Karatsuba\cite{karatsuba} noticed that the middle term $z_1$ can be computed reusing the terms $z_2$ and $z_0$. Reusing these terms allow us to  replace two of the multiplications and one addition with four additions/subtractions and one multiplication
-
-\begin{align}
-z_{1} &=  X_{0}Y_{1} + X_{1}Y_{0} \notag\\
-&=  X_{1}Y_{1} + X_{0}Y_{0} - (X_{1} - X_{0})(Y_{1} - Y_{0}) \notag\\
-XY &= T_{1} - T_{2} \notag \\
-T_{1} &= 2^{2k}z_{2} + z_{0} + 2^{k}(z_{2} + z_{0}) \notag \\
-T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
-\label{eq:eq2}
-\end{align}
-
-
-\begin{algorithm}                      % enter the algorithm environment
-\caption{Karatsuba Multiplication}          % give the algorithm a caption
-\label{alg_karatsuba}                           % and a label for \ref{} commands later in the document
-\begin{algorithmic}                    % enter the algorithmic environment
-    \REQUIRE two large numbers $n_1$ and $n_2$
-    \ENSURE product of $n_1$ and $n_2$
-
-   %\STATE Function($n_1$, $n_2$)
-    \IF{$n_1 < 10$ \OR $n_1 < 10$}
-    	\RETURN{$n_1 \times n_2$}
-    \ENDIF
-    
-    \IF{$n_1 > n_2$}
-    	\STATE{$m = n_1$}
-    \ELSE
-    	\STATE{$m = n_2$}
-    \ENDIF
-    
-    \STATE{$m_2 = \frac{m}{2}$}
-    
-    \COMMENT{split the digit sequences about the middle}
-    \STATE{$high_1, low_1 = split\_at(n_1, m_2)$}
-    \STATE{$high_2, low_2 = split\_at(n_2, m_2)$}
-    
-    \STATE{$z_0 = karatsuba(low_1, low_2)$}
-    \STATE{$z_1 = karatsuba((low_1+high_1), (low_2+high_2))$}
-    \STATE{$z_0 = karatsuba(high_1, high_2)$}
-    \RETURN{$(z_2 \times 10^{2 \times m_2})+ ((z_1 - z_2 - z_0)\times 10^{m_2})+(z_0)$}
-\end{algorithmic}
-\end{algorithm}
-
-
-Taking an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
-
-\begin{enumerate}[ {STEP }1{:} ]
-	\item Compute $a \times c = 672$
-	\item Compute $b \times d = 2652$
-	\item Compute sum of $(a + b)\times (c +d) = 134 \times 46 = 6164$
-	\item Compute STEP 3 - STEP 2 - STEP 1 = 2840
-	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
-\end{enumerate}
-
-Also Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: chines remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
-
-Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast. Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen on the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
-\caption{Karatsuba Multiplication Performance}
-\label{fig:karatsube_image}
-\end{figure}
-
-The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
-
-%\parbox{\linewidth}{
-%	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
-%}
-
-We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers. All times are in milliseconds and Table \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade} shows results we obtained.
-
-\begin{table}[ht]
-	\begin{center}
-	\begin{tabular}{|c|c|c|}
-    	\hline
-       		digits 	&		Karatsuba					&	Grade School Multiplication\\
-	\hline
-    		8		&		0.059923					&	0.063902 \\
-		16		&		0.006230					&	0.006141 \\
-		32		&		0.016622					&	0.017437 \\
-		64		&		0.048354					&	0.058411 \\
-		128		&		0.140272					&	0.212314 \\
-		256		&		0.437445					&	0.808407 \\
-		512		&		1.317523					&	3.164557 \\
-	\hline
-	\end{tabular}
-	\end{center}
-	\caption{Karatsube VS GradeSchool Multiplication}
-	\label{table:karatsubaVSgrade}
-
-\end{table}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/karatsubaVSgradeSchool.jpg}
-\caption{Graph of results for Karatsuba and Grade School Multiplication}
-\label{fig:karatsubaVSgrade}
-\end{figure}
-
+%RESULTS
 \section{{\LARGE Results}}
 
 \subsection{{\large Random Numbers}}
