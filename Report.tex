@@ -890,7 +890,7 @@ STEP 4 of the algorithm can be rewritten as:
 	\end{align}
 \end{enumerate}
 
-To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values are provided in in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values of comparison are provided in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
 
 \begin{table}[ht]
 	\begin{center}
@@ -933,11 +933,12 @@ To illustrate the algorithm, we let $X$ and $Y$ be two $2k$-bit unsigned integer
 X &= 2^{k}X_{1} + X_{0} \notag \\
 Y &= 2^{k}Y_{1} + Y_{0} 
 \end{align}
-In conventional long multiplication, the product $XY$ is computed with four $k$-bit multiplications and three additions as shown in Equation \ref{eq:eq1}
+In conventional long multiplication, the product $XY$ is computed with four $k$-bit multiplications and three additions as shown in Equation \ref{eq:eq0}
 
-\begin{align*}
+\begin{align}
+\label{eq:eq0}
 XY &= 2^{2k}z_{2} + 2^{k}z_{1} + z_{0}
-\end{align*}
+\end{align}
 
 \begin{align}
 \label{eq:eq1}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 23:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 MAY 2014 00:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -400,21 +400,21 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 916--917
 File: images/Karatsuba-Complexity.png Graphic file (type png)
 
 <use images/Karatsuba-Complexity.png>
-Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 975
+Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 976
 .
 (pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 975--976
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 976--977
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1003
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1004
 .
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1003.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1004.
 
  [5 <./images/rsaVSjava.pdf> <./images/Karatsuba-Complexity.png (PNG copy)>]
 <images/karatsubaVSgradeSchool.pdf, id=43, 722.7pt x 505.89pt>
@@ -422,10 +422,10 @@ File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.pdf used on input line 1
-042.
+043.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1042--1043
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1043--1044
  [][] 
  []
 
@@ -433,10 +433,10 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1042--1043
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1057.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1058.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1057--1058
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1058--1059
  [][] 
  []
 
@@ -445,47 +445,47 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1057--1058
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1162.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1163.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1162--1163
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1163--1164
  [][] 
  []
 
 [7]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1187.
+             The label is: \space {}3{)}\space  on input line 1188.
 
 [8 <./images/cdf_mersenne.jpeg>]
 <images/encryptionTime.pdf, id=130, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
-Package pdftex.def Info: images/encryptionTime.pdf used on input line 1264.
+Package pdftex.def Info: images/encryptionTime.pdf used on input line 1265.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1264--1265
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1265--1266
  [][] 
  []
 
 <images/rsaPlot.pdf, id=131, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1277.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1278.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1277--1278
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1278--1279
  [][] 
  []
 
 <images/Rplot.pdf, id=132, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1287.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1288.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1287--1288
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1288--1289
  [][] 
  []
 
@@ -493,10 +493,10 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1287--1288
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1296.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1297.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1296--1297
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1297--1298
  [][] 
  []
 
@@ -525,10 +525,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4623 strings out of 493488
- 68584 string characters out of 3141326
- 141411 words of memory out of 3000000
- 7844 multiletter control sequences out of 15000+200000
+ 4624 strings out of 493488
+ 68592 string characters out of 3141326
+ 141420 words of memory out of 3000000
+ 7845 multiletter control sequences out of 15000+200000
  43813 words of font info for 77 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,19n,32p,1762b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -551,7 +551,7 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/
 fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 566707 bytes).
+Output written on Report.pdf (11 pages, 566738 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  247 compressed objects within 3 object streams
