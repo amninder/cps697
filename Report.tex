@@ -887,13 +887,13 @@ Now, STEP 4 of the algorithm can be rewritten as:
 	\end{align}
 \end{enumerate}
 
-To test with new value of $d$ we collected time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found the performance was improved. The values are provided in in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values are provided in in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
 
 \begin{table}[ht]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
     	\hline
-       		\emph{bits}	&		Java		&	Python\\
+       		\emph{bits}	&		Secure RSA		&	Our Result\\
 	\hline
     		33			&	78.310144	&	27.386368\\
 		96			&	320.994816	&	33.817088\\
@@ -1282,7 +1282,7 @@ Secure RSA algorithm is used to encrypt files and transmit encrypted files to ot
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{images/encryptionTime.jpg}
+\includegraphics[width=90mm]{images/encryptionTime.pdf}
 \caption{Encryption \& Decryption of file}
 \label{fig:rsa_time}
 \end{figure}
