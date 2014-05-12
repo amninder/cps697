@@ -953,6 +953,30 @@ T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
 \end{align}
 
 
+To elaborate, let's take an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
+
+\begin{enumerate}[ {STEP }1{:} ]
+	\item Compute $a \times c = 672$
+	\item Compute $b \times d = 2652$
+	\item Compute sum of $(a + b)\times (c +d) = 134 \times 46 = 6164$
+	\item Compute STEP 3 - STEP 2 - STEP 1 = 2840
+	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
+\end{enumerate}
+
+Also, Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: Chinese remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
+
+Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
+\caption{Karatsuba Multiplication Performance}
+\label{fig:karatsube_image}
+\end{figure}
+
+\subsubsection{\bf Karatsuba Algorithm}
+
+The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
 \begin{algorithm}                      % enter the algorithm environmen\LARGEt
 \caption{Karatsuba Multiplication}          % give the algorithm a caption
 \label{alg_karatsuba}                           % and a label for \ref{} commands later in the document
@@ -983,33 +1007,6 @@ T_{2} &= 2^{2k}(X_{1} - X_{0})((Y_{1}-Y_{0})
     \RETURN{$(z_2 \times 10^{2 \times m_2})+ ((z_1 - z_2 - z_0)\times 10^{m_2})+(z_0)$}
 \end{algorithmic}
 \end{algorithm}
-
-
-To elaborate, let's take an example of $x = 5678 \text{ and } y = 1234$. Now we will split first number $x$ into two halves as $a=56 \text{ and }b=78$ similarly for $y$, $c=12 \text{ and } d=34$
-
-\begin{enumerate}[ {STEP }1{:} ]
-	\item Compute $a \times c = 672$
-	\item Compute $b \times d = 2652$
-	\item Compute sum of $(a + b)\times (c +d) = 134 \times 46 = 6164$
-	\item Compute STEP 3 - STEP 2 - STEP 1 = 2840
-	\item Pad result of STEP1 with 4 zeros, pad 2 zeros for result from STEP 4 and add them along with result from STEP 2 and resultant is the required result which is 7006652.
-\end{enumerate}
-
-Also, Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: Chinese remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
-
-Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
-\caption{Karatsuba Multiplication Performance}
-\label{fig:karatsube_image}
-\end{figure}
-
-\subsubsection{\bf Karatsuba Algorithm}
-
-The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
-
 %\parbox{\linewidth}{
 %	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
 %}
@@ -1039,7 +1036,7 @@ We measured the program and found the results of multiplication for pairs of ran
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{images/karatsubaVSgradeSchool.jpg}
+\includegraphics[width=90mm]{images/karatsubaVSgradeSchool.pdf}
 \caption{Graph of results for Karatsuba and Grade School Multiplication}
 \label{fig:karatsubaVSgrade}
 \end{figure}
