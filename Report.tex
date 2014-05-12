@@ -969,16 +969,16 @@ To elaborate, let's take an example of $x = 5678 \text{ and } y = 1234$. Now we 
 
 Also, Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: Chinese remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
 
-Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Karatsuba improves the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
+Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Using Karatsuba, we improved the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
-\caption{Karatsuba Multiplication Performance}
-\label{fig:karatsube_image}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=90mm]{images/Karatsuba-Complexity.png}
+%\caption{Karatsuba Multiplication Performance}
+%\label{fig:karatsube_image}
+%\end{figure}
 
-\subsubsection{\bf Karatsuba Algorithm}
+\subsubsection{\bf Karatsuba Algorithm Implementation}
 
 The algorithm we followed to generate result for Karatsuba multiplication is explained in Algorithm \ref{alg_karatsuba}
 \begin{algorithm}                      % enter the algorithm environmen\LARGEt
@@ -1015,7 +1015,7 @@ The algorithm we followed to generate result for Karatsuba multiplication is exp
 %	\lstinputlisting[label = samplecode, firstline=195,lastline=232]{RSA.py}
 %}
 
-We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers. All times are in milliseconds and TABLE \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade} shows results we obtained.
+We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers which is in TABLE \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade}. All times are in milliseconds and  shows results we obtained.
 
 \begin{table}[ht]
 	\begin{center}

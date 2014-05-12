@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 MAY 2014 00:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 MAY 2014 00:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -396,17 +396,10 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 916--917
  [][] 
  []
 
-[4] <images/Karatsuba-Complexity.png, id=34, 602.25pt x 372.39125pt>
-File: images/Karatsuba-Complexity.png Graphic file (type png)
+[4]
 
-<use images/Karatsuba-Complexity.png>
-Package pdftex.def Info: images/Karatsuba-Complexity.png used on input line 976
-.
-(pdftex.def)             Requested size: 256.0748pt x 158.34657pt.
-
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 976--977
- [][] 
- []
+LaTeX Warning: Reference `fig:karatsube_image' on page 5 undefined on input lin
+e 972.
 
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1004
 .
@@ -416,8 +409,8 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1004.
 
- [5 <./images/rsaVSjava.pdf> <./images/Karatsuba-Complexity.png (PNG copy)>]
-<images/karatsubaVSgradeSchool.pdf, id=43, 722.7pt x 505.89pt>
+
+<images/karatsubaVSgradeSchool.pdf, id=34, 722.7pt x 505.89pt>
 File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
@@ -429,7 +422,8 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1043--1044
  [][] 
  []
 
-<images/plotRandomNumber.pdf, id=44, 505.89pt x 505.89pt>
+[5 <./images/rsaVSjava.pdf>]
+<images/plotRandomNumber.pdf, id=43, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
@@ -441,7 +435,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1058--1059
  []
 
 [6 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
-<images/cdf_mersenne.jpeg, id=122, 200.75pt x 126.4725pt>
+<images/cdf_mersenne.jpeg, id=121, 200.75pt x 126.4725pt>
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
@@ -452,13 +446,12 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1163--1164
  [][] 
  []
 
-[7]
+[7 <./images/cdf_mersenne.jpeg>]
 
 LaTeX Warning: The counter will not be printed.
              The label is: \space {}3{)}\space  on input line 1188.
 
-[8 <./images/cdf_mersenne.jpeg>]
-<images/encryptionTime.pdf, id=130, 722.7pt x 505.89pt>
+[8] <images/encryptionTime.pdf, id=129, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
@@ -469,7 +462,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1265--1266
  [][] 
  []
 
-<images/rsaPlot.pdf, id=131, 505.89pt x 505.89pt>
+<images/rsaPlot.pdf, id=130, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
 Package pdftex.def Info: images/rsaPlot.pdf used on input line 1278.
@@ -479,7 +472,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1278--1279
  [][] 
  []
 
-<images/Rplot.pdf, id=132, 506.21703pt x 506.21703pt>
+<images/Rplot.pdf, id=131, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
 Package pdftex.def Info: images/Rplot.pdf used on input line 1288.
@@ -489,7 +482,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1288--1289
  [][] 
  []
 
-<images/mersenneTime.png, id=133, 722.7pt x 542.025pt>
+<images/mersenneTime.png, id=132, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
@@ -500,11 +493,11 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1297--1298
  [][] 
  []
 
-
+[9 <./images/encryptionTime.pdf> <./images/rsaPlot.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./images/encryptionTime.pdf> <./images/rsaPlot.pdf>] (./Report.bbl [10 <./
-images/Rplot.pdf> <./images/mersenneTime.png>]
+
+(./Report.bbl [10 <./images/Rplot.pdf> <./images/mersenneTime.png>]
 Underfull \hbox (badness 2376) in paragraph at lines 65--69
 []\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
  []
@@ -523,38 +516,41 @@ Before submitting the final camera ready copy, remember to:
 
 [11
 
-] (./Report.aux) ) 
+] (./Report.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4624 strings out of 493488
- 68592 string characters out of 3141326
- 141420 words of memory out of 3000000
- 7845 multiletter control sequences out of 15000+200000
+ 4619 strings out of 493488
+ 68425 string characters out of 3141326
+ 142412 words of memory out of 3000000
+ 7841 multiletter control sequences out of 15000+200000
  43813 words of font info for 77 fonts, out of 3000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,19n,32p,1762b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 566738 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utm
+r8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Report.pdf (11 pages, 558343 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
+ 339 PDF objects out of 1000 (max. 8388607)
  247 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
