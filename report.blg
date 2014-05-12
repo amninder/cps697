@@ -6,47 +6,47 @@ Database file #1: ref.bib
 Warning--entry type for "gmpy2" isn't style-file defined
 --line 12 of file ref.bib
 Warning--entry type for "lcg_cdf" isn't style-file defined
---line 21 of file ref.bib
+--line 22 of file ref.bib
 Warning--to sort, need author or key in gmpy2
-You've used 21 entries,
+You've used 25 entries,
             2118 wiz_defined-function locations,
-            613 strings with 6607 characters,
-and the built_in function-call counts, 6136 in all, are:
-= -- 592
-> -- 201
-< -- 8
-+ -- 82
-- -- 60
-* -- 339
-:= -- 951
-add.period$ -- 55
-call.type$ -- 21
-change.case$ -- 91
+            639 strings with 7373 characters,
+and the built_in function-call counts, 7864 in all, are:
+= -- 764
+> -- 256
+< -- 12
++ -- 103
+- -- 77
+* -- 451
+:= -- 1201
+add.period$ -- 68
+call.type$ -- 25
+change.case$ -- 111
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 274
-empty$ -- 569
-format.name$ -- 60
-if$ -- 1359
+cite$ -- 26
+duplicate$ -- 352
+empty$ -- 725
+format.name$ -- 77
+if$ -- 1759
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 14
-newline$ -- 100
-num.names$ -- 41
-pop$ -- 131
+int.to.str$ -- 25
+missing$ -- 18
+newline$ -- 120
+num.names$ -- 51
+pop$ -- 156
 preamble$ -- 1
-purify$ -- 72
+purify$ -- 88
 quote$ -- 0
-skip$ -- 248
+skip$ -- 314
 stack$ -- 0
-substring$ -- 363
-swap$ -- 84
-text.length$ -- 8
+substring$ -- 504
+swap$ -- 117
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 81
+type$ -- 97
 warning$ -- 1
-while$ -- 59
-width$ -- 23
-write$ -- 205
+while$ -- 75
+width$ -- 27
+write$ -- 251
 (There were 3 warnings)

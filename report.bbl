@@ -3,9 +3,22 @@
 \bibitem{gmpy2}
 Gmpy2.0 [gmpy2.readthedocs.org], May 2014.
 
+\bibitem{affine_cipher}
+G.~Aithal, K.~Bhat, and U.~Sripathi.
+\newblock Implementation of stream cipher system based on representation of
+  integers in residue number system.
+\newblock In {\em Advance Computing Conference (IACC), 2010 IEEE 2nd
+  International}, pages 210--217, Feb 2010.
+
 \bibitem{wolfram_mt}
 W.~Alpha.
 \newblock Statistical performance of mersenne twister mt19937.
+
+\bibitem{marsaglia_theorem}
+E.~Bach.
+\newblock Efficient prediction of marsaglia-zaman random number generators.
+\newblock {\em IEEE Transactions on Information Theory}, 44(3):1253--1257,
+  1998.
 
 \bibitem{lcg_cdf}
 D.~Biebighauser.
@@ -61,6 +74,12 @@ B.~Kleinberg.
 \newblock Introduction to algorithms (cs 482).
 \newblock {\em The Miller-Rabin Randomized Primality Test}, 05 2010.
 
+\bibitem{lcg_cryptography}
+C.-C. Li and B.~Sun.
+\newblock Using linear congruential generators for cryptographic purposes.
+\newblock In G.~Hu, editor, {\em Computers and Their Applications}, pages
+  13--19. ISCA, 2005.
+
 \bibitem{MT19937}
 M.~Matsumoto and T.~Nishimura.
 \newblock Mersenne twister: A 623-dimensionally equidistributed uniform
@@ -92,6 +111,13 @@ M.~Shand and J.~Vuillemin.
 \newblock Fast implementations of rsa cryptography.
 \newblock In {\em Computer Arithmetic, 1993. Proceedings., 11th Symposium on},
   pages 252--259, Jun 1993.
+
+\bibitem{1347044}
+R.~Tirtea and G.~Deconinck.
+\newblock Specifications overview for counter mode of operation. security
+  aspects in case of faults.
+\newblock In {\em Electrotechnical Conference, 2004. MELECON 2004. Proceedings
+  of the 12th IEEE Mediterranean}, volume~2, pages 769--773 Vol.2, May 2004.
 
 \bibitem{768_key}
 T.~K. K. A. J. F. A. K. L. E. T. J. W. B. P. G. A. K. P. L. M. D. A. O.~H.

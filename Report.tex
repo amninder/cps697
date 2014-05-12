@@ -969,7 +969,7 @@ To elaborate, let's take an example of $x = 5678 \text{ and } y = 1234$. Now we 
 
 Also, Xin  and Ziaofei\cite{378085} analysed the critical techniques that may be combined in the design of fast hardware for RSA cryptography: Chinese remainders, star chains, Hensel's odd division (also known as Montgomery modular reduction), carry-save representation, quotient pipelining, and asynchronous carry completion adders.
 
-Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Using Karatsuba, we improved the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsube_image} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
+Assuming that we replace two of the multiplications with only one makes the program faster. The question is how fast? Using Karatsuba, we improved the multiplication process by replacing the initial complexity of $O(n^{2})$ by $O(n^{\log 3})$, which can be seen in the Figure \ref{fig:karatsubaVSgrade} for the performance of Karatsuba Multiplication over conventional multiplication for big n.
 
 %\begin{figure}[ht!]
 %\centering
@@ -1017,6 +1017,9 @@ The algorithm we followed to generate result for Karatsuba multiplication is exp
 
 We measured the program and found the results of multiplication for pairs of random \emph{n}-digit numbers which is in TABLE \ref{table:karatsubaVSgrade} and Figure \ref{fig:karatsubaVSgrade}. All times are in milliseconds and  shows results we obtained.
 
+To increase the security of encryption we need pseudorandom number generator with large period. To achieve so Linear Congruential Generator (LCG)\cite{lcg_cryptography} can be used which is fast and require minimal memory (typically 32 or 64 bits) to retain state. This makes them valuable for simulating multiple independent streams but it is not recommended where high-quality randomness is critical which is highly prioritized in cryptography. If a linear congruential generator is seeded with a character and then iterated once, the result is simple classical cipher called an affine cipher\cite{affine_cipher}; this cipher is easily broken by standard frequency analysis. Also, LCG tend to exhibit some severe defects. for instance, if a LCG is used to choose points in $n$-dimensional space, the points will lie on, at most $m^{\frac{1}{m}}$ hyperplanes\cite{marsaglia_theorem}. For this research, we introduced Mersenne Twister (MT19937) pseudorandom number generator which we will explain in next section.
+
+
 \begin{table}[ht]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -1051,7 +1054,7 @@ We measured the program and found the results of multiplication for pairs of ran
 \label{sec:mersenne}
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
 
- It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behaviour of the randomness. The main point of of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}. The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. 
+ It is quite possible to have a random generator that produces the exactly same values for two different seeds. This isn't an issue unless we depend on some behavior of the randomness. The main point of course being cryptography is crypto graphical random number generators try very hard to be very random even if we run 10 generators in parallel. However, this might defeats the purpose of repeatability. The authors claim speeds 1.5 to 2 times faster than \emph{Advanced Encryption Standard in counter mode}\cite{1347044}. The values for parameters $w, n, m, r, a, u, s, b, t, c \text{ and }l$ are taken from \emph{Table $II$ Parameters and k-distribution of Mersenne Twisters}\cite{MT19937}. 
 
 \begin{figure}[ht!]
 \centering
@@ -1177,7 +1180,9 @@ MT19937 we worked with showed the following statistical property which makes it 
 		$\frac{1}{2}erfc(0.009485(4599.84-x))$
 \end{itemize}
 
+For faster primality test for random number generated by MT19937 we used Miller-Rabin Primality test which is by far fastest performing algorithm. We are going to explain the implementation in next section.
 
+%MILLER-RABIN
 \subsection{{\large Miller-Rabin Primality Test\cite{miller-rabin}}}
 We know of two ways to prove that a number $n$ is composite:
 \begin{enumerate}
