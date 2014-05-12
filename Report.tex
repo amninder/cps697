@@ -800,9 +800,9 @@ Error difference is just 1700
 	\hline
     		$10^{4}$	&	1,229					&	1085.7				&	1246.1	\\
 		$10^{8}$	&	5,761,455					&	$5.42 \times 10^6$		&	$5.762 \times 10^6$	\\
-		$10^{12}$	&	37,607,912,018				&	$3.61 \times 10^10$		&	$3.760795  \times 10^10$		\\
-		$10^{16}$	&	279,238,341,033,925		&	$2.71 \times 10^14$		&	$2.79238344 \times 10^14$	\\
-		$10^{18}$	&	24,739,954,287,740,860		&	$2.41 \times 10^16$		&	$2.47399543 \times 10^16$	\\
+		$10^{12}$	&	37,607,912,018				&	$3.61 \times 10^10$		&	$3.760  \times 10^{10}$		\\
+		$10^{16}$	&	279,238,341,033,925		&	$2.71 \times 10^14$		&	$2.792 \times 10^{14}$	\\
+		$10^{18}$	&	24,739,954,287,740,860		&	$2.41 \times 10^16$		&	$2.473 \times 10^{16}$	\\
 	\hline
 	\end{tabular}
 	\end{center}
@@ -814,13 +814,15 @@ The prime counts in the TABLE \ref{table:gauss_values} are taken from Edwards\ci
 
 \section{{Method}}
 
-\subsection{{Secure RSA for File Transfer}}
-\label{sec:secureMrea}
+\subsection{{Using 2 pairs of prime numbers}}
+%\label{sec:secureMrea}
+\label{sec:mrea_algo}
 
 Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for Secure RSA crypto system. We have removed the drawback using Secure RSA for safe transmission of file from one user to another.
 
-\subsubsection{\bf Secure RSA can be summarized as follows:}
-\label{sec:mrea_algo}
+%\subsubsection{\bf Secure RSA can be summarized as follows:}
+%\label{sec:mrea_algo}
+Secure RSA can be summarized as follows: \\
 \begin{enumerate}[ {STEP }1{:} ]
 	\item \emph{Choose four large prime numbers $p, q, r \text{ and } s$ randomly and independently of each other. All primes should be of equivalent length.}"
 	\item \emph{Compute $n = p \times s, m=r \times s, \phi = (p-1)\times(q-1) \text{ and } \lambda = (r-1) \times (s-1)$}
@@ -847,7 +849,7 @@ Compute original message:
 
 \par
 
-\subsubsection{\bf The proposed algorithm\cite{securersa} can be further enhanced by following two methods}
+\subsection{\bf Using 3\textsuperscript{rd} prime number}%\cite{securersa}
 \par \par
 For STEP \ref{itm:step3} of algorithm of Section \ref{sec:mrea_algo}, we found that there are only two possibilities:
 
@@ -894,33 +896,6 @@ STEP 4 of the algorithm can be rewritten as:
 	\end{align}
 \end{enumerate}
 
-To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values of comparison are provided in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
-
-\begin{table}[ht]
-	\begin{center}
-	\begin{tabular}{|c|c|c|}
-    	\hline
-       		\emph{bits}	&		Secure RSA		&	Our Result\\
-	\hline
-    		33			&	78.310144	&	27.386368\\
-		96			&	320.994816	&	33.817088\\
-		160			&	963.48288	&	160.193792\\
-		220			&	10155.14112	&	2901.262848\\
-		273			&	33831.1593	&	4219.404032\\
-	\hline
-	\end{tabular}
-	\end{center}
-	\caption{Time comparison of java and python}
-	\label{table:rsaVSjava}
-
-\end{table}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{images/rsaVSjava.pdf}
-\caption{Time comparison of performance}
-\label{fig:rsaVSjava}
-\end{figure}
 
 
 Secure RSA as defined in Section \ref{sec:mrea_algo} needs large multiplicative computation for large prime numbers which will take $O(n^2)$ digit operation thus limiting the performance. To overcome this we needed faster algorithm for multiplication which we are going to explain in the next section.
@@ -1264,8 +1239,77 @@ If for some $a$ none of the above set of powers is $-1$ and the specific odd pow
 %RESULTS
 \section{{Results}}
 
+\subsection{Using 2 pairs of prime number}
+We found that that time consuming step in the algorithm as mentioned in Section \ref{sec:mrea_algo} is STEP 4. Since $\phi$ is very large which is why it makes it time consuming to compute the value of $d$. We ran independent test to find the average time (in milliseconds) taken to encrypt and decrypt using $d$ and found the following results:
 
-\subsection{{Encryption \& Decryption}}
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|}
+    	\hline
+       		\emph{bits}	&		Secure RSA\\
+	\hline
+    		33			&	78.310144\\
+		96			&	320.994816\\
+		160			&	963.48288\\
+		220			&	10155.14112\\
+		273			&	33831.1593\\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Time taken to encrypt and decrypt}
+	\label{table:rsa_with_d}
+
+\end{table}
+
+
+\subsection{Using 3\textsuperscript{rd} prime number}
+Performance wise introduction of new method of finding the value of $d$ reduced computation time as compared to the previous approach. We ran tests for encryption and decryption using new method and it reduced time consumption. The values are mentioned in Table \ref{table:4.2}:
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+    	\hline
+       		\emph{bits}	&		Our result\\
+	\hline
+    		33			&	27.386368\\
+		96			&	33.817088\\
+		160			&	160.193792\\
+		220			&	2901.262848\\
+		273			&	4219.404032\\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Time comparison of Old $d$ and new $d$}
+	\label{table:4.2}
+\end{table}
+
+\subsection{Comparision}
+To test with new value of $d$ we collected average time taken for 10 sets of 33, 96, 160, 220, 273 \emph{bits} of data for encryption and decryption and found that the change had significant affect on the performance. The values of comparison are provided in TABLE \ref{table:rsaVSjava} and performance graph is Figure \ref{fig:rsaVSjava}.
+
+\begin{table}[ht]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+    	\hline
+       		\emph{bits}	&		Secure RSA		&	Our result\\
+	\hline
+    		33			&	78.310144	&	27.386368\\
+		96			&	320.994816	&	33.817088\\
+		160			&	963.48288	&	160.193792\\
+		220			&	10155.14112	&	2901.262848\\
+		273			&	33831.1593	&	4219.404032\\
+	\hline
+	\end{tabular}
+	\end{center}
+	\caption{Time comparison of Old $d$ and new $d$}
+	\label{table:rsaVSjava}
+\end{table}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{images/rsaVSjava.pdf}
+\caption{Time comparison of performance}
+\label{fig:rsaVSjava}
+\end{figure}
+%\subsection{{Encryption \& Decryption}}
 
 Though, introduction to one more random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. We performed Normal Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
 
@@ -1317,7 +1361,10 @@ To further boost the multiplicative performance we used third party library for 
 
 
 \section{{Conclusion}}
-The digital world of cryptography is getting bigger and bigger, not smaller and our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption. 
+
+
+
+The digital world of cryptography is getting bigger and bigger, not smaller and our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption.  Our method indicated we can reduce the time complexity of computation to generate private key using newly introduced method.
 
 
 Secure RSA algorithm is used to encrypt files and transmit encrypted files to other end where it is decrypted. Our system works on the large numbers. It has broad development prospects. The system application was designed to take the efficiency and reusability into account. Great level of security is achieved using this algorithm. Secure RSA algorithm for file transmission algorithm can be used where high security file transmission required in public forums.

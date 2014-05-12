@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 09:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -434,41 +434,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 797.
 
-Overfull \hbox (22.16562pt too wide) in paragraph at lines 797--808
- [] 
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+
  []
 
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 822.
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
 []\OT1/ppl/m/it/12 Choose four large prime num-bers
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
 \OML/cmm/m/it/12 p; q; r[]s$ \OT1/ppl/m/it/12 ran-domly and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
 \OT1/ppl/m/it/12 in-de-pen-dently of each other. All
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 852--853
-\OT1/ppl/m/n/12 For STEP 3[] of al-go-rithm of Sec-tion 3.1.1[],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 860--861
-
- []
-
-[5]
-Underfull \hbox (badness 3088) in paragraph at lines 862--863
-[]\OT1/ppl/m/n/12 STEP 4[] of Sec-tion 3.1.1[] which is $\OML/cmm/m/it/12 e \OM
-S/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 d
+Underfull \hbox (badness 3323) in paragraph at lines 854--855
+\OT1/ppl/m/n/12 For STEP 3[] of al-go-rithm of Sec-tion 3.1[],
  []
 
 
@@ -476,193 +463,205 @@ Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 
-LaTeX Warning: The counter will not be printed.
-             The label is: \space {STEP }4{:}\space  on input line 889.
-
-<images/rsaVSjava.pdf, id=37, 722.7pt x 505.89pt>
-File: images/rsaVSjava.pdf Graphic file (type pdf)
- <use images/rsaVSjava.pdf>
-Package pdftex.def Info: images/rsaVSjava.pdf used on input line 920.
-(pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
-
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 920--921
- [][] 
  []
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 926--927
+LaTeX Warning: The counter will not be printed.
+             The label is: \space {STEP }4{:}\space  on input line 891.
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 901--902
 \OT1/ppl/m/n/12 large mul-ti-plica-tive com-pu-ta-tion for large
  []
 
-[6 <./images/rsaVSjava.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 985--985
- \OT1/phv/m/sl/12 3.2.2 \OT1/ppl/b/n/12 Karat-suba Al-go-rithm Im-ple-men-ta-
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 908.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+ \OT1/phv/m/sl/12 3.3.2 \OT1/ppl/b/n/12 Karat-suba Al-go-rithm Im-ple-men-ta-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 1008
-.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 983.
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1008.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 983.
 
- [7]
-<images/karatsubaVSgradeSchool.pdf, id=50, 722.7pt x 505.89pt>
+<images/karatsubaVSgradeSchool.pdf, id=40, 722.7pt x 505.89pt>
 File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.pdf used on input line 1
-050.
+025.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1050--1051
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1025--1026
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
- \OT1/phv/b/n/12 3.3 Pseu-do-ran-dom Num-ber Gen-er-a-
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1032
+ \OT1/phv/b/n/12 3.4 Pseu-do-ran-dom Num-ber Gen-er-a-
  []
 
-<images/plotRandomNumber.pdf, id=51, 505.89pt x 505.89pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+<images/plotRandomNumber.pdf, id=45, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1065.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1040.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1065--1066
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1040--1041
  [][] 
  []
 
 [8 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
 []$\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [0]\OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [1]
 \OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [2]\OML/cmm/m/it/12 :::::x\OT1/cmr/m/n/12 [
 \OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1112
 []$\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT
 1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][]\OML/cmm/m/it/12 u\OT1/cmr/m
 /n/12 )[](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 i \OT1/cmr/m/n/1
 2 + 1)
  []
 
-<images/cdf_mersenne.jpeg, id=129, 200.75pt x 126.4725pt>
+<images/cdf_mersenne.jpeg, id=123, 200.75pt x 126.4725pt>
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1170.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1145.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1170--1171
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1145--1146
  [][] 
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 1176--1177
-[]\OT1/ppl/m/n/12 Figure 4[] shows the Cum-mu-la-tive Den-sity
+Underfull \hbox (badness 2277) in paragraph at lines 1151--1152
+[]\OT1/ppl/m/n/12 Figure 3[] shows the Cum-mu-la-tive Den-sity
  []
 
 [9]
 
-LaTeX Warning: Text page 10 contains only floats.
-
-
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1197.
+             The label is: \space {}3{)}\space  on input line 1172.
 
-[10 <./images/cdf_mersenne.jpeg>] [11]
-<images/encryptionTime.pdf, id=139, 722.7pt x 505.89pt>
+[10 <./images/cdf_mersenne.jpeg>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1265.
+ [11]
+<images/rsaVSjava.pdf, id=133, 722.7pt x 505.89pt>
+File: images/rsaVSjava.pdf Graphic file (type pdf)
+ <use images/rsaVSjava.pdf>
+Package pdftex.def Info: images/rsaVSjava.pdf used on input line 1308.
+(pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1308--1309
+ [][] 
+ []
+
+<images/encryptionTime.pdf, id=134, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
-Package pdftex.def Info: images/encryptionTime.pdf used on input line 1274.
+Package pdftex.def Info: images/encryptionTime.pdf used on input line 1318.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1274--1275
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1318--1319
  [][] 
  []
 
-<images/rsaPlot.pdf, id=140, 505.89pt x 505.89pt>
+<images/rsaPlot.pdf, id=135, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1287.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1331.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1287--1288
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1331--1332
  [][] 
  []
 
-<images/Rplot.pdf, id=141, 506.21703pt x 506.21703pt>
+<images/Rplot.pdf, id=136, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1297.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1341.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1297--1298
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1341--1342
  [][] 
  []
 
-<images/mersenneTime.png, id=142, 722.7pt x 542.025pt>
+[12 <./images/rsaVSjava.pdf> <./images/encryptionTime.pdf>]
+<images/mersenneTime.png, id=150, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1306.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1350.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1306--1307
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1350--1351
  [][] 
  []
 
-[12 <./images/encryptionTime.pdf> <./images/rsaPlot.pdf>]
-Underfull \hbox (badness 2012) in paragraph at lines 1316--1317
+
+Underfull \hbox (badness 2012) in paragraph at lines 1360--1361
 []\OT1/ppl/m/n/12 To fur-ther boost the mul-ti-plica-tive per-for-
  []
 
-
-Underfull \hbox (badness 1484) in paragraph at lines 1323--1324
+[13 <./images/rsaPlot.pdf> <./images/Rplot.pdf> <./images/mersenneTime.png>]
+Underfull \hbox (badness 1484) in paragraph at lines 1370--1371
 \OT1/ppl/m/n/12 the ef-fi-ciency and reusabil-ity into ac-count.
  []
 
-[13 <./images/Rplot.pdf> <./images/mersenneTime.png>] (./Report.bbl) [14]
-(./Report.aux) ) 
+(./Report.bbl [14]) [15
+
+] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4736 strings out of 493315
- 70155 string characters out of 6137904
- 145988 words of memory out of 5000000
- 8084 multiletter control sequences out of 15000+600000
- 45548 words of font info for 95 fonts, out of 8000000 for 9000
+ 4741 strings out of 493315
+ 70207 string characters out of 6137904
+ 141995 words of memory out of 5000000
+ 8087 multiletter control sequences out of 15000+600000
+ 47790 words of font info for 98 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,19n,32p,1762b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/f
-onts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palat
-ino/uplri8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/uz
-dr.pfb>
-Output written on Report.pdf (14 pages, 575526 bytes).
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
+urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/pal
+atino/uplri8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/
+uzdr.pfb>
+Output written on Report.pdf (15 pages, 576504 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
+ 356 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
