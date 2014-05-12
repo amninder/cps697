@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 08:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.4)  12 MAY 2014 09:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -16,58 +16,55 @@ Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 \@IEEEtrantmpcountA=\count79
 \@IEEEtrantmpcountB=\count80
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
+-- Using IEEE Computer Society mode.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 368.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen104
--- This is a 10 point document.
+-- This is a 12 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen105
 \CLASSINFOnormalsizeunitybaselineskip=\dimen106
 \IEEEnormaljot=\dimen107
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <6> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <14> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <22> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <22> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 726.
 \IEEEilabelindentA=\dimen108
 \IEEEilabelindentB=\dimen109
 \IEEEilabelindent=\dimen110
@@ -264,18 +261,18 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 410.
+LaTeX Font Info:    ... okay on input line 410.
 \c@lstlisting=\count119
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -338,203 +335,334 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-** WARNING: \IEEEPARstart is locked out when in conference mode (line 561).
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 511.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 511.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 660.
+(Font)              <14> on input line 511.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 660.
+(Font)              <9.79996> on input line 511.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 511.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 511.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 514.
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--530
+\OT1/phv/b/n/9 Index Terms\OT1/phv/m/n/9 ---Cryptography, RSA, MT19937, Mersenn
+e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--530
+\OT1/phv/m/n/9 Twister, Miller-Rabin, Prime Num-bers, Pseu-do-ran-dom
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 549.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 549.
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-[2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 793.
+(Font)              <12> on input line 664.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 793.
+(Font)              <8> on input line 664.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 664.
 
-Overfull \hbox (2.668pt too wide) in paragraph at lines 793--804
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
+ \OT1/phv/b/sc/14 2 Back-ground & Re-lated
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 688.
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
+ \OT1/phv/b/n/12 2.1 El-lip-tic Curve Cryp-tosys-tem (ECC)
+ []
+
+[2]
+Underfull \hbox (badness 2644) in paragraph at lines 719--719
+ \OT1/phv/b/n/12 2.4 Diffie-Hellman key agree-ment pro-to-
+ []
+
+[3]
+Underfull \hbox (badness 2970) in paragraph at lines 727--728
+[]\OT1/ppl/m/n/12 Repeat STEP 2 un-til no num-ber
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--732
+[]\OT1/ppl/m/n/12 The al-go-rithm [19] is de-fined in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
+[]\OT1/ppl/m/n/12 The com-plex-ity of the al-go-rithm is
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 760--761
+\OT1/ppl/m/n/12 in RAM ma-chine model is $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 n [] [] n\OT1/cmr/m/n/12 )$
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 760--761
+\OT1/ppl/m/n/12 the fact that the prime har-monic se-ries
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
+\OT1/ppl/m/n/12 asymp-tot-i-cally ap-proaches $[]$. The
+ []
+
+[4]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 797.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 797.
+
+Overfull \hbox (22.16562pt too wide) in paragraph at lines 797--808
  [] 
  []
 
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 822.
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--831
-\OT1/ptm/m/n/10 The pub-lic key is ($\OML/cmm/m/it/10 n; m; g; e$\OT1/ptm/m/n/1
-0 ) and pri-vate key is
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+[]\OT1/ppl/m/it/12 Choose four large prime num-bers
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
-
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+\OML/cmm/m/it/12 p; q; r[]s$ \OT1/ppl/m/it/12 ran-domly and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--859
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+\OT1/ppl/m/it/12 in-de-pen-dently of each other. All
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 852--853
+\OT1/ppl/m/n/12 For STEP 3[] of al-go-rithm of Sec-tion 3.1.1[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
+
+ []
+
+[5]
+Underfull \hbox (badness 3088) in paragraph at lines 862--863
+[]\OT1/ppl/m/n/12 STEP 4[] of Sec-tion 3.1.1[] which is $\OML/cmm/m/it/12 e \OM
+S/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 d
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {STEP }4{:}\space  on input line 885.
+             The label is: \space {STEP }4{:}\space  on input line 889.
 
-<images/rsaVSjava.pdf, id=24, 722.7pt x 505.89pt>
+<images/rsaVSjava.pdf, id=37, 722.7pt x 505.89pt>
 File: images/rsaVSjava.pdf Graphic file (type pdf)
  <use images/rsaVSjava.pdf>
-Package pdftex.def Info: images/rsaVSjava.pdf used on input line 916.
+Package pdftex.def Info: images/rsaVSjava.pdf used on input line 920.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 916--917
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 920--921
  [][] 
  []
 
-[4]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1004
-.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1004.
 
- [5 <./images/rsaVSjava.pdf>]
-<images/karatsubaVSgradeSchool.pdf, id=42, 722.7pt x 505.89pt>
+Underfull \hbox (badness 4217) in paragraph at lines 926--927
+\OT1/ppl/m/n/12 large mul-ti-plica-tive com-pu-ta-tion for large
+ []
+
+[6 <./images/rsaVSjava.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 985--985
+ \OT1/phv/m/sl/12 3.2.2 \OT1/ppl/b/n/12 Karat-suba Al-go-rithm Im-ple-men-ta-
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 1008
+.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1008.
+
+ [7]
+<images/karatsubaVSgradeSchool.pdf, id=50, 722.7pt x 505.89pt>
 File: images/karatsubaVSgradeSchool.pdf Graphic file (type pdf)
 
 <use images/karatsubaVSgradeSchool.pdf>
 Package pdftex.def Info: images/karatsubaVSgradeSchool.pdf used on input line 1
-046.
+050.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1046--1047
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1050--1051
  [][] 
  []
 
-<images/plotRandomNumber.pdf, id=43, 505.89pt x 505.89pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
+ \OT1/phv/b/n/12 3.3 Pseu-do-ran-dom Num-ber Gen-er-a-
+ []
+
+<images/plotRandomNumber.pdf, id=51, 505.89pt x 505.89pt>
 File: images/plotRandomNumber.pdf Graphic file (type pdf)
 
 <use images/plotRandomNumber.pdf>
-Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1061.
+Package pdftex.def Info: images/plotRandomNumber.pdf used on input line 1065.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1061--1062
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1065--1066
  [][] 
  []
 
+[8 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+[]$\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [0]\OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [1]
+\OML/cmm/m/it/12 ; x\OT1/cmr/m/n/12 [2]\OML/cmm/m/it/12 :::::x\OT1/cmr/m/n/12 [
+\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12  
+ []
 
-Underfull \vbox (badness 1838) has occurred while \output is active []
 
- [6 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
-<images/cdf_mersenne.jpeg, id=121, 200.75pt x 126.4725pt>
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+[]$\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT
+1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][]\OML/cmm/m/it/12 u\OT1/cmr/m
+/n/12 )[](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 i \OT1/cmr/m/n/1
+2 + 1)
+ []
+
+<images/cdf_mersenne.jpeg, id=129, 200.75pt x 126.4725pt>
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
-Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1166.
+Package pdftex.def Info: images/cdf_mersenne.jpeg used on input line 1170.
 (pdftex.def)             Requested size: 256.0748pt x 161.35161pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1166--1167
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1170--1171
  [][] 
  []
 
-[7]
+
+Underfull \hbox (badness 2277) in paragraph at lines 1176--1177
+[]\OT1/ppl/m/n/12 Figure 4[] shows the Cum-mu-la-tive Den-sity
+ []
+
+[9]
+
+LaTeX Warning: Text page 10 contains only floats.
+
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \space {}3{)}\space  on input line 1193.
+             The label is: \space {}3{)}\space  on input line 1197.
 
-[8 <./images/cdf_mersenne.jpeg>]
-<images/encryptionTime.pdf, id=129, 722.7pt x 505.89pt>
+[10 <./images/cdf_mersenne.jpeg>] [11]
+<images/encryptionTime.pdf, id=139, 722.7pt x 505.89pt>
 File: images/encryptionTime.pdf Graphic file (type pdf)
 
 <use images/encryptionTime.pdf>
-Package pdftex.def Info: images/encryptionTime.pdf used on input line 1270.
+Package pdftex.def Info: images/encryptionTime.pdf used on input line 1274.
 (pdftex.def)             Requested size: 256.0748pt x 179.24869pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1270--1271
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1274--1275
  [][] 
  []
 
-<images/rsaPlot.pdf, id=130, 505.89pt x 505.89pt>
+<images/rsaPlot.pdf, id=140, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
-Package pdftex.def Info: images/rsaPlot.pdf used on input line 1283.
+Package pdftex.def Info: images/rsaPlot.pdf used on input line 1287.
 (pdftex.def)             Requested size: 256.0748pt x 256.07838pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1283--1284
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1287--1288
  [][] 
  []
 
-<images/Rplot.pdf, id=131, 506.21703pt x 506.21703pt>
+<images/Rplot.pdf, id=141, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
-Package pdftex.def Info: images/Rplot.pdf used on input line 1293.
+Package pdftex.def Info: images/Rplot.pdf used on input line 1297.
 (pdftex.def)             Requested size: 256.0748pt x 256.08171pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1293--1294
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1297--1298
  [][] 
  []
 
-[9 <./images/encryptionTime.pdf> <./images/rsaPlot.pdf>]
-<images/mersenneTime.png, id=206, 722.7pt x 542.025pt>
+<images/mersenneTime.png, id=142, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
-Package pdftex.def Info: images/mersenneTime.png used on input line 1302.
+Package pdftex.def Info: images/mersenneTime.png used on input line 1306.
 (pdftex.def)             Requested size: 256.0748pt x 192.05217pt.
 
-Overfull \hbox (4.0748pt too wide) in paragraph at lines 1302--1303
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 1306--1307
  [][] 
  []
 
-(./Report.bbl [10 <./images/Rplot.pdf> <./images/mersenneTime.png>]
-Underfull \hbox (badness 2376) in paragraph at lines 84--88
-[]\OT1/ptm/m/n/8 M. Mat-sumoto and T. Nishimura.  Mersenne twister: A 623-
+[12 <./images/encryptionTime.pdf> <./images/rsaPlot.pdf>]
+Underfull \hbox (badness 2012) in paragraph at lines 1316--1317
+[]\OT1/ppl/m/n/12 To fur-ther boost the mul-ti-plica-tive per-for-
  []
 
-)
 
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
+Underfull \hbox (badness 1484) in paragraph at lines 1323--1324
+\OT1/ppl/m/n/12 the ef-fi-ciency and reusabil-ity into ac-count.
+ []
 
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[11
-
-] (./Report.aux) ) 
+[13 <./images/Rplot.pdf> <./images/mersenneTime.png>] (./Report.bbl) [14]
+(./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4642 strings out of 493315
- 68890 string characters out of 6137904
- 145418 words of memory out of 5000000
- 8009 multiletter control sequences out of 15000+600000
- 43813 words of font info for 77 fonts, out of 8000000 for 9000
+ 4736 strings out of 493315
+ 70155 string characters out of 6137904
+ 145988 words of memory out of 5000000
+ 8084 multiletter control sequences out of 15000+600000
+ 45548 words of font info for 95 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  38i,19n,32p,1762b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 559800 bytes).
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf
+-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
+w/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palat
+ino/uplri8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/uz
+dr.pfb>
+Output written on Report.pdf (14 pages, 575526 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
+ 353 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

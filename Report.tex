@@ -62,7 +62,8 @@
 % should be used if it is desired that the figures are to be displayed in
 % draft mode.
 %
-\documentclass[conference]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+\documentclass[12pt,journal,compsoc]{IEEEtran}
 
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
@@ -402,6 +403,9 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+%\renewcommand\thesection{\Roman{section}}
+%\renewcommand\thesubsection{\thesubsection.\arabic{subsection}}
+
 \usepackage[parfill]{parskip}
 \begin{document}
 
@@ -509,7 +513,7 @@
 
 \begin{abstract}
 %\boldmath
-The Secure RSA algorithm\cite{6021216} is generally 6 step algorithm and the security is based on the randomly selected 2 prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
+The Secure RSA algorithm\cite{6021216} is generally 6 step algorithm and the security is based on the randomly selected 2 pairs of prime numbers on the assumption that it is easy to find the multiply to prime numbers together, but it is extremely difficult to factor their product. In today's world speed of processing is decreasing at an exponential rate which makes these numbers easily crackable. To overcome this limitation we need to look at the bigger aspects for the application and even larger prime number. Working with even larger numbers are somewhat limitation to computer science since we are limited to at most 64-bit integers.
 
 This paper introduces the concept and implementation of RSA algorithm for security purpose, Mersenne Twister for generating pseudorandom number with large key space and faster primality test to generate prime number. We will enhance the performance of the system by adding one more prime number to the algorithm and implement external libraries with low computation time to work with large numbers. As the result, it will be faster to encrypt and more secure to be decrypted by crypto analyst.
 \end{abstract}
@@ -542,7 +546,7 @@ Cryptography, RSA, MT19937, Mersenne Twister, Miller-Rabin, Prime Numbers, Pseud
 
 
 
-\section{{\LARGE Introduction}}
+\section{{Introduction}}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -661,7 +665,7 @@ To achieve security there are two ways in which we can achieve.
 	\item Strong secure protocol for transmission
 \end{itemize}
 
-\section{{\LARGE Background \& Related Work}}
+\section{{Background \& Related Work}}
 There are two types of cryptographic algorithm to accomplish these goals: Symmetric and Asymmetric cryptography. The initial unencrypted dat is referred as normal text. RSA is (\emph{Rivest, Shamir \& Adleman}) is asymmetric cryptographic algorithm developed in 1977. It generated two keys: public key for encryption and private key to decrypt message. RSA encrypt and decrypt data, second phase is encryption, where actual process of conversion of plain text to cipher text is being carried out and third phase is decryption, where encrypted text is converted in to plain text at the other side.
 
 
@@ -681,14 +685,14 @@ Cryptography is a process which is associated with scrambling plaintext into cip
 
 This is one main difference between symmetric and asymmetric cryptography, but that difference makes whole process different. This difference is small but it is enough that it has implications throughout the security. Mainly, symmetric cryptography is seen as faster, more lightweight and better suited for applications that have a lot of data to transfer, while at the same time, it is known to be less secure and more open to wider areas of attacks because of maintenance for a private key required. This drawback is removed by asymmetric cryptographic algorithm discussed in following section.
 
-\subsection{{\large Elliptic Curve Cryptosystem (ECC)\cite{ecc}}}
+\subsection{{Elliptic Curve Cryptosystem (ECC)\cite{ecc}}}
 Over the past 30 years, public key cryptography has become a mainstay for secure communications over the Internet and throughout many other forms of communications. It provides the foundation for both key management and digital signatures. In key management, public key cryptography is used to distribute the secret keys used in other cryptographic algorithms (e.g. DES). For digital signatures, public key cryptography is used to authenticate the origin of data and protect the integrity of that data. For the past 20 years, Internet communications have been secured by the first generation of public key cryptographic algorithms developed in the mid-1970's. Notably, they form the basis for key management and authentication for IP encryption (IKE/IPSEC), web traffic (SSL/TLS) and secure electronic mail. 
 
 The majority of public key systems in use today use 1024-bit parameters for RSA and Diffie-Hellman. The US National Institute for Standards and Technology has recommended that these 1024-bit systems are sufficient for use until 2010. After that, NIST recommends that they be upgraded to something providing more security. The question is what should these systems be changed to? One option is to simply increase the public key parameter size to a level appropriate for another decade of use. Another option is to take advantage of the past 30 years of public key research and analysis and move from first generation public key algorithms and on to elliptic curves.
 
 Elliptic Curve Cryptography provides greater security and more efficient performance than the first generation public key techniques (RSA and Diffie-Hellman) now in use. As vendors look to upgrade their systems they should seriously consider the elliptic curve alternative for the computational and bandwidth advantages they offer at comparable security. It consists of both encryption and signature algorithms. 
 
-\subsection{{\large ELGamal System}}
+\subsection{{ELGamal System}}
 The ElGamal System \cite{elgamal} provides an alternative to rya for public key encryption.
 \begin{enumerate}
 	\item Security of RSA depends on the presumed difficulty of factoring large integers.
@@ -696,7 +700,7 @@ The ElGamal System \cite{elgamal} provides an alternative to rya for public key 
 \end{enumerate}
 The ElGamal signature algorithm is similar to encryption algorithm in that the public key and private key have the same form; however encryption is not the same as signature verification, nor is decryption the same as signature creation. Signature creation depends on the ElGamal signature algorithm. The main disadvantage of ElGamal is the need for randomness and it's slower speed.  ElGamal has the disadvantage that the cipher text is twice as long as the plain text. ElGamal is not semantically secure.
 
-\subsection{{\large DSS (Digital Signature Standard)}}
+\subsection{{DSS (Digital Signature Standard)}}
 A digital signature is represented in a computer as a string of binary digits\cite{dss}. A digital signature is computed using a set of rules and a set of parameters such that the identity of the signatory and integrity of the data can be verified. An algorithm provides capability to generate and verify signatures. Signature generation\cite{dss} makes use of a private key to generate a digital signature. Signature verification\cite{dss} makes use of a public key which corresponds to, but is not the same as, the private key. Each user possesses a private and public key pair. Public key are assumed to be known to the public in general. Private keys are never shared. Anyone can verify the signature of a user by employing the user's public key. Signature generation can be performed only by the possessor of the private key.
 
 The advantages of this system are
@@ -712,10 +716,10 @@ Drawbacks of DSS are
 	\item The verification process is slower than RSA
 \end{itemize}
 
-\subsection{{\large Diffie-Hellman key agreement protocol}}
+\subsection{{Diffie-Hellman key agreement protocol}}
 Although Diffie-Hellman\cite{diffie} key agreement itself is an anonymous (non-authenticated) key-agreement protocol, it provides the basis for a variety of authenticated protocols, and is used to provide perfect forward secrecy in Transport Layer Security's ephemeral modes (referred to as EDH or DHE depending on the cipher suite). In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. \cite{diffie} A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. In the original description papers, the Diffie-Hellman exchange by itself does not provide authentication of the communicating parties and is thus susceptible to a man-in- the-middle attack. An attacking person in the middle may establish two different Diffie-Hellman key exchanges, with the two members of the party "A" and "B", appearing as "A" to "B", and vice versa, allowing the attacker to decrypt \cite{diffie} (and read or store) then re-encrypt the messages passed between them. A method to authenticate the communicating parties to each other is generally needed to prevent this type of attack. Secure Sockets Layer (SSL)/Transport Layer Security (TLS), Diffie-Hellman protocol is used in Secure Shell (SSH), Internet Protocol Security (IPSec), Public Key Infrastructure (PKI).
 
-\subsection{{\large The Sieve of Eratosthenes}}
+\subsection{{The Sieve of Eratosthenes}}
 Eratosthenes gave a method to generate all prime numbers between 1 and n.\cite{sieve_complexity} The algorithm is as follows:
 \begin{enumerate}[ {STEP }1{:}]
 \item Write down all numbers from 2 to $n$.
@@ -755,10 +759,10 @@ The algorithm\cite{eratos} is defined in Algorithm\ref{alg_sieve}
 
 The complexity of the algorithm is $O(n(\log n)(\log \log n))$\cite{sieve_complexity} bit operations with a memory requirement of $O(n)$.Time complexity in RAM machine model is $O(n\log \log n)$ operations; this is a direct consequence of the fact that the prime harmonic series asymptotically approaches $\frac{1}{(ln(\ln(N)))}$. The segmented version of the sieve of Eratosthenes, with basic optimizations, uses $O(n)$ operations and $O(n^{\frac{1}{2}}\log \log n / \log n)$ bits of memory.
 
-\subsection{{\large Fermat's Little Theorem\cite{fermat}}}
+\subsection{{Fermat's Little Theorem\cite{fermat}}}
 "\emph{Let $p$ be a prime which does not divide the integer $a$, then $a^{p-1} = 1 \mod p$}"\cite{fermat}. The result is trivial (both sides are zero) if $p$ divides $a$. If $p$ does not divide $a$, then we need only multiply the congruence in Fermat's Little Theorem by $a$ to complete the proof. This theorem satisfies only the subset of prime numbers since there are few composite numbers which also satisfy this property. Those numbers were discovered by Robert Carmichael. The smallest carmichael is 561 ($3 \times 11 \times 17$). In 1994 it was proved that there are infinite carmaichael numbers.
 
-\subsection{{\large Gauss Theorem}}
+\subsection{{Gauss Theorem}}
 Carl Friedrich Gauss considered the question of prime-counting function that gives the number of primes less than or equal to x, for any real number x which is as follows:
 	\begin{equation}
 	\label{eq:gauss1}
@@ -808,9 +812,9 @@ Error difference is just 1700
 \end{table}
 The prime counts in the TABLE \ref{table:gauss_values} are taken from Edwards\cite{zeta_values}
 
-\section{{\LARGE Method}}
+\section{{Method}}
 
-\subsection{{\large Secure RSA for File Transfer}}
+\subsection{{Secure RSA for File Transfer}}
 \label{sec:secureMrea}
 
 Secure RSA\cite{mrea} is a asymmetric-key crypto system, meaning that for communication, two keys are required: a public key and a private key. furthermore, unlike RSA, it is one way, the public key is used only for encryption, and the private key is used only for decryption. Following is a key generation algorithm for Secure RSA crypto system. We have removed the drawback using Secure RSA for safe transmission of file from one user to another.
@@ -922,7 +926,7 @@ To test with new value of $d$ we collected average time taken for 10 sets of 33,
 Secure RSA as defined in Section \ref{sec:mrea_algo} needs large multiplicative computation for large prime numbers which will take $O(n^2)$ digit operation thus limiting the performance. To overcome this we needed faster algorithm for multiplication which we are going to explain in the next section.
 
 %KARATSUBA MULTIPLICATION
-\subsection{{\large Karatsuba Multiplication}}
+\subsection{{Karatsuba Multiplication}}
 \label{sec: karatsuba_code}
 Karatsuba's algorithm for fast multiplication was first published in "\emph{Multiplication of Many-Digital Numbers by Automatic Computers}"\cite{karatsuba}, Proceedings of the USSR Academy of Sciences. The algorithm space for this algorithm is surprisingly rich. There are many methods of integer multiplication beyond what we learnt called conventional long multiplication and this is one of them. 
 
@@ -1050,7 +1054,7 @@ To increase the security of encryption we need pseudorandom number generator wit
 
 
 %MERSENNE PRIME
-\subsection{{\large Pseudorandom Number Generation}}
+\subsection{{Pseudorandom Number Generation}}
 \label{sec:mersenne}
 The Mersenne twister\cite{MT19937} is pseudorandom number generator. It is, by far, the most widely used Pseudorandom number generator. It's name derives from the fact that it's period length is chosen to be 24\textsuperscript{th} Mersenne Prime though the "guarantee" isn't there anymore. MT19937 is a variant of the twisted generalised feedback shift-register algorithm. It has passed the DIEHARD statistical tests. MT19937 uses 624 words of state per generator and is comparable in speed to the other generators. The original generator used a default seed of 4357 and "choosing \emph{{\bf s}} equal to zero".\cite{MT19937}
 
@@ -1183,7 +1187,7 @@ MT19937 we worked with showed the following statistical property which makes it 
 For faster primality test for random number generated by MT19937 we used Miller-Rabin Primality test which is by far fastest performing algorithm. We are going to explain the implementation in next section.
 
 %MILLER-RABIN
-\subsection{{\large Miller-Rabin Primality Test\cite{miller-rabin}}}
+\subsection{{Miller-Rabin Primality Test\cite{miller-rabin}}}
 We know of two ways to prove that a number $n$ is composite:
 \begin{enumerate}
 \item Exhibit a factorization $n = ab$, where $a,b >1$
@@ -1258,10 +1262,10 @@ If for some $a$ none of the above set of powers is $-1$ and the specific odd pow
 %}
  
 %RESULTS
-\section{{\LARGE Results}}
+\section{{Results}}
 
 
-\subsection{{\large Encryption \& Decryption}}
+\subsection{{Encryption \& Decryption}}
 
 Though, introduction to one more random prime number slowed the performance but using Karatsuba Multiplication as mentioned in Algorithm \ref{alg_karatsuba} over came the limitation. To prove this hypothesis we ran test of generation of 60 encryptions and decryptions (10 sets of file encryption and decryption with 32, 65, 94, 127, 160, 320 \emph{bits} size random prime numbers) and found the performance to be significant. The result is shown in Figure \ref{fig:rsa_time}. We performed Normal Distribution Function and found that on average probability of encryption and decryption of 500 files is very high as shown in Figure \ref{fig:rsa_cdf}.
 
@@ -1285,7 +1289,7 @@ Furthermore, comparing this results with the "\emph{File Encryption and Decrypti
 \label{fig:rsa_cdf}
 \end{figure}
 
-\subsection{{\large Random Numbers}}
+\subsection{{Random Numbers}}
 Our method for doing simple benchmarking and Mersenne Twister implementation generates numbers at a rate steadily over 4600 pseudo-random numbers per second which is very large. The test code reports normal distribution formulated from mean and standard deviation of performance of MT19937 is shown in Figure \ref{fig:mersenne_performance}.\cite{wolfram_mt}. Also, comparing our results with results mentioned in "Testing Random Number Generators"\cite{lcg_cdf} we found that as the number range increase the probability density increases exponentially (Figure \ref{fig:cdf_mersenne}) as compared to the results from paper\cite{lcg_cdf} which is linear and then remains constant. From this we can imply that as the key space of number increases probability density increases.
 
 \begin{figure}[ht!]
@@ -1306,13 +1310,13 @@ Also, we tested to generate large prime number and our system showed significant
 %Though GMPY2 is suitable for faster computation but it is limited to python's exponential computation. 
 
 
-\subsection{{\large Large Multiplication}}
+\subsection{{Large Multiplication}}
 Karatsuba Multiplication\cite{karatsuba_multiplication} algorithm mentioned in section \ref{sec: karatsuba_code} was implemented to enhance the performance of multiplication also had significant performance as shown in Figure \ref{fig:karatsubaVSgrade}. The multipliers have significantly lower area-delay products compared with previous designs\cite{karatsuba_multiplication}. For key generation we worked to generate keys of size upto 512-bits to 1000-bits long keys for significant performance based on time of computation.
 
 To further boost the multiplicative performance we used third party library for mathematical computation called GMPY2\cite{gmpy2} which is a Python module that provides access to the GNU Multiple Precision (GMP) library. GMP provides very fast and highly optimized routines for working with arbitrary precision integers, rationals, and floating point numbers.
 
 
-\section{{\LARGE Conclusion}}
+\section{{Conclusion}}
 The digital world of cryptography is getting bigger and bigger, not smaller and our method have showed a new approach to make secure by increasing the bit size of the key generated with not compromising with good computational performance up to 512-bit long keys and comparatively significant performance up to 1900-bit long key for encryption and decryption. 
 
 
