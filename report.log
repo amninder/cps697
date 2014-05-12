@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 22:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 MAY 2014 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -435,7 +435,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1054--1055
  []
 
 [6 <./images/karatsubaVSgradeSchool.pdf> <./images/plotRandomNumber.pdf>]
-<images/cdf_mersenne.jpeg, id=124, 200.75pt x 126.4725pt>
+<images/cdf_mersenne.jpeg, id=123, 200.75pt x 126.4725pt>
 File: images/cdf_mersenne.jpeg Graphic file (type jpg)
 
 <use images/cdf_mersenne.jpeg>
@@ -452,7 +452,7 @@ LaTeX Warning: The counter will not be printed.
              The label is: \space {}3{)}\space  on input line 1184.
 
 [8 <./images/cdf_mersenne.jpeg>]
-<images/Rplot.pdf, id=132, 506.21703pt x 506.21703pt>
+<images/Rplot.pdf, id=131, 506.21703pt x 506.21703pt>
 File: images/Rplot.pdf Graphic file (type pdf)
  <use images/Rplot.pdf>
 Package pdftex.def Info: images/Rplot.pdf used on input line 1259.
@@ -462,7 +462,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1259--1260
  [][] 
  []
 
-<images/mersenneTime.png, id=133, 722.7pt x 542.025pt>
+<images/mersenneTime.png, id=132, 722.7pt x 542.025pt>
 File: images/mersenneTime.png Graphic file (type png)
 
 <use images/mersenneTime.png>
@@ -473,7 +473,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1268--1269
  [][] 
  []
 
-<images/encryptionTime.jpg, id=135, 722.7pt x 542.025pt>
+<images/encryptionTime.jpg, id=134, 722.7pt x 542.025pt>
 File: images/encryptionTime.jpg Graphic file (type jpg)
 
 <use images/encryptionTime.jpg>
@@ -485,7 +485,7 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 1285--1286
  []
 
 [9 <./images/Rplot.pdf> <./images/mersenneTime.png>]
-<images/rsaPlot.pdf, id=206, 505.89pt x 505.89pt>
+<images/rsaPlot.pdf, id=205, 505.89pt x 505.89pt>
 File: images/rsaPlot.pdf Graphic file (type pdf)
  <use images/rsaPlot.pdf>
 Package pdftex.def Info: images/rsaPlot.pdf used on input line 1297.
@@ -542,10 +542,10 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/
 fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 588184 bytes).
+Output written on Report.pdf (11 pages, 587950 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
+ 336 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
