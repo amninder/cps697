@@ -74,6 +74,13 @@ B.~Kleinberg.
 \newblock Introduction to algorithms (cs 482).
 \newblock {\em The Miller-Rabin Randomized Primality Test}, 05 2010.
 
+\bibitem{768_key}
+T.~Kleinjung, K.~Aoki, J.~Franke, A.~K. Lenstra, E.~Thomm{\'e}, J.~W. Bos,
+  P.~Gaudry, A.~Kruppa, P.~L. Montgomery, D.~A. Osvik, H.~to~Riele,
+  A.~Timofeev, and P.~Zimmermann, editors.
+\newblock {\em Factorization of a 768-bit RSA modulus}, volume 1.4, February
+  2010.
+
 \bibitem{lcg_cryptography}
 C.-C. Li and B.~Sun.
 \newblock Using linear congruential generators for cryptographic purposes.
@@ -118,12 +125,6 @@ R.~Tirtea and G.~Deconinck.
   aspects in case of faults.
 \newblock In {\em Electrotechnical Conference, 2004. MELECON 2004. Proceedings
   of the 12th IEEE Mediterranean}, volume~2, pages 769--773 Vol.2, May 2004.
-
-\bibitem{768_key}
-T.~K. K. A. J. F. A. K. L. E. T. J. W. B. P. G. A. K. P. L. M. D. A. O.~H.
-  to~Riele; Andrey~Timofeev and P.~Zimmermann, editors.
-\newblock {\em Factorization of a 768-bit RSA modulus}, volume 1.4, February
-  2010.
 
 \bibitem{sieve_complexity}
 P.~Univeristy.
